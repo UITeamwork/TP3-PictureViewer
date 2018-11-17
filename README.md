@@ -31,53 +31,53 @@ Compétences
 - Fenêtre de dialogue adaptive à sa taille
 
 ------------------------------------------------------------------------------------
-Liste des fonctionnalités à inclure (voir l’exécutable démo pour plus de détails)
+Liste des fonctionnalités (**Voir [Issues](https://github.com/UITeamwork/TP3-PictureViewer/issues) pour liste à faire**)
 ------------------------------------------------------------------------------------
-- [ ] Gestion de compte
-	- [ ] Login
-	- [ ] Profil
-	- [ ] Création
-	- [ ] Retrait
-- [ ] Gestion des photos
-	- [ ] Ajout
-	- [ ] Modification de la photo propriétaire sélectionnée
-	- [ ] Retrait de la photo propriétaire sélectionnée
-	- [ ] Voir/masquer le dialogue non modal sur les informations de la photo sélectionnée
-- [ ] Propriétaire (nom, avatar)
-- [ ] Titre, description, date de création, mots-clés
-- [ ] Dimensions en pixels
-- [ ] Partagée, privée
-- [ ] Filtres (vous devez innover sur ce point)
-	- [ ] Par mots-clés
-	- [ ] Par usagers
-	- [ ] Par intervalle de dates
-- [ ] Exploitation du contrôle de saisie de photo (ImageBox)
-	- [ ] Ajouter un item de menu contextuel « Rotation »
-	- [ ] Implanter la rotation d’image
-- [ ] Exploitation du fureteur de photos (PhotoBrowser)
-- [ ] Gestion d’une « liste noire » d’usagers (masquer leurs photos en tout temps)
-	- [ ] Ajout/retrait
-	- [ ] Réinitialisation
-- [ ] Gestion de la liste des photos du « carrousel » (slide-show)
-	- [ ] Ajout/retrait
-	- [ ] Réinitialisation
-- [ ] Visionnement du carrousel en boucle perpétuelle dans une fenêtre à part
-	- [ ] Consécutivement ou aléatoirement
-	- [ ] Vitesse variable par l’usager
-- [ ] Conservation des réglages suivants
-	- [ ] Taille et position de tous les dialogues
-	- [ ] Placement du fureteur de photos (gauche, droit, haut, bas)
-	- [ ] Nom d’usager et mot de passe (« se souvenir de moi »)
-	- [ ] La « liste noire » d’usagers
-	- [ ] Liste des photos du « carrousel »
-- [ ] Menu « à propos » donnant accès au dialogue qui présente les auteurs de l’application
-- [ ] Menu d’aide donnant accès au dialogue d’aide sur les fonctionnalités de l’application
+- Gestion de compte
+	- Login
+	- Profil
+	- Création
+	- Retrait
+- Gestion des photos
+	- Ajout
+	- Modification de la photo propriétaire sélectionnée
+	- Retrait de la photo propriétaire sélectionnée
+	- Voir/masquer le dialogue non modal sur les informations de la photo sélectionnée
+- Propriétaire (nom, avatar)
+- Titre, description, date de création, mots-clés
+- Dimensions en pixels
+- Partagée, privée
+- Filtres (vous devez innover sur ce point)
+	- Par mots-clés
+	- Par usagers
+	- Par intervalle de dates
+- Exploitation du contrôle de saisie de photo (ImageBox)
+	- Ajouter un item de menu contextuel « Rotation »
+	- Implanter la rotation d’image
+- Exploitation du fureteur de photos (PhotoBrowser)
+- Gestion d’une « liste noire » d’usagers (masquer leurs photos en tout temps)
+	- Ajout/retrait
+	- Réinitialisation
+- Gestion de la liste des photos du « carrousel » (slide-show)
+	- Ajout/retrait
+	- Réinitialisation
+- Visionnement du carrousel en boucle perpétuelle dans une fenêtre à part
+	- Consécutivement ou aléatoirement
+	- Vitesse variable par l’usager
+- Conservation des réglages suivants
+	- Taille et position de tous les dialogues
+	- Placement du fureteur de photos (gauche, droit, haut, bas)
+	- Nom d’usager et mot de passe (« se souvenir de moi »)
+	- La « liste noire » d’usagers
+	- Liste des photos du « carrousel »
+- Menu « à propos » donnant accès au dialogue qui présente les auteurs de l’application
+- Menu d’aide donnant accès au dialogue d’aide sur les fonctionnalités de l’application
 
 ------------------------------------------------------------------------------------
 Contraintes
 ------------------------------------------------------------------------------------
-- [ ] Commandes via menu, clavier et boutons flash
-- [ ] Info-bulle pour tous les boutons flash
+- Commandes via menu, clavier et boutons flash
+- Info-bulle pour tous les boutons flash
 - Offrir au moins deux méthodes pour toutes commandes
 - Dialogue adaptif à sa taille
 - Vous ne devez pas outrepasser vos droits sur les données du serveur de photos
@@ -87,12 +87,12 @@ Contraintes
 ------------------------------------------------------------------------------------
 Calendrier (toutes ses rencontres sont obligatoires)
 ------------------------------------------------------------------------------------
-- [ ] Mercredi 14 novembre - soumission de ce travail - formation des équipes
-- [ ] Lundi 19 novembre - rencontre de conception
-- [ ] Mercredi 21 novembre – approbation des prototypes
-- [ ] Lundi 26 novembre – programmation / consultation
-- [ ] Mercredi 8 novembre – programmation / consultation
-- [ ] Lundi 3 décembre – présentations / évaluations en classe, dépôt dans Colnet avant minuit
+- Mercredi 14 novembre - soumission de ce travail - formation des équipes
+- Lundi 19 novembre - rencontre de conception
+- Mercredi 21 novembre – approbation des prototypes
+- Lundi 26 novembre – programmation / consultation
+- Mercredi 8 novembre – programmation / consultation
+- Lundi 3 décembre – présentations / évaluations en classe, dépôt dans Colnet avant minuit
 
 ------------------------------------------------------------------------------------
 Critères d’évaluation
