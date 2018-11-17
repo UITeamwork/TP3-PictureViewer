@@ -1,6 +1,8 @@
 # TP3-PictureViewer
 >[Mise en forme](https://help.github.com/articles/basic-writing-and-formatting-syntax/)
 
+>[Glossaire GitHub](https://help.github.com/articles/github-glossary/)
+
 >[Comment utiliser GitHub](https://guides.github.com/activities/hello-world/)
 
 >[Extension GitHub pour Visual Studio](https://visualstudio.github.com/)
