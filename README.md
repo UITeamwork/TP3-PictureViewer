@@ -35,7 +35,7 @@ Compétences
 - Fenêtre de dialogue adaptive à sa taille
 
 ------------------------------------------------------------------------------------
-Liste des fonctionnalités (**Voir [Issues](https://github.com/UITeamwork/TP3-PictureViewer/issues?q=is%3Aissue+is%3Aopen+sort%3Acreated-asc) pour liste des choses à faire**)
+Liste des fonctionnalités (**Voir [Projet](https://github.com/UITeamwork/TP3-PictureViewer/projects/4) pour liste des choses à faire**)
 ------------------------------------------------------------------------------------
 - Gestion de compte
 	- Login
