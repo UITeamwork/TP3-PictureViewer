@@ -47,10 +47,10 @@ Liste des fonctionnalités (**Voir [Projet](https://github.com/UITeamwork/TP3-Pi
 	- Modification de la photo propriétaire sélectionnée
 	- Retrait de la photo propriétaire sélectionnée
 	- Voir/masquer le dialogue non modal sur les informations de la photo sélectionnée
-- Propriétaire (nom, avatar)
-- Titre, description, date de création, mots-clés
-- Dimensions en pixels
-- Partagée, privée
+		- Propriétaire (nom, avatar)
+		- Titre, description, date de création, mots-clés
+		- Dimensions en pixels
+		- Partagée, privée
 - Filtres (vous devez innover sur ce point)
 	- Par mots-clés
 	- Par usagers
