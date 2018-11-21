@@ -34,6 +34,7 @@
             this.TBX_Password = new System.Windows.Forms.TextBox();
             this.BTN_Cancel = new System.Windows.Forms.Button();
             this.BTN_Ok = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -73,7 +74,7 @@
             // 
             this.BTN_Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BTN_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BTN_Cancel.Location = new System.Drawing.Point(229, 114);
+            this.BTN_Cancel.Location = new System.Drawing.Point(255, 141);
             this.BTN_Cancel.Name = "BTN_Cancel";
             this.BTN_Cancel.Size = new System.Drawing.Size(76, 29);
             this.BTN_Cancel.TabIndex = 3;
@@ -83,12 +84,23 @@
             // BTN_Ok
             // 
             this.BTN_Ok.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BTN_Ok.Location = new System.Drawing.Point(147, 114);
+            this.BTN_Ok.Location = new System.Drawing.Point(173, 141);
             this.BTN_Ok.Name = "BTN_Ok";
             this.BTN_Ok.Size = new System.Drawing.Size(76, 29);
             this.BTN_Ok.TabIndex = 2;
             this.BTN_Ok.Text = "Login";
             this.BTN_Ok.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(172, 105);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.checkBox1.Size = new System.Drawing.Size(133, 24);
+            this.checkBox1.TabIndex = 4;
+            this.checkBox1.Text = "Remember me";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // DLG_Login
             // 
@@ -96,8 +108,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.BTN_Cancel;
-            this.ClientSize = new System.Drawing.Size(343, 161);
+            this.ClientSize = new System.Drawing.Size(343, 182);
             this.ControlBox = false;
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.BTN_Ok);
             this.Controls.Add(this.BTN_Cancel);
             this.Controls.Add(this.TBX_Password);
@@ -124,5 +137,6 @@
         private System.Windows.Forms.TextBox TBX_Password;
         private System.Windows.Forms.Button BTN_Cancel;
         private System.Windows.Forms.Button BTN_Ok;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
