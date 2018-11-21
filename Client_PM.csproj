@@ -64,11 +64,41 @@
     <Compile Include="DLG_Account.Designer.cs">
       <DependentUpon>DLG_Account.cs</DependentUpon>
     </Compile>
+    <Compile Include="DLG_BlackList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DLG_BlackList.Designer.cs">
+      <DependentUpon>DLG_BlackList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DLG_Help.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DLG_Help.Designer.cs">
+      <DependentUpon>DLG_Help.cs</DependentUpon>
+    </Compile>
     <Compile Include="DLG_Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DLG_Login.Designer.cs">
       <DependentUpon>DLG_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DLG_Photo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DLG_Photo.Designer.cs">
+      <DependentUpon>DLG_Photo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DLG_PhotoInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DLG_PhotoInfo.Designer.cs">
+      <DependentUpon>DLG_PhotoInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DLG_Slideshow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DLG_Slideshow.Designer.cs">
+      <DependentUpon>DLG_Slideshow.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -77,6 +107,9 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="PM_Controls\FlashButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PM_Controls\FlashCheckBox.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="PM_Controls\ImageBox.cs">
@@ -97,8 +130,23 @@
     <EmbeddedResource Include="DLG_Account.resx">
       <DependentUpon>DLG_Account.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DLG_BlackList.resx">
+      <DependentUpon>DLG_BlackList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DLG_Help.resx">
+      <DependentUpon>DLG_Help.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DLG_Login.resx">
       <DependentUpon>DLG_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DLG_Photo.resx">
+      <DependentUpon>DLG_Photo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DLG_PhotoInfo.resx">
+      <DependentUpon>DLG_PhotoInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DLG_Slideshow.resx">
+      <DependentUpon>DLG_Slideshow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -111,6 +159,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -124,6 +173,45 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_Reset.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_Blacklist.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\upload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_Shuffle_Neutral.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_Shuffle_Clicked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

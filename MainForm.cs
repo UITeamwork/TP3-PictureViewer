@@ -11,6 +11,12 @@ using System.Windows.Forms;
 
 namespace Client_PM
 {
+    /* TODO :
+    // About messagebox
+    MessageBox.Show("Lorem Ipsum", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
+    // Tooltips "FromDate" and "ToDate"
+    */
+
     public partial class MainForm : Form
     {
         User Logged_User = null;
@@ -174,6 +180,31 @@ namespace Client_PM
                 Logged_User = dlg.User;
                 Setup_Logged_User();
             }
+        }
+
+        private void FBTN_Blacklist_Click(object sender, EventArgs e)
+        {
+            // TODO : Get result from dialog and reload the images to hide blacklisted users
+            if(new DLG_BlackList().ShowDialog() == DialogResult.OK)
+            {
+                // Do something...
+            }
+        }
+
+        private void FBTN_Slideshow_Click(object sender, EventArgs e)
+        {
+            DLG_Slideshow dlg = new DLG_Slideshow();
+            dlg.ShowDialog();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox4_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
