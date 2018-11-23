@@ -34,7 +34,7 @@
             this.LAB_SlideshowSpeed = new System.Windows.Forms.Label();
             this.BTN_Previous = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.flashCheckBox1 = new Convertisseur.FlashCheckBox();
+            this.flashCheckBox1 = new CustomControls.FlashCheckBox();
             this.imageBox1 = new PhotoManagerClient.ImageBox();
             ((System.ComponentModel.ISupportInitialize)(this.TrckB_SlideshowSpeed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageBox1)).BeginInit();
@@ -149,6 +149,6 @@
         private System.Windows.Forms.Label LAB_SlideshowSpeed;
         private System.Windows.Forms.Button BTN_Previous;
         private System.Windows.Forms.Button button1;
-        private Convertisseur.FlashCheckBox flashCheckBox1;
+        private CustomControls.FlashCheckBox flashCheckBox1;
     }
 }
