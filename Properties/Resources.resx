@@ -145,16 +145,34 @@
   <data name="view" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\view.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="IMG_Shuffle_Clicked" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IMG_Shuffle_Clicked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IMG_Shuffle_Neutral" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IMG_Shuffle_Neutral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Help_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Help-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Shuffle_Checked_Clicked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_Shuffle_Checked_Clicked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Shuffle_Checked_Disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_Shuffle_Checked_Disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Shuffle_Checked_Neutral" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_Shuffle_Checked_Neutral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Shuffle_Checked_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_Shuffle_Checked_Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Shuffle_Clicked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_Shuffle_Clicked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Shuffle_Disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_Shuffle_Disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Shuffle_Neutral" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_Shuffle_Neutral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Shuffle_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_Shuffle_Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

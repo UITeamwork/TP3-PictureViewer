@@ -123,6 +123,46 @@ namespace Client_PM.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap IMG_Shuffle_Checked_Clicked {
+            get {
+                object obj = ResourceManager.GetObject("IMG_Shuffle_Checked_Clicked", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap IMG_Shuffle_Checked_Disabled {
+            get {
+                object obj = ResourceManager.GetObject("IMG_Shuffle_Checked_Disabled", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap IMG_Shuffle_Checked_Neutral {
+            get {
+                object obj = ResourceManager.GetObject("IMG_Shuffle_Checked_Neutral", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap IMG_Shuffle_Checked_Over {
+            get {
+                object obj = ResourceManager.GetObject("IMG_Shuffle_Checked_Over", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap IMG_Shuffle_Clicked {
             get {
                 object obj = ResourceManager.GetObject("IMG_Shuffle_Clicked", resourceCulture);
@@ -133,9 +173,29 @@ namespace Client_PM.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap IMG_Shuffle_Disabled {
+            get {
+                object obj = ResourceManager.GetObject("IMG_Shuffle_Disabled", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap IMG_Shuffle_Neutral {
             get {
                 object obj = ResourceManager.GetObject("IMG_Shuffle_Neutral", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap IMG_Shuffle_Over {
+            get {
+                object obj = ResourceManager.GetObject("IMG_Shuffle_Over", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

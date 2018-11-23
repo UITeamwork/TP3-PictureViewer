@@ -202,16 +202,34 @@
     <None Include="Resources\edit.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Help-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\IMG_Shuffle_Neutral.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_Shuffle_Over.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\IMG_Shuffle_Clicked.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Help-icon.png" />
+    <None Include="Resources\IMG_Shuffle_Disabled.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\search.png" />
+    <None Include="Resources\IMG_Shuffle_Checked_Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_Shuffle_Checked_Clicked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_Shuffle_Checked_Disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_Shuffle_Checked_Neutral.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
