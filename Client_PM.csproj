@@ -175,49 +175,136 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\IMG_Reset.png" />
+    <None Include="Resources\IMG_Blacklist_Clicked.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\IMG_Blacklist.png" />
+    <None Include="Resources\IMG_Blacklist_Disabled.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\play.png" />
+    <None Include="Resources\IMG_Blacklist_Neutral.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\remove.png" />
+    <None Include="Resources\IMG_Blacklist_Over.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\upload.png" />
+    <None Include="Resources\IMG_View_Over.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\view.png" />
+    <None Include="Resources\IMG_View_Clicked.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\add.png" />
+    <None Include="Resources\IMG_View_Disabled.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\delete.png" />
+    <None Include="Resources\IMG_View_Neutral.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\edit.png" />
+    <None Include="Resources\IMG_Play_Over.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Help-icon.png" />
+    <None Include="Resources\IMG_Play_Clicked.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\search.png" />
+    <None Include="Resources\IMG_Play_Disabled.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\IMG_Shuffle_Neutral.png" />
+    <None Include="Resources\IMG_Play_Neutral.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\IMG_Shuffle_Over.png" />
+    <None Include="Resources\IMG_Delete_Disabled.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\IMG_Shuffle_Clicked.png" />
+    <None Include="Resources\IMG_Delete_Neutral.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\IMG_Shuffle_Disabled.png" />
+    <None Include="Resources\IMG_Edit_Clicked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_Edit_Disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_Edit_Neutral.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_Edit_Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_Delete_Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_Delete_Clicked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_Search_Neutral.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_Search_Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_Search_Clicked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_Search_Disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_Upload_Clicked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_Upload_Disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_Upload_Neutral.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_Upload_Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_AddVideo_Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_AddVideo_Clicked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_AddVideo_Disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_AddVideo_Neutral.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_RemoveVideo_Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_RemoveVideo_Clicked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_RemoveVideo_Disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_RemoveVideo_Neutral.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_Recycle_Clicked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_Recycle_Disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_Recycle_Neutral.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_Recycle_Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_Rotate_Clicked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_Rotate_Disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_Rotate_Neutral.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_Rotate_Over.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\IMG_Shuffle_Checked_Over.png" />
@@ -230,6 +317,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\IMG_Shuffle_Checked_Neutral.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_Shuffle_Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_Shuffle_Clicked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_Shuffle_Disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_Shuffle_Neutral.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_Help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_Info.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

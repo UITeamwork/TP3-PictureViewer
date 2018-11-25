@@ -87,18 +87,19 @@
             this.flashCheckBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.flashCheckBox1.BackgroundImage = global::Client_PM.Properties.Resources.IMG_Shuffle_Neutral;
             this.flashCheckBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.flashCheckBox1.CheckedClickedImage = null;
-            this.flashCheckBox1.CheckedDisabledImage = null;
-            this.flashCheckBox1.CheckedNeutralImage = null;
-            this.flashCheckBox1.CheckedOverImage = null;
-            this.flashCheckBox1.ClickedImage = null;
-            this.flashCheckBox1.DisabledImage = null;
+            this.flashCheckBox1.CheckedClickedImage = global::Client_PM.Properties.Resources.IMG_Shuffle_Checked_Clicked;
+            this.flashCheckBox1.CheckedDisabledImage = global::Client_PM.Properties.Resources.IMG_Shuffle_Checked_Disabled;
+            this.flashCheckBox1.CheckedNeutralImage = global::Client_PM.Properties.Resources.IMG_Shuffle_Checked_Neutral;
+            this.flashCheckBox1.CheckedOverImage = global::Client_PM.Properties.Resources.IMG_Shuffle_Checked_Over;
+            this.flashCheckBox1.ClickedImage = global::Client_PM.Properties.Resources.IMG_Shuffle_Clicked;
+            this.flashCheckBox1.DisabledImage = global::Client_PM.Properties.Resources.IMG_Shuffle_Disabled;
             this.flashCheckBox1.Image = ((System.Drawing.Image)(resources.GetObject("flashCheckBox1.Image")));
             this.flashCheckBox1.Location = new System.Drawing.Point(207, 336);
             this.flashCheckBox1.Name = "flashCheckBox1";
-            this.flashCheckBox1.NeutralImage = null;
-            this.flashCheckBox1.OverImage = null;
+            this.flashCheckBox1.NeutralImage = global::Client_PM.Properties.Resources.IMG_Shuffle_Neutral;
+            this.flashCheckBox1.OverImage = global::Client_PM.Properties.Resources.IMG_Shuffle_Over;
             this.flashCheckBox1.Size = new System.Drawing.Size(50, 50);
             this.flashCheckBox1.TabIndex = 5;
             this.flashCheckBox1.Text = "flashCheckBox1";
