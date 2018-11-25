@@ -48,7 +48,7 @@
             "bbb",
             "ccc"});
             this.CLBX_AllUsers.Location = new System.Drawing.Point(13, 35);
-            this.CLBX_AllUsers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CLBX_AllUsers.Margin = new System.Windows.Forms.Padding(4);
             this.CLBX_AllUsers.Name = "CLBX_AllUsers";
             this.CLBX_AllUsers.Size = new System.Drawing.Size(210, 251);
             this.CLBX_AllUsers.TabIndex = 0;
@@ -56,7 +56,7 @@
             // BTN_SendToBlacklist
             // 
             this.BTN_SendToBlacklist.Location = new System.Drawing.Point(243, 156);
-            this.BTN_SendToBlacklist.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BTN_SendToBlacklist.Margin = new System.Windows.Forms.Padding(4);
             this.BTN_SendToBlacklist.Name = "BTN_SendToBlacklist";
             this.BTN_SendToBlacklist.Size = new System.Drawing.Size(39, 33);
             this.BTN_SendToBlacklist.TabIndex = 1;
@@ -66,7 +66,7 @@
             // BTN_RemoveFromBlacklist
             // 
             this.BTN_RemoveFromBlacklist.Location = new System.Drawing.Point(243, 82);
-            this.BTN_RemoveFromBlacklist.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BTN_RemoveFromBlacklist.Margin = new System.Windows.Forms.Padding(4);
             this.BTN_RemoveFromBlacklist.Name = "BTN_RemoveFromBlacklist";
             this.BTN_RemoveFromBlacklist.Size = new System.Drawing.Size(39, 33);
             this.BTN_RemoveFromBlacklist.TabIndex = 2;
@@ -81,7 +81,7 @@
             "bbb",
             "ccc"});
             this.CLBX_BlacklistedUsers.Location = new System.Drawing.Point(307, 35);
-            this.CLBX_BlacklistedUsers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CLBX_BlacklistedUsers.Margin = new System.Windows.Forms.Padding(4);
             this.CLBX_BlacklistedUsers.Name = "CLBX_BlacklistedUsers";
             this.CLBX_BlacklistedUsers.Size = new System.Drawing.Size(210, 251);
             this.CLBX_BlacklistedUsers.TabIndex = 3;
@@ -130,15 +130,15 @@
             // 
             // FBTN_ResetBlacklist
             // 
-            this.FBTN_ResetBlacklist.BackgroundImage = global::Client_PM.Properties.Resources.IMG_Reset;
+            this.FBTN_ResetBlacklist.BackgroundImage = global::Client_PM.Properties.Resources.IMG_Recycle_Neutral;
             this.FBTN_ResetBlacklist.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.FBTN_ResetBlacklist.ClickedImage = null;
-            this.FBTN_ResetBlacklist.DisabledImage = null;
+            this.FBTN_ResetBlacklist.ClickedImage = global::Client_PM.Properties.Resources.IMG_Recycle_Clicked;
+            this.FBTN_ResetBlacklist.DisabledImage = global::Client_PM.Properties.Resources.IMG_Recycle_Disabled;
             this.FBTN_ResetBlacklist.Image = ((System.Drawing.Image)(resources.GetObject("FBTN_ResetBlacklist.Image")));
             this.FBTN_ResetBlacklist.Location = new System.Drawing.Point(243, 250);
             this.FBTN_ResetBlacklist.Name = "FBTN_ResetBlacklist";
-            this.FBTN_ResetBlacklist.NeutralImage = null;
-            this.FBTN_ResetBlacklist.OverImage = null;
+            this.FBTN_ResetBlacklist.NeutralImage = global::Client_PM.Properties.Resources.IMG_Recycle_Neutral;
+            this.FBTN_ResetBlacklist.OverImage = global::Client_PM.Properties.Resources.IMG_Recycle_Over;
             this.FBTN_ResetBlacklist.Size = new System.Drawing.Size(39, 36);
             this.FBTN_ResetBlacklist.TabIndex = 8;
             this.FBTN_ResetBlacklist.Text = "flashButton1";
@@ -162,7 +162,7 @@
             this.Controls.Add(this.BTN_SendToBlacklist);
             this.Controls.Add(this.CLBX_AllUsers);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DLG_BlackList";
             this.Text = "DLG_BlackList";
             this.ResumeLayout(false);

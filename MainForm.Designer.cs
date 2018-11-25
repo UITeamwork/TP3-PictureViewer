@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.CBX_UsersList = new System.Windows.Forms.ComboBox();
             this.MS_Account = new System.Windows.Forms.MenuStrip();
             this.accountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,16 +45,17 @@
             this.topToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bottomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.CBX_Keywords = new System.Windows.Forms.ComboBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.PhotoBrowser = new PhotoManagerClient.PhotosBrowser();
-            this.DTP_From = new System.Windows.Forms.DateTimePicker();
-            this.DTP_To = new System.Windows.Forms.DateTimePicker();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.FBTN_Help = new PhotoManagerClient.FlashButton();
+            this.DTP_To = new System.Windows.Forms.DateTimePicker();
+            this.DTP_From = new System.Windows.Forms.DateTimePicker();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.PhotoBrowser = new PhotoManagerClient.PhotosBrowser();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.FBTN_Slideshow = new PhotoManagerClient.FlashButton();
             this.FBTN_Blacklist = new PhotoManagerClient.FlashButton();
             this.flashButton1 = new PhotoManagerClient.FlashButton();
@@ -62,6 +64,7 @@
             this.FBTN_DeletePicture = new PhotoManagerClient.FlashButton();
             this.FBTN_EditPicture = new PhotoManagerClient.FlashButton();
             this.FBTN_NewPicture = new PhotoManagerClient.FlashButton();
+            this.displayHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.MS_Account.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -73,12 +76,22 @@
             // 
             this.groupBox1.Controls.Add(this.checkBox2);
             this.groupBox1.Controls.Add(this.CBX_UsersList);
-            this.groupBox1.Location = new System.Drawing.Point(245, 27);
+            this.groupBox1.Location = new System.Drawing.Point(270, 27);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(227, 94);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Users";
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(6, 24);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(161, 24);
+            this.checkBox2.TabIndex = 9;
+            this.checkBox2.Text = "Exclude my photos";
+            this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // CBX_UsersList
             // 
@@ -93,7 +106,8 @@
             // 
             this.MS_Account.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.accountToolStripMenuItem,
-            this.layoutToolStripMenuItem});
+            this.layoutToolStripMenuItem,
+            this.toolStripMenuItem1});
             this.MS_Account.Location = new System.Drawing.Point(0, 0);
             this.MS_Account.Name = "MS_Account";
             this.MS_Account.Size = new System.Drawing.Size(1153, 24);
@@ -189,19 +203,28 @@
             this.groupBox2.Controls.Add(this.flashButton1);
             this.groupBox2.Controls.Add(this.checkBox3);
             this.groupBox2.Controls.Add(this.CBX_Keywords);
-            this.groupBox2.Location = new System.Drawing.Point(478, 27);
+            this.groupBox2.Location = new System.Drawing.Point(503, 27);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(170, 94);
+            this.groupBox2.Size = new System.Drawing.Size(191, 94);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Keyword";
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(7, 24);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(15, 14);
+            this.checkBox3.TabIndex = 9;
+            this.checkBox3.UseVisualStyleBackColor = true;
             // 
             // CBX_Keywords
             // 
             this.CBX_Keywords.FormattingEnabled = true;
             this.CBX_Keywords.Location = new System.Drawing.Point(7, 58);
             this.CBX_Keywords.Name = "CBX_Keywords";
-            this.CBX_Keywords.Size = new System.Drawing.Size(155, 28);
+            this.CBX_Keywords.Size = new System.Drawing.Size(178, 28);
             this.CBX_Keywords.TabIndex = 0;
             this.CBX_Keywords.SelectedIndexChanged += new System.EventHandler(this.CBX_Keywords_SelectedIndexChanged);
             // 
@@ -214,7 +237,7 @@
             this.groupBox4.Controls.Add(this.FBTN_NewPicture);
             this.groupBox4.Location = new System.Drawing.Point(12, 27);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(227, 94);
+            this.groupBox4.Size = new System.Drawing.Size(252, 94);
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Commands";
@@ -225,12 +248,45 @@
             this.groupBox5.Controls.Add(this.checkBox1);
             this.groupBox5.Controls.Add(this.DTP_To);
             this.groupBox5.Controls.Add(this.DTP_From);
-            this.groupBox5.Location = new System.Drawing.Point(654, 27);
+            this.groupBox5.Location = new System.Drawing.Point(700, 27);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(271, 94);
+            this.groupBox5.Size = new System.Drawing.Size(246, 94);
             this.groupBox5.TabIndex = 1;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Date interval";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(18, 25);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(15, 14);
+            this.checkBox1.TabIndex = 8;
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // DTP_To
+            // 
+            this.DTP_To.Location = new System.Drawing.Point(74, 56);
+            this.DTP_To.Name = "DTP_To";
+            this.DTP_To.Size = new System.Drawing.Size(162, 26);
+            this.DTP_To.TabIndex = 7;
+            // 
+            // DTP_From
+            // 
+            this.DTP_From.Location = new System.Drawing.Point(74, 24);
+            this.DTP_From.Name = "DTP_From";
+            this.DTP_From.Size = new System.Drawing.Size(162, 26);
+            this.DTP_From.TabIndex = 6;
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.displayHelpToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.aboutToolStripMenuItem});
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(44, 20);
+            this.toolStripMenuItem1.Text = "Help";
             // 
             // PhotoBrowser
             // 
@@ -244,75 +300,29 @@
             this.PhotoBrowser.Size = new System.Drawing.Size(1129, 535);
             this.PhotoBrowser.TabIndex = 0;
             // 
-            // DTP_From
+            // toolStripSeparator1
             // 
-            this.DTP_From.Location = new System.Drawing.Point(101, 24);
-            this.DTP_From.Name = "DTP_From";
-            this.DTP_From.Size = new System.Drawing.Size(162, 26);
-            this.DTP_From.TabIndex = 6;
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
             // 
-            // DTP_To
+            // aboutToolStripMenuItem
             // 
-            this.DTP_To.Location = new System.Drawing.Point(101, 56);
-            this.DTP_To.Name = "DTP_To";
-            this.DTP_To.Size = new System.Drawing.Size(162, 26);
-            this.DTP_To.TabIndex = 7;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(18, 25);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 25);
-            this.checkBox1.TabIndex = 8;
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(6, 24);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(200, 25);
-            this.checkBox2.TabIndex = 9;
-            this.checkBox2.Text = "Exclude my photos";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(7, 24);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(80, 25);
-            this.checkBox3.TabIndex = 9;
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // FBTN_Help
-            // 
-            this.FBTN_Help.BackgroundImage = global::Client_PM.Properties.Resources.Help_icon;
-            this.FBTN_Help.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.FBTN_Help.ClickedImage = null;
-            this.FBTN_Help.DisabledImage = null;
-            this.FBTN_Help.Image = ((System.Drawing.Image)(resources.GetObject("FBTN_Help.Image")));
-            this.FBTN_Help.Location = new System.Drawing.Point(1129, 0);
-            this.FBTN_Help.Name = "FBTN_Help";
-            this.FBTN_Help.NeutralImage = null;
-            this.FBTN_Help.OverImage = null;
-            this.FBTN_Help.Size = new System.Drawing.Size(24, 24);
-            this.FBTN_Help.TabIndex = 5;
-            this.FBTN_Help.Text = "Play the slideshow...";
-            this.FBTN_Help.UseVisualStyleBackColor = true;
+            this.aboutToolStripMenuItem.Image = global::Client_PM.Properties.Resources.IMG_Info;
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Text = "About";
             // 
             // FBTN_Slideshow
             // 
-            this.FBTN_Slideshow.BackgroundImage = global::Client_PM.Properties.Resources.play;
+            this.FBTN_Slideshow.BackgroundImage = global::Client_PM.Properties.Resources.IMG_Play_Neutral;
             this.FBTN_Slideshow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.FBTN_Slideshow.ClickedImage = null;
-            this.FBTN_Slideshow.DisabledImage = null;
+            this.FBTN_Slideshow.ClickedImage = global::Client_PM.Properties.Resources.IMG_Play_Clicked;
+            this.FBTN_Slideshow.DisabledImage = global::Client_PM.Properties.Resources.IMG_Play_Disabled;
             this.FBTN_Slideshow.Image = ((System.Drawing.Image)(resources.GetObject("FBTN_Slideshow.Image")));
-            this.FBTN_Slideshow.Location = new System.Drawing.Point(1058, 52);
+            this.FBTN_Slideshow.Location = new System.Drawing.Point(1072, 52);
             this.FBTN_Slideshow.Name = "FBTN_Slideshow";
-            this.FBTN_Slideshow.NeutralImage = null;
-            this.FBTN_Slideshow.OverImage = null;
+            this.FBTN_Slideshow.NeutralImage = global::Client_PM.Properties.Resources.IMG_Play_Neutral;
+            this.FBTN_Slideshow.OverImage = global::Client_PM.Properties.Resources.IMG_Play_Over;
             this.FBTN_Slideshow.Size = new System.Drawing.Size(49, 49);
             this.FBTN_Slideshow.TabIndex = 4;
             this.FBTN_Slideshow.Text = "Play the slideshow...";
@@ -321,15 +331,15 @@
             // 
             // FBTN_Blacklist
             // 
-            this.FBTN_Blacklist.BackgroundImage = global::Client_PM.Properties.Resources.IMG_Blacklist;
+            this.FBTN_Blacklist.BackgroundImage = global::Client_PM.Properties.Resources.IMG_Blacklist_Neutral;
             this.FBTN_Blacklist.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.FBTN_Blacklist.ClickedImage = null;
-            this.FBTN_Blacklist.DisabledImage = null;
+            this.FBTN_Blacklist.ClickedImage = global::Client_PM.Properties.Resources.IMG_Blacklist_Clicked;
+            this.FBTN_Blacklist.DisabledImage = global::Client_PM.Properties.Resources.IMG_Blacklist_Disabled;
             this.FBTN_Blacklist.Image = ((System.Drawing.Image)(resources.GetObject("FBTN_Blacklist.Image")));
-            this.FBTN_Blacklist.Location = new System.Drawing.Point(971, 52);
+            this.FBTN_Blacklist.Location = new System.Drawing.Point(985, 52);
             this.FBTN_Blacklist.Name = "FBTN_Blacklist";
-            this.FBTN_Blacklist.NeutralImage = null;
-            this.FBTN_Blacklist.OverImage = null;
+            this.FBTN_Blacklist.NeutralImage = global::Client_PM.Properties.Resources.IMG_Blacklist_Neutral;
+            this.FBTN_Blacklist.OverImage = global::Client_PM.Properties.Resources.IMG_Blacklist_Over;
             this.FBTN_Blacklist.Size = new System.Drawing.Size(49, 49);
             this.FBTN_Blacklist.TabIndex = 3;
             this.FBTN_Blacklist.Text = "Open the user blacklist...";
@@ -338,15 +348,15 @@
             // 
             // flashButton1
             // 
-            this.flashButton1.BackgroundImage = global::Client_PM.Properties.Resources.search;
+            this.flashButton1.BackgroundImage = global::Client_PM.Properties.Resources.IMG_Search_Neutral;
             this.flashButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.flashButton1.ClickedImage = null;
-            this.flashButton1.DisabledImage = null;
+            this.flashButton1.ClickedImage = global::Client_PM.Properties.Resources.IMG_Search_Clicked;
+            this.flashButton1.DisabledImage = global::Client_PM.Properties.Resources.IMG_Search_Disabled;
             this.flashButton1.Image = ((System.Drawing.Image)(resources.GetObject("flashButton1.Image")));
-            this.flashButton1.Location = new System.Drawing.Point(132, 21);
+            this.flashButton1.Location = new System.Drawing.Point(153, 21);
             this.flashButton1.Name = "flashButton1";
-            this.flashButton1.NeutralImage = null;
-            this.flashButton1.OverImage = null;
+            this.flashButton1.NeutralImage = global::Client_PM.Properties.Resources.IMG_Search_Neutral;
+            this.flashButton1.OverImage = global::Client_PM.Properties.Resources.IMG_Search_Over;
             this.flashButton1.Size = new System.Drawing.Size(30, 30);
             this.flashButton1.TabIndex = 9;
             this.flashButton1.Text = "Add/Remove picture to/from slideshow";
@@ -354,90 +364,97 @@
             // 
             // FBTN_PictureSlideshow
             // 
-            this.FBTN_PictureSlideshow.BackgroundImage = global::Client_PM.Properties.Resources.add;
+            this.FBTN_PictureSlideshow.BackgroundImage = global::Client_PM.Properties.Resources.IMG_AddVideo_Neutral;
             this.FBTN_PictureSlideshow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.FBTN_PictureSlideshow.ClickedImage = null;
-            this.FBTN_PictureSlideshow.DisabledImage = null;
+            this.FBTN_PictureSlideshow.ClickedImage = global::Client_PM.Properties.Resources.IMG_AddVideo_Clicked;
+            this.FBTN_PictureSlideshow.DisabledImage = global::Client_PM.Properties.Resources.IMG_AddVideo_Disabled;
             this.FBTN_PictureSlideshow.Image = ((System.Drawing.Image)(resources.GetObject("FBTN_PictureSlideshow.Image")));
-            this.FBTN_PictureSlideshow.Location = new System.Drawing.Point(178, 35);
+            this.FBTN_PictureSlideshow.Location = new System.Drawing.Point(193, 35);
             this.FBTN_PictureSlideshow.Name = "FBTN_PictureSlideshow";
-            this.FBTN_PictureSlideshow.NeutralImage = null;
-            this.FBTN_PictureSlideshow.OverImage = null;
-            this.FBTN_PictureSlideshow.Size = new System.Drawing.Size(30, 30);
+            this.FBTN_PictureSlideshow.NeutralImage = global::Client_PM.Properties.Resources.IMG_AddVideo_Neutral;
+            this.FBTN_PictureSlideshow.OverImage = global::Client_PM.Properties.Resources.IMG_AddVideo_Over;
+            this.FBTN_PictureSlideshow.Size = new System.Drawing.Size(50, 35);
             this.FBTN_PictureSlideshow.TabIndex = 8;
             this.FBTN_PictureSlideshow.Text = "Add/Remove picture to/from slideshow";
             this.FBTN_PictureSlideshow.UseVisualStyleBackColor = true;
             // 
             // FBTN_ViewPictureInfo
             // 
-            this.FBTN_ViewPictureInfo.BackgroundImage = global::Client_PM.Properties.Resources.view;
+            this.FBTN_ViewPictureInfo.BackgroundImage = global::Client_PM.Properties.Resources.IMG_View_Neutral;
             this.FBTN_ViewPictureInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.FBTN_ViewPictureInfo.ClickedImage = null;
-            this.FBTN_ViewPictureInfo.DisabledImage = null;
+            this.FBTN_ViewPictureInfo.ClickedImage = global::Client_PM.Properties.Resources.IMG_View_Clicked;
+            this.FBTN_ViewPictureInfo.DisabledImage = global::Client_PM.Properties.Resources.IMG_View_Disabled;
             this.FBTN_ViewPictureInfo.Image = ((System.Drawing.Image)(resources.GetObject("FBTN_ViewPictureInfo.Image")));
-            this.FBTN_ViewPictureInfo.Location = new System.Drawing.Point(138, 35);
+            this.FBTN_ViewPictureInfo.Location = new System.Drawing.Point(133, 34);
             this.FBTN_ViewPictureInfo.Name = "FBTN_ViewPictureInfo";
-            this.FBTN_ViewPictureInfo.NeutralImage = null;
-            this.FBTN_ViewPictureInfo.OverImage = null;
-            this.FBTN_ViewPictureInfo.Size = new System.Drawing.Size(30, 30);
+            this.FBTN_ViewPictureInfo.NeutralImage = global::Client_PM.Properties.Resources.IMG_View_Neutral;
+            this.FBTN_ViewPictureInfo.OverImage = global::Client_PM.Properties.Resources.IMG_View_Over;
+            this.FBTN_ViewPictureInfo.Size = new System.Drawing.Size(54, 35);
             this.FBTN_ViewPictureInfo.TabIndex = 7;
             this.FBTN_ViewPictureInfo.Text = "View picture info...";
             this.FBTN_ViewPictureInfo.UseVisualStyleBackColor = true;
             // 
             // FBTN_DeletePicture
             // 
-            this.FBTN_DeletePicture.BackgroundImage = global::Client_PM.Properties.Resources.delete;
+            this.FBTN_DeletePicture.BackgroundImage = global::Client_PM.Properties.Resources.IMG_Delete_Neutral;
             this.FBTN_DeletePicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.FBTN_DeletePicture.ClickedImage = null;
-            this.FBTN_DeletePicture.DisabledImage = null;
+            this.FBTN_DeletePicture.ClickedImage = global::Client_PM.Properties.Resources.IMG_Delete_Clicked;
+            this.FBTN_DeletePicture.DisabledImage = global::Client_PM.Properties.Resources.IMG_Delete_Disabled;
             this.FBTN_DeletePicture.Image = ((System.Drawing.Image)(resources.GetObject("FBTN_DeletePicture.Image")));
-            this.FBTN_DeletePicture.Location = new System.Drawing.Point(98, 35);
+            this.FBTN_DeletePicture.Location = new System.Drawing.Point(91, 32);
             this.FBTN_DeletePicture.Name = "FBTN_DeletePicture";
-            this.FBTN_DeletePicture.NeutralImage = null;
-            this.FBTN_DeletePicture.OverImage = null;
-            this.FBTN_DeletePicture.Size = new System.Drawing.Size(30, 30);
+            this.FBTN_DeletePicture.NeutralImage = global::Client_PM.Properties.Resources.IMG_Delete_Neutral;
+            this.FBTN_DeletePicture.OverImage = global::Client_PM.Properties.Resources.IMG_Delete_Over;
+            this.FBTN_DeletePicture.Size = new System.Drawing.Size(40, 40);
             this.FBTN_DeletePicture.TabIndex = 6;
             this.FBTN_DeletePicture.Text = "Remove the picture";
             this.FBTN_DeletePicture.UseVisualStyleBackColor = true;
             // 
             // FBTN_EditPicture
             // 
-            this.FBTN_EditPicture.BackgroundImage = global::Client_PM.Properties.Resources.edit;
+            this.FBTN_EditPicture.BackgroundImage = global::Client_PM.Properties.Resources.IMG_Edit_Neutral;
             this.FBTN_EditPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.FBTN_EditPicture.ClickedImage = null;
-            this.FBTN_EditPicture.DisabledImage = null;
+            this.FBTN_EditPicture.ClickedImage = global::Client_PM.Properties.Resources.IMG_Edit_Clicked;
+            this.FBTN_EditPicture.DisabledImage = global::Client_PM.Properties.Resources.IMG_Edit_Disabled;
             this.FBTN_EditPicture.Image = ((System.Drawing.Image)(resources.GetObject("FBTN_EditPicture.Image")));
-            this.FBTN_EditPicture.Location = new System.Drawing.Point(60, 35);
+            this.FBTN_EditPicture.Location = new System.Drawing.Point(52, 32);
             this.FBTN_EditPicture.Name = "FBTN_EditPicture";
-            this.FBTN_EditPicture.NeutralImage = null;
-            this.FBTN_EditPicture.OverImage = null;
-            this.FBTN_EditPicture.Size = new System.Drawing.Size(30, 30);
+            this.FBTN_EditPicture.NeutralImage = global::Client_PM.Properties.Resources.IMG_Edit_Neutral;
+            this.FBTN_EditPicture.OverImage = global::Client_PM.Properties.Resources.IMG_Edit_Over;
+            this.FBTN_EditPicture.Size = new System.Drawing.Size(40, 40);
             this.FBTN_EditPicture.TabIndex = 5;
             this.FBTN_EditPicture.Text = "Edit picture...";
             this.FBTN_EditPicture.UseVisualStyleBackColor = true;
             // 
             // FBTN_NewPicture
             // 
-            this.FBTN_NewPicture.BackgroundImage = global::Client_PM.Properties.Resources.upload;
+            this.FBTN_NewPicture.BackgroundImage = global::Client_PM.Properties.Resources.IMG_Upload_Neutral;
             this.FBTN_NewPicture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.FBTN_NewPicture.ClickedImage = null;
-            this.FBTN_NewPicture.DisabledImage = null;
+            this.FBTN_NewPicture.ClickedImage = global::Client_PM.Properties.Resources.IMG_Upload_Clicked;
+            this.FBTN_NewPicture.DisabledImage = global::Client_PM.Properties.Resources.IMG_Upload_Disabled;
             this.FBTN_NewPicture.Image = ((System.Drawing.Image)(resources.GetObject("FBTN_NewPicture.Image")));
-            this.FBTN_NewPicture.Location = new System.Drawing.Point(20, 35);
+            this.FBTN_NewPicture.Location = new System.Drawing.Point(6, 32);
             this.FBTN_NewPicture.Name = "FBTN_NewPicture";
-            this.FBTN_NewPicture.NeutralImage = null;
-            this.FBTN_NewPicture.OverImage = null;
-            this.FBTN_NewPicture.Size = new System.Drawing.Size(30, 30);
+            this.FBTN_NewPicture.NeutralImage = global::Client_PM.Properties.Resources.IMG_Upload_Neutral;
+            this.FBTN_NewPicture.OverImage = global::Client_PM.Properties.Resources.IMG_Upload_Over;
+            this.FBTN_NewPicture.Size = new System.Drawing.Size(40, 40);
             this.FBTN_NewPicture.TabIndex = 4;
             this.FBTN_NewPicture.Text = "Upload a picture...";
             this.FBTN_NewPicture.UseVisualStyleBackColor = true;
+            // 
+            // displayHelpToolStripMenuItem
+            // 
+            this.displayHelpToolStripMenuItem.Image = global::Client_PM.Properties.Resources.IMG_Help;
+            this.displayHelpToolStripMenuItem.Name = "displayHelpToolStripMenuItem";
+            this.displayHelpToolStripMenuItem.ShortcutKeyDisplayString = "F1";
+            this.displayHelpToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.displayHelpToolStripMenuItem.Text = "Help";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1153, 674);
-            this.Controls.Add(this.FBTN_Help);
             this.Controls.Add(this.FBTN_Slideshow);
             this.Controls.Add(this.FBTN_Blacklist);
             this.Controls.Add(this.groupBox5);
@@ -496,13 +513,16 @@
         private PhotoManagerClient.FlashButton FBTN_EditPicture;
         private PhotoManagerClient.FlashButton FBTN_NewPicture;
         private PhotoManagerClient.FlashButton FBTN_Slideshow;
-        private PhotoManagerClient.FlashButton FBTN_Help;
         private System.Windows.Forms.DateTimePicker DTP_To;
         private System.Windows.Forms.DateTimePicker DTP_From;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox2;
         private PhotoManagerClient.FlashButton flashButton1;
         private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem displayHelpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
     }
 }
 

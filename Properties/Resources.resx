@@ -118,39 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="add" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\delete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="edit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\edit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IMG_Blacklist" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IMG_Blacklist.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IMG_Reset" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IMG_Reset.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="play" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\play.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="remove" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\remove.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="upload" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\upload.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="view" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\view.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Help_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Help-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="search" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="IMG_Shuffle_Checked_Clicked" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IMG_Shuffle_Checked_Clicked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -174,5 +141,143 @@
   </data>
   <data name="IMG_Shuffle_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IMG_Shuffle_Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_AddVideo_Clicked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_AddVideo_Clicked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_AddVideo_Disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_AddVideo_Disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_AddVideo_Neutral" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_AddVideo_Neutral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_AddVideo_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_AddVideo_Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Play_Clicked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_Play_Clicked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Play_Disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_Play_Disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Play_Neutral" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_Play_Neutral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Play_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_Play_Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_RemoveVideo_Clicked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_RemoveVideo_Clicked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_RemoveVideo_Disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_RemoveVideo_Disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_RemoveVideo_Neutral" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_RemoveVideo_Neutral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_RemoveVideo_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_RemoveVideo_Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_View_Clicked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_View_Clicked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_View_Disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_View_Disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_View_Neutral" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_View_Neutral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_View_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_View_Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Blacklist_Clicked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_Blacklist_Clicked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Blacklist_Disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_Blacklist_Disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Blacklist_Neutral" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_Blacklist_Neutral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Blacklist_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_Blacklist_Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Delete_Clicked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_Delete_Clicked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Delete_Disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_Delete_Disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Delete_Neutral" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_Delete_Neutral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Delete_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_Delete_Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Edit_Clicked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_Edit_Clicked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Edit_Disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_Edit_Disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Edit_Neutral" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_Edit_Neutral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Edit_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_Edit_Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Recycle_Clicked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_Recycle_Clicked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Recycle_Disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_Recycle_Disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Recycle_Neutral" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_Recycle_Neutral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Recycle_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_Recycle_Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Search_Clicked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_Search_Clicked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Search_Disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_Search_Disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Search_Neutral" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_Search_Neutral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Search_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_Search_Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Upload_Clicked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_Upload_Clicked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Upload_Disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_Upload_Disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Upload_Neutral" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_Upload_Neutral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Upload_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_Upload_Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Rotate_Clicked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_Rotate_Clicked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Rotate_Disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_Rotate_Disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Rotate_Neutral" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_Rotate_Neutral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Rotate_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_Rotate_Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Help" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_Help.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_Info" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_Info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
