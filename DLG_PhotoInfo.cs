@@ -13,7 +13,7 @@ namespace Client_PM
 {
     public partial class DLG_PhotoInfo : Form
     {
-        private static readonly string DIMENSIONS_FORMAT = "{0}px X {1}px";
+        private static readonly string DIMENSIONS_FORMAT = "{0} X {1}";
 
         public Photo SelectedPhoto { get; set; }
 

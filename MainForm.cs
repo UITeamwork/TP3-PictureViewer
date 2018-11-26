@@ -164,7 +164,7 @@ namespace Client_PM
                 // PhotoBrowser.SelectedPhoto will not be null since the button is not accessible if it's the case
                 SelectedPhoto = PhotoBrowser.SelectedPhoto
             };
-            dlg.ShowDialog();
+            dlg.Show();
         }
 
         #region Layout Menu
