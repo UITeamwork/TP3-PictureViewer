@@ -140,6 +140,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DLG_Slideshow";
             this.Text = "DLG_Slideshow";
+            this.Load += new System.EventHandler(this.DLG_Slideshow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TrckB_SlideshowSpeed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageBox1)).EndInit();
             this.ResumeLayout(false);

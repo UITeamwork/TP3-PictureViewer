@@ -16,8 +16,13 @@ namespace Client_PM
         {
             InitializeComponent();
         }
-
+        //oui bonjour modification test
         private void TrckB_SlideshowSpeed_Scroll(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DLG_Slideshow_Load(object sender, EventArgs e)
         {
 
         }
