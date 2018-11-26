@@ -44,5 +44,10 @@ namespace Client_PM
             RTBX_Description.Text = SelectedPhoto.Description;
             TBX_Keywords.Text = SelectedPhoto.Keywords;
         }
+
+        private void BTN_Close_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
