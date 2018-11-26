@@ -44,6 +44,10 @@
             this.rightToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.topToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bottomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.displayHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.CBX_Keywords = new System.Windows.Forms.ComboBox();
@@ -52,10 +56,6 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.DTP_To = new System.Windows.Forms.DateTimePicker();
             this.DTP_From = new System.Windows.Forms.DateTimePicker();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.PhotoBrowser = new PhotoManagerClient.PhotosBrowser();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.FBTN_Slideshow = new PhotoManagerClient.FlashButton();
             this.FBTN_Blacklist = new PhotoManagerClient.FlashButton();
             this.flashButton1 = new PhotoManagerClient.FlashButton();
@@ -64,7 +64,7 @@
             this.FBTN_DeletePicture = new PhotoManagerClient.FlashButton();
             this.FBTN_EditPicture = new PhotoManagerClient.FlashButton();
             this.FBTN_NewPicture = new PhotoManagerClient.FlashButton();
-            this.displayHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.PhotoBrowser = new PhotoManagerClient.PhotosBrowser();
             this.groupBox1.SuspendLayout();
             this.MS_Account.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -198,6 +198,36 @@
             this.bottomToolStripMenuItem.Text = "Bottom";
             this.bottomToolStripMenuItem.Click += new System.EventHandler(this.BTN_Bottom_Click);
             // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.displayHelpToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.aboutToolStripMenuItem});
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(44, 20);
+            this.toolStripMenuItem1.Text = "Help";
+            // 
+            // displayHelpToolStripMenuItem
+            // 
+            this.displayHelpToolStripMenuItem.Image = global::Client_PM.Properties.Resources.IMG_Help;
+            this.displayHelpToolStripMenuItem.Name = "displayHelpToolStripMenuItem";
+            this.displayHelpToolStripMenuItem.ShortcutKeyDisplayString = "F1";
+            this.displayHelpToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.displayHelpToolStripMenuItem.Text = "Help";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(115, 6);
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Image = global::Client_PM.Properties.Resources.IMG_Info;
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.aboutToolStripMenuItem.Text = "About";
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.flashButton1);
@@ -241,7 +271,6 @@
             this.groupBox4.TabIndex = 1;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Commands";
-            this.groupBox4.Enter += new System.EventHandler(this.groupBox4_Enter);
             // 
             // groupBox5
             // 
@@ -277,40 +306,6 @@
             this.DTP_From.Name = "DTP_From";
             this.DTP_From.Size = new System.Drawing.Size(162, 26);
             this.DTP_From.TabIndex = 6;
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.displayHelpToolStripMenuItem,
-            this.toolStripSeparator1,
-            this.aboutToolStripMenuItem});
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(44, 20);
-            this.toolStripMenuItem1.Text = "Help";
-            // 
-            // PhotoBrowser
-            // 
-            this.PhotoBrowser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.PhotoBrowser.Location = new System.Drawing.Point(12, 127);
-            this.PhotoBrowser.Name = "PhotoBrowser";
-            this.PhotoBrowser.Placement = PhotoManagerClient.PhotoBrowserPlacement.Left;
-            this.PhotoBrowser.SelectedPhoto = null;
-            this.PhotoBrowser.Size = new System.Drawing.Size(1129, 535);
-            this.PhotoBrowser.TabIndex = 0;
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Image = global::Client_PM.Properties.Resources.IMG_Info;
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.aboutToolStripMenuItem.Text = "About";
             // 
             // FBTN_Slideshow
             // 
@@ -393,6 +388,7 @@
             this.FBTN_ViewPictureInfo.TabIndex = 7;
             this.FBTN_ViewPictureInfo.Text = "View picture info...";
             this.FBTN_ViewPictureInfo.UseVisualStyleBackColor = true;
+            this.FBTN_ViewPictureInfo.Click += new System.EventHandler(this.FBTN_ViewPictureInfo_Click);
             // 
             // FBTN_DeletePicture
             // 
@@ -442,13 +438,18 @@
             this.FBTN_NewPicture.Text = "Upload a picture...";
             this.FBTN_NewPicture.UseVisualStyleBackColor = true;
             // 
-            // displayHelpToolStripMenuItem
+            // PhotoBrowser
             // 
-            this.displayHelpToolStripMenuItem.Image = global::Client_PM.Properties.Resources.IMG_Help;
-            this.displayHelpToolStripMenuItem.Name = "displayHelpToolStripMenuItem";
-            this.displayHelpToolStripMenuItem.ShortcutKeyDisplayString = "F1";
-            this.displayHelpToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.displayHelpToolStripMenuItem.Text = "Help";
+            this.PhotoBrowser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PhotoBrowser.Location = new System.Drawing.Point(12, 127);
+            this.PhotoBrowser.Name = "PhotoBrowser";
+            this.PhotoBrowser.Placement = PhotoManagerClient.PhotoBrowserPlacement.Left;
+            this.PhotoBrowser.SelectedPhoto = null;
+            this.PhotoBrowser.Size = new System.Drawing.Size(1129, 535);
+            this.PhotoBrowser.TabIndex = 0;
+            this.PhotoBrowser.SelectedChanged += new PhotoManagerClient.PhotosBrowser.SelectedChangedHandler(this.PhotoBrowser_SelectedChanged);
             // 
             // MainForm
             // 
@@ -469,7 +470,6 @@
             this.MinimumSize = new System.Drawing.Size(1169, 713);
             this.Name = "MainForm";
             this.Text = "Photo manager client application";
-            this.Load += new System.EventHandler(this.MainForm_Load);
             this.Shown += new System.EventHandler(this.MainForm_Shown);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
