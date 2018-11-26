@@ -108,3 +108,6 @@ Critères d’évaluation
 - Validation et filtre des données 10 pts
 - Convivialité / clarté / esthétisme 20 pts
 - Innovation (points bonis) 10 pts
+
+
+//Pour du temps a perdre : https://www.nirsoft.net/
