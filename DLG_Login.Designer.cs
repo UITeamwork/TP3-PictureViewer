@@ -34,7 +34,7 @@
             this.TBX_Password = new System.Windows.Forms.TextBox();
             this.BTN_Cancel = new System.Windows.Forms.Button();
             this.BTN_Ok = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.CBX_RememberMe = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -91,16 +91,16 @@
             this.BTN_Ok.Text = "Login";
             this.BTN_Ok.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // CBX_RememberMe
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(172, 105);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.checkBox1.Size = new System.Drawing.Size(133, 24);
-            this.checkBox1.TabIndex = 4;
-            this.checkBox1.Text = "Remember me";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.CBX_RememberMe.AutoSize = true;
+            this.CBX_RememberMe.Location = new System.Drawing.Point(172, 105);
+            this.CBX_RememberMe.Name = "CBX_RememberMe";
+            this.CBX_RememberMe.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.CBX_RememberMe.Size = new System.Drawing.Size(133, 24);
+            this.CBX_RememberMe.TabIndex = 4;
+            this.CBX_RememberMe.Text = "Remember me";
+            this.CBX_RememberMe.UseVisualStyleBackColor = true;
             // 
             // DLG_Login
             // 
@@ -109,8 +109,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.BTN_Cancel;
             this.ClientSize = new System.Drawing.Size(343, 182);
-            this.ControlBox = false;
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.CBX_RememberMe);
             this.Controls.Add(this.BTN_Ok);
             this.Controls.Add(this.BTN_Cancel);
             this.Controls.Add(this.TBX_Password);
@@ -137,6 +136,6 @@
         private System.Windows.Forms.TextBox TBX_Password;
         private System.Windows.Forms.Button BTN_Cancel;
         private System.Windows.Forms.Button BTN_Ok;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox CBX_RememberMe;
     }
 }
