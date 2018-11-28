@@ -23,6 +23,7 @@ namespace Client_PM
         private bool Initializing = true;
         private DLG_PhotoInfo InfoOnSelected = new DLG_PhotoInfo();
         private PhotoFilter PhotoFilter;
+        private bool PhotoBrowserIsExpanded = false;
 
         /// <summary>
         /// Constructed using <see cref="PhotoFilter.UsersList"/> that is loaded on construction. We don't want to load all users multiple times in the program.
@@ -118,6 +119,50 @@ namespace Client_PM
             Update_UI();
         }
 
+        private void HideShowAllGroups(bool isShow)
+        {
+            foreach(GroupBox group in FLP_Groups.Controls)
+            {
+                ChangeGroupVisibility(group, isShow);
+            }
+        }
+
+        private bool AllGroupsAreHidden()
+        {
+            foreach(Control group in FLP_Groups.Controls)
+            {
+                if (group.Visible)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        private void ChangeGroupVisibility(GroupBox gbx, bool isVisible)
+        {
+            FLP_Groups.Visible = (isVisible ? isVisible : FLP_Groups.Visible);
+            gbx.Visible = isVisible;
+
+            if (AllGroupsAreHidden())
+            {
+                if (!PhotoBrowserIsExpanded)
+                {
+                    PhotoBrowser.Location = FLP_Groups.Location;
+                    PhotoBrowser.Height += FLP_Groups.Height;
+                    FLP_Groups.Visible = false;
+                    PhotoBrowserIsExpanded = true;
+                }
+            }
+            else if (PhotoBrowserIsExpanded)
+            {
+                PhotoBrowser.Location = new Point(PhotoBrowser.Location.X, PhotoBrowser.Location.Y + FLP_Groups.Height);
+                PhotoBrowser.Height -= FLP_Groups.Height;
+                FLP_Groups.Visible = true;
+                PhotoBrowserIsExpanded = false;
+            }
+        }
+
         #region Control Events
         private void PhotoBrowser_SelectedChanged(object sender, EventArgs e)
         {
@@ -190,25 +235,66 @@ namespace Client_PM
         }
 
         #region Layout Menu
-        private void BTN_Left_Click(object sender, EventArgs e)
+
+        #region Browser Disposition
+        private void MI_Left_Click(object sender, EventArgs e)
         {
             PhotoBrowser.Placement = PhotoBrowserPlacement.Left;
         }
 
-        private void BTN_Top_Click(object sender, EventArgs e)
+        private void MI_Top_Click(object sender, EventArgs e)
         {
             PhotoBrowser.Placement = PhotoBrowserPlacement.Top;
         }
 
-        private void BTN_Right_Click(object sender, EventArgs e)
+        private void MI_Right_Click(object sender, EventArgs e)
         {
             PhotoBrowser.Placement = PhotoBrowserPlacement.Right;
         }
 
-        private void BTN_Bottom_Click(object sender, EventArgs e)
+        private void MI_Bottom_Click(object sender, EventArgs e)
         {
             PhotoBrowser.Placement = PhotoBrowserPlacement.Bottom;
         }
+        #endregion
+
+        #region Hide/Show Groups
+        private void MI_HideAll_Click(object sender, EventArgs e)
+        {
+            HideShowAllGroups(false);
+        }
+
+        private void MI_ShowAll_Click(object sender, EventArgs e)
+        {
+            HideShowAllGroups(true);
+        }
+
+        private void MI_HSCommands_Click(object sender, EventArgs e)
+        {
+            ChangeGroupVisibility(GBX_Commands, !GBX_Commands.Visible);
+        }
+
+        private void MI_HSUserFilter_Click(object sender, EventArgs e)
+        {
+            ChangeGroupVisibility(GBX_Users, !GBX_Users.Visible);
+        }
+
+        private void MI_HSKeywordFilter_Click(object sender, EventArgs e)
+        {
+            ChangeGroupVisibility(GBX_Keyword, !GBX_Keyword.Visible);
+        }
+
+        private void MI_HSDateFilter_Click(object sender, EventArgs e)
+        {
+            ChangeGroupVisibility(GBX_Date, !GBX_Date.Visible);
+        }
+
+        private void MI_HStodo_Click(object sender, EventArgs e)
+        {
+            ChangeGroupVisibility(GBX_Todo, !GBX_Todo.Visible);
+        }
+        #endregion
+
         #endregion
 
         #region Account Menu
