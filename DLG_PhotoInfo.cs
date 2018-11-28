@@ -22,15 +22,27 @@ namespace Client_PM
             InitializeComponent();
         }
 
-        private void DLG_PhotoInfo_Load(object sender, EventArgs e)
+        /// <summary>
+        /// Sends the data of <see cref="SelectedPhoto"/> and its owner to the interface
+        /// <para>Handles the visibility of the dialog</para>
+        /// /summary>
+        public void UpdateDLG()
         {
-            OwnerInfoToDLG();
-            PhotoInfoToDLG();
+            if (SelectedPhoto != null)
+            {
+                OwnerInfoToDLG();
+                PhotoInfoToDLG();
+                Show();
+            }
+            else
+            {
+                Close();
+            }
         }
 
         private void OwnerInfoToDLG()
         {
-            User owner = User.GetAllUsers().First(u => u.Id == SelectedPhoto.OwnerId);
+            User owner = MainForm.AllUsers.First(u => u.Id == SelectedPhoto.OwnerId);
             LAB_OwnerName.Text = owner.Name;
             PBX_OwnerPicture.Image = owner.GetAvatarThumbnailImage();
         }
@@ -48,6 +60,12 @@ namespace Client_PM
         private void BTN_Close_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void DLG_PhotoInfo_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+            Hide();
         }
     }
 }
