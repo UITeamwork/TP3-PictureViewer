@@ -40,25 +40,12 @@
             this.MI_Blacklist = new System.Windows.Forms.ToolStripMenuItem();
             this.MI_Account_Exit = new System.Windows.Forms.ToolStripMenuItem();
             this.layoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.MI_Help = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.GBX_Keyword = new System.Windows.Forms.GroupBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.CBX_Keywords = new System.Windows.Forms.ComboBox();
-            this.GBX_Commands = new System.Windows.Forms.GroupBox();
-            this.GBX_Date = new System.Windows.Forms.GroupBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.DTP_To = new System.Windows.Forms.DateTimePicker();
-            this.DTP_From = new System.Windows.Forms.DateTimePicker();
-            this.displayHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.GBX_Todo = new System.Windows.Forms.GroupBox();
-            this.MI_HideGroups = new System.Windows.Forms.ToolStripMenuItem();
             this.MI_BrowserDispo = new System.Windows.Forms.ToolStripMenuItem();
             this.MI_Left = new System.Windows.Forms.ToolStripMenuItem();
             this.MI_Right = new System.Windows.Forms.ToolStripMenuItem();
             this.MI_Top = new System.Windows.Forms.ToolStripMenuItem();
             this.MI_Bottom = new System.Windows.Forms.ToolStripMenuItem();
+            this.MI_HideGroups = new System.Windows.Forms.ToolStripMenuItem();
             this.MI_HideAll = new System.Windows.Forms.ToolStripMenuItem();
             this.MI_ShowAll = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
@@ -67,6 +54,19 @@
             this.MI_HSKeywordFilter = new System.Windows.Forms.ToolStripMenuItem();
             this.MI_HSDateFilter = new System.Windows.Forms.ToolStripMenuItem();
             this.MI_HStodo = new System.Windows.Forms.ToolStripMenuItem();
+            this.MI_Help = new System.Windows.Forms.ToolStripMenuItem();
+            this.displayHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.GBX_Keyword = new System.Windows.Forms.GroupBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.CBX_Keywords = new System.Windows.Forms.ComboBox();
+            this.GBX_Commands = new System.Windows.Forms.GroupBox();
+            this.GBX_Date = new System.Windows.Forms.GroupBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.DTP_To = new System.Windows.Forms.DateTimePicker();
+            this.DTP_From = new System.Windows.Forms.DateTimePicker();
+            this.GBX_Todo = new System.Windows.Forms.GroupBox();
             this.FLP_Groups = new System.Windows.Forms.FlowLayoutPanel();
             this.FBTN_PictureSlideshow = new PhotoManagerClient.FlashButton();
             this.FBTN_ViewPictureInfo = new PhotoManagerClient.FlashButton();
@@ -181,6 +181,124 @@
             this.layoutToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
             this.layoutToolStripMenuItem.Text = "Layout";
             // 
+            // MI_BrowserDispo
+            // 
+            this.MI_BrowserDispo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MI_Left,
+            this.MI_Right,
+            this.MI_Top,
+            this.MI_Bottom});
+            this.MI_BrowserDispo.Name = "MI_BrowserDispo";
+            this.MI_BrowserDispo.Size = new System.Drawing.Size(178, 22);
+            this.MI_BrowserDispo.Text = "Browser Disposition";
+            // 
+            // MI_Left
+            // 
+            this.MI_Left.Name = "MI_Left";
+            this.MI_Left.Size = new System.Drawing.Size(114, 22);
+            this.MI_Left.Text = "Left";
+            this.MI_Left.Click += new System.EventHandler(this.MI_Left_Click);
+            // 
+            // MI_Right
+            // 
+            this.MI_Right.Name = "MI_Right";
+            this.MI_Right.Size = new System.Drawing.Size(114, 22);
+            this.MI_Right.Text = "Right";
+            this.MI_Right.Click += new System.EventHandler(this.MI_Right_Click);
+            // 
+            // MI_Top
+            // 
+            this.MI_Top.Name = "MI_Top";
+            this.MI_Top.Size = new System.Drawing.Size(114, 22);
+            this.MI_Top.Text = "Top";
+            this.MI_Top.Click += new System.EventHandler(this.MI_Top_Click);
+            // 
+            // MI_Bottom
+            // 
+            this.MI_Bottom.Name = "MI_Bottom";
+            this.MI_Bottom.Size = new System.Drawing.Size(114, 22);
+            this.MI_Bottom.Text = "Bottom";
+            this.MI_Bottom.Click += new System.EventHandler(this.MI_Bottom_Click);
+            // 
+            // MI_HideGroups
+            // 
+            this.MI_HideGroups.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MI_HideAll,
+            this.MI_ShowAll,
+            this.toolStripSeparator2,
+            this.MI_HSCommands,
+            this.MI_HSUserFilter,
+            this.MI_HSKeywordFilter,
+            this.MI_HSDateFilter,
+            this.MI_HStodo});
+            this.MI_HideGroups.Name = "MI_HideGroups";
+            this.MI_HideGroups.Size = new System.Drawing.Size(178, 22);
+            this.MI_HideGroups.Text = "Hide Commands";
+            // 
+            // MI_HideAll
+            // 
+            this.MI_HideAll.Name = "MI_HideAll";
+            this.MI_HideAll.Size = new System.Drawing.Size(188, 22);
+            this.MI_HideAll.Text = "Hide All";
+            this.MI_HideAll.Click += new System.EventHandler(this.MI_HideAll_Click);
+            // 
+            // MI_ShowAll
+            // 
+            this.MI_ShowAll.Name = "MI_ShowAll";
+            this.MI_ShowAll.Size = new System.Drawing.Size(188, 22);
+            this.MI_ShowAll.Text = "Show All";
+            this.MI_ShowAll.Click += new System.EventHandler(this.MI_ShowAll_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(185, 6);
+            // 
+            // MI_HSCommands
+            // 
+            this.MI_HSCommands.Checked = true;
+            this.MI_HSCommands.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.MI_HSCommands.Name = "MI_HSCommands";
+            this.MI_HSCommands.Size = new System.Drawing.Size(188, 22);
+            this.MI_HSCommands.Text = "Toggle Commands";
+            this.MI_HSCommands.Click += new System.EventHandler(this.MI_HSCommands_Click);
+            // 
+            // MI_HSUserFilter
+            // 
+            this.MI_HSUserFilter.Checked = true;
+            this.MI_HSUserFilter.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.MI_HSUserFilter.Name = "MI_HSUserFilter";
+            this.MI_HSUserFilter.Size = new System.Drawing.Size(188, 22);
+            this.MI_HSUserFilter.Text = "Toggle User Filter";
+            this.MI_HSUserFilter.Click += new System.EventHandler(this.MI_HSUserFilter_Click);
+            // 
+            // MI_HSKeywordFilter
+            // 
+            this.MI_HSKeywordFilter.Checked = true;
+            this.MI_HSKeywordFilter.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.MI_HSKeywordFilter.Name = "MI_HSKeywordFilter";
+            this.MI_HSKeywordFilter.Size = new System.Drawing.Size(188, 22);
+            this.MI_HSKeywordFilter.Text = "Toggle Keyword Filter";
+            this.MI_HSKeywordFilter.Click += new System.EventHandler(this.MI_HSKeywordFilter_Click);
+            // 
+            // MI_HSDateFilter
+            // 
+            this.MI_HSDateFilter.Checked = true;
+            this.MI_HSDateFilter.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.MI_HSDateFilter.Name = "MI_HSDateFilter";
+            this.MI_HSDateFilter.Size = new System.Drawing.Size(188, 22);
+            this.MI_HSDateFilter.Text = "Toggle Date Filter";
+            this.MI_HSDateFilter.Click += new System.EventHandler(this.MI_HSDateFilter_Click);
+            // 
+            // MI_HStodo
+            // 
+            this.MI_HStodo.Checked = true;
+            this.MI_HStodo.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.MI_HStodo.Name = "MI_HStodo";
+            this.MI_HStodo.Size = new System.Drawing.Size(188, 22);
+            this.MI_HStodo.Text = "Toggle todo";
+            this.MI_HStodo.Click += new System.EventHandler(this.MI_HStodo_Click);
+            // 
             // MI_Help
             // 
             this.MI_Help.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -191,10 +309,25 @@
             this.MI_Help.Size = new System.Drawing.Size(44, 20);
             this.MI_Help.Text = "Help";
             // 
+            // displayHelpToolStripMenuItem
+            // 
+            this.displayHelpToolStripMenuItem.Image = global::Client_PM.Properties.Resources.IMG_Help;
+            this.displayHelpToolStripMenuItem.Name = "displayHelpToolStripMenuItem";
+            this.displayHelpToolStripMenuItem.ShortcutKeyDisplayString = "F1";
+            this.displayHelpToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.displayHelpToolStripMenuItem.Text = "Help";
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(115, 6);
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Image = global::Client_PM.Properties.Resources.IMG_Info;
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.aboutToolStripMenuItem.Text = "About";
             // 
             // GBX_Keyword
             // 
@@ -275,21 +408,6 @@
             this.DTP_From.Size = new System.Drawing.Size(165, 26);
             this.DTP_From.TabIndex = 6;
             // 
-            // displayHelpToolStripMenuItem
-            // 
-            this.displayHelpToolStripMenuItem.Image = global::Client_PM.Properties.Resources.IMG_Help;
-            this.displayHelpToolStripMenuItem.Name = "displayHelpToolStripMenuItem";
-            this.displayHelpToolStripMenuItem.ShortcutKeyDisplayString = "F1";
-            this.displayHelpToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
-            this.displayHelpToolStripMenuItem.Text = "Help";
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Image = global::Client_PM.Properties.Resources.IMG_Info;
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
-            this.aboutToolStripMenuItem.Text = "About";
-            // 
             // GBX_Todo
             // 
             this.GBX_Todo.Controls.Add(this.FBTN_Blacklist);
@@ -301,114 +419,6 @@
             this.GBX_Todo.TabStop = false;
             this.GBX_Todo.Text = "todo";
             // 
-            // MI_HideGroups
-            // 
-            this.MI_HideGroups.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.MI_HideAll,
-            this.MI_ShowAll,
-            this.toolStripSeparator2,
-            this.MI_HSCommands,
-            this.MI_HSUserFilter,
-            this.MI_HSKeywordFilter,
-            this.MI_HSDateFilter,
-            this.MI_HStodo});
-            this.MI_HideGroups.Name = "MI_HideGroups";
-            this.MI_HideGroups.Size = new System.Drawing.Size(180, 22);
-            this.MI_HideGroups.Text = "Hide Commands";
-            // 
-            // MI_BrowserDispo
-            // 
-            this.MI_BrowserDispo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.MI_Left,
-            this.MI_Right,
-            this.MI_Top,
-            this.MI_Bottom});
-            this.MI_BrowserDispo.Name = "MI_BrowserDispo";
-            this.MI_BrowserDispo.Size = new System.Drawing.Size(180, 22);
-            this.MI_BrowserDispo.Text = "Browser Disposition";
-            // 
-            // MI_Left
-            // 
-            this.MI_Left.Name = "MI_Left";
-            this.MI_Left.Size = new System.Drawing.Size(114, 22);
-            this.MI_Left.Text = "Left";
-            this.MI_Left.Click += new System.EventHandler(this.MI_Left_Click);
-            // 
-            // MI_Right
-            // 
-            this.MI_Right.Name = "MI_Right";
-            this.MI_Right.Size = new System.Drawing.Size(114, 22);
-            this.MI_Right.Text = "Right";
-            this.MI_Right.Click += new System.EventHandler(this.MI_Right_Click);
-            // 
-            // MI_Top
-            // 
-            this.MI_Top.Name = "MI_Top";
-            this.MI_Top.Size = new System.Drawing.Size(114, 22);
-            this.MI_Top.Text = "Top";
-            this.MI_Top.Click += new System.EventHandler(this.MI_Top_Click);
-            // 
-            // MI_Bottom
-            // 
-            this.MI_Bottom.Name = "MI_Bottom";
-            this.MI_Bottom.Size = new System.Drawing.Size(114, 22);
-            this.MI_Bottom.Text = "Bottom";
-            this.MI_Bottom.Click += new System.EventHandler(this.MI_Bottom_Click);
-            // 
-            // MI_HideAll
-            // 
-            this.MI_HideAll.Name = "MI_HideAll";
-            this.MI_HideAll.Size = new System.Drawing.Size(180, 22);
-            this.MI_HideAll.Text = "Hide All";
-            this.MI_HideAll.Click += new System.EventHandler(this.MI_HideAll_Click);
-            // 
-            // MI_ShowAll
-            // 
-            this.MI_ShowAll.Name = "MI_ShowAll";
-            this.MI_ShowAll.Size = new System.Drawing.Size(180, 22);
-            this.MI_ShowAll.Text = "Show All";
-            this.MI_ShowAll.Click += new System.EventHandler(this.MI_ShowAll_Click);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
-            // 
-            // MI_HSCommands
-            // 
-            this.MI_HSCommands.Name = "MI_HSCommands";
-            this.MI_HSCommands.Size = new System.Drawing.Size(180, 22);
-            this.MI_HSCommands.Text = "Hide Commands";
-            this.MI_HSCommands.Click += new System.EventHandler(this.MI_HSCommands_Click);
-            // 
-            // MI_HSUserFilter
-            // 
-            this.MI_HSUserFilter.Name = "MI_HSUserFilter";
-            this.MI_HSUserFilter.Size = new System.Drawing.Size(180, 22);
-            this.MI_HSUserFilter.Text = "Hide User Filter";
-            this.MI_HSUserFilter.Click += new System.EventHandler(this.MI_HSUserFilter_Click);
-            // 
-            // MI_HSKeywordFilter
-            // 
-            this.MI_HSKeywordFilter.Name = "MI_HSKeywordFilter";
-            this.MI_HSKeywordFilter.Size = new System.Drawing.Size(180, 22);
-            this.MI_HSKeywordFilter.Text = "Hide Keyword Filter";
-            this.MI_HSKeywordFilter.Click += new System.EventHandler(this.MI_HSKeywordFilter_Click);
-            // 
-            // MI_HSDateFilter
-            // 
-            this.MI_HSDateFilter.Name = "MI_HSDateFilter";
-            this.MI_HSDateFilter.Size = new System.Drawing.Size(180, 22);
-            this.MI_HSDateFilter.Text = "Hide Date Filter";
-            this.MI_HSDateFilter.Click += new System.EventHandler(this.MI_HSDateFilter_Click);
-            // 
-            // MI_HStodo
-            // 
-            this.MI_HStodo.Name = "MI_HStodo";
-            this.MI_HStodo.Size = new System.Drawing.Size(180, 22);
-            this.MI_HStodo.Text = "Hide todo";
-            this.MI_HStodo.Click += new System.EventHandler(this.MI_HStodo_Click);
-            // 
             // FLP_Groups
             // 
             this.FLP_Groups.Controls.Add(this.GBX_Commands);
@@ -418,21 +428,21 @@
             this.FLP_Groups.Controls.Add(this.GBX_Todo);
             this.FLP_Groups.Location = new System.Drawing.Point(12, 27);
             this.FLP_Groups.Name = "FLP_Groups";
-            this.FLP_Groups.Size = new System.Drawing.Size(1030, 109);
+            this.FLP_Groups.Size = new System.Drawing.Size(1022, 109);
             this.FLP_Groups.TabIndex = 11;
             // 
             // FBTN_PictureSlideshow
             // 
-            this.FBTN_PictureSlideshow.BackgroundImage = global::Client_PM.Properties.Resources.IMG_AddVideo_Neutral;
+            this.FBTN_PictureSlideshow.BackgroundImage = global::Client_PM.Properties.Resources.IMG_AddPicture_Neutral;
             this.FBTN_PictureSlideshow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.FBTN_PictureSlideshow.ClickedImage = global::Client_PM.Properties.Resources.IMG_AddVideo_Clicked;
-            this.FBTN_PictureSlideshow.DisabledImage = global::Client_PM.Properties.Resources.IMG_AddVideo_Disabled;
+            this.FBTN_PictureSlideshow.ClickedImage = global::Client_PM.Properties.Resources.IMG_AddPicture_Clicked;
+            this.FBTN_PictureSlideshow.DisabledImage = global::Client_PM.Properties.Resources.IMG_AddPicture_Disabled;
             this.FBTN_PictureSlideshow.Image = ((System.Drawing.Image)(resources.GetObject("FBTN_PictureSlideshow.Image")));
-            this.FBTN_PictureSlideshow.Location = new System.Drawing.Point(235, 35);
+            this.FBTN_PictureSlideshow.Location = new System.Drawing.Point(237, 32);
             this.FBTN_PictureSlideshow.Name = "FBTN_PictureSlideshow";
-            this.FBTN_PictureSlideshow.NeutralImage = global::Client_PM.Properties.Resources.IMG_AddVideo_Neutral;
-            this.FBTN_PictureSlideshow.OverImage = global::Client_PM.Properties.Resources.IMG_AddVideo_Over;
-            this.FBTN_PictureSlideshow.Size = new System.Drawing.Size(50, 35);
+            this.FBTN_PictureSlideshow.NeutralImage = global::Client_PM.Properties.Resources.IMG_AddPicture_Neutral;
+            this.FBTN_PictureSlideshow.OverImage = global::Client_PM.Properties.Resources.IMG_AddPicture_Over;
+            this.FBTN_PictureSlideshow.Size = new System.Drawing.Size(45, 40);
             this.FBTN_PictureSlideshow.TabIndex = 8;
             this.FBTN_PictureSlideshow.Text = "Add/Remove picture to/from slideshow";
             this.FBTN_PictureSlideshow.UseVisualStyleBackColor = true;
@@ -444,7 +454,7 @@
             this.FBTN_ViewPictureInfo.ClickedImage = global::Client_PM.Properties.Resources.IMG_View_Clicked;
             this.FBTN_ViewPictureInfo.DisabledImage = global::Client_PM.Properties.Resources.IMG_View_Disabled;
             this.FBTN_ViewPictureInfo.Image = ((System.Drawing.Image)(resources.GetObject("FBTN_ViewPictureInfo.Image")));
-            this.FBTN_ViewPictureInfo.Location = new System.Drawing.Point(168, 35);
+            this.FBTN_ViewPictureInfo.Location = new System.Drawing.Point(171, 35);
             this.FBTN_ViewPictureInfo.Name = "FBTN_ViewPictureInfo";
             this.FBTN_ViewPictureInfo.NeutralImage = global::Client_PM.Properties.Resources.IMG_View_Neutral;
             this.FBTN_ViewPictureInfo.OverImage = global::Client_PM.Properties.Resources.IMG_View_Over;
@@ -461,7 +471,7 @@
             this.FBTN_DeletePicture.ClickedImage = global::Client_PM.Properties.Resources.IMG_Delete_Clicked;
             this.FBTN_DeletePicture.DisabledImage = global::Client_PM.Properties.Resources.IMG_Delete_Disabled;
             this.FBTN_DeletePicture.Image = ((System.Drawing.Image)(resources.GetObject("FBTN_DeletePicture.Image")));
-            this.FBTN_DeletePicture.Location = new System.Drawing.Point(115, 32);
+            this.FBTN_DeletePicture.Location = new System.Drawing.Point(118, 32);
             this.FBTN_DeletePicture.Name = "FBTN_DeletePicture";
             this.FBTN_DeletePicture.NeutralImage = global::Client_PM.Properties.Resources.IMG_Delete_Neutral;
             this.FBTN_DeletePicture.OverImage = global::Client_PM.Properties.Resources.IMG_Delete_Over;
@@ -477,7 +487,7 @@
             this.FBTN_EditPicture.ClickedImage = global::Client_PM.Properties.Resources.IMG_Edit_Clicked;
             this.FBTN_EditPicture.DisabledImage = global::Client_PM.Properties.Resources.IMG_Edit_Disabled;
             this.FBTN_EditPicture.Image = ((System.Drawing.Image)(resources.GetObject("FBTN_EditPicture.Image")));
-            this.FBTN_EditPicture.Location = new System.Drawing.Point(63, 32);
+            this.FBTN_EditPicture.Location = new System.Drawing.Point(66, 32);
             this.FBTN_EditPicture.Name = "FBTN_EditPicture";
             this.FBTN_EditPicture.NeutralImage = global::Client_PM.Properties.Resources.IMG_Edit_Neutral;
             this.FBTN_EditPicture.OverImage = global::Client_PM.Properties.Resources.IMG_Edit_Over;
@@ -493,7 +503,7 @@
             this.FBTN_NewPicture.ClickedImage = global::Client_PM.Properties.Resources.IMG_Upload_Clicked;
             this.FBTN_NewPicture.DisabledImage = global::Client_PM.Properties.Resources.IMG_Upload_Disabled;
             this.FBTN_NewPicture.Image = ((System.Drawing.Image)(resources.GetObject("FBTN_NewPicture.Image")));
-            this.FBTN_NewPicture.Location = new System.Drawing.Point(11, 32);
+            this.FBTN_NewPicture.Location = new System.Drawing.Point(14, 32);
             this.FBTN_NewPicture.Name = "FBTN_NewPicture";
             this.FBTN_NewPicture.NeutralImage = global::Client_PM.Properties.Resources.IMG_Upload_Neutral;
             this.FBTN_NewPicture.OverImage = global::Client_PM.Properties.Resources.IMG_Upload_Over;

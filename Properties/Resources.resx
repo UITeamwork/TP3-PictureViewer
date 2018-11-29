@@ -142,18 +142,6 @@
   <data name="IMG_Shuffle_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IMG_Shuffle_Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="IMG_AddVideo_Clicked" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IMG_AddVideo_Clicked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IMG_AddVideo_Disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IMG_AddVideo_Disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IMG_AddVideo_Neutral" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IMG_AddVideo_Neutral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IMG_AddVideo_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IMG_AddVideo_Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="IMG_Play_Clicked" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IMG_Play_Clicked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -165,18 +153,6 @@
   </data>
   <data name="IMG_Play_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IMG_Play_Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IMG_RemoveVideo_Clicked" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IMG_RemoveVideo_Clicked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IMG_RemoveVideo_Disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IMG_RemoveVideo_Disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IMG_RemoveVideo_Neutral" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IMG_RemoveVideo_Neutral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IMG_RemoveVideo_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IMG_RemoveVideo_Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="IMG_View_Clicked" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IMG_View_Clicked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -238,18 +214,6 @@
   <data name="IMG_Recycle_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IMG_Recycle_Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="IMG_Search_Clicked" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IMG_Search_Clicked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IMG_Search_Disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IMG_Search_Disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IMG_Search_Neutral" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IMG_Search_Neutral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="IMG_Search_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IMG_Search_Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="IMG_Upload_Clicked" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IMG_Upload_Clicked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -279,5 +243,29 @@
   </data>
   <data name="IMG_Info" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IMG_Info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_AddPicture_Clicked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_AddPicture_Clicked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_AddPicture_Disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_AddPicture_Disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_AddPicture_Neutral" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_AddPicture_Neutral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_AddPicture_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_AddPicture_Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_RemovePicture_Clicked" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_RemovePicture_Clicked.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_RemovePicture_Disabled" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_RemovePicture_Disabled.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_RemovePicture_Neutral" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_RemovePicture_Neutral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IMG_RemovePicture_Over" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IMG_RemovePicture_Over.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
