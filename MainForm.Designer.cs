@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.GBX_Users = new System.Windows.Forms.GroupBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.CBX_ExcludeMine = new System.Windows.Forms.CheckBox();
             this.CBX_UsersList = new System.Windows.Forms.ComboBox();
             this.MS_Account = new System.Windows.Forms.MenuStrip();
             this.accountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -57,18 +57,18 @@
             this.MI_Help = new System.Windows.Forms.ToolStripMenuItem();
             this.displayHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MI_About = new System.Windows.Forms.ToolStripMenuItem();
             this.GBX_Keyword = new System.Windows.Forms.GroupBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.CBX_KeywordFilter = new System.Windows.Forms.CheckBox();
             this.CBX_Keywords = new System.Windows.Forms.ComboBox();
             this.GBX_Commands = new System.Windows.Forms.GroupBox();
             this.GBX_Date = new System.Windows.Forms.GroupBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.CBX_DateFilter = new System.Windows.Forms.CheckBox();
             this.DTP_To = new System.Windows.Forms.DateTimePicker();
             this.DTP_From = new System.Windows.Forms.DateTimePicker();
             this.GBX_Todo = new System.Windows.Forms.GroupBox();
             this.FLP_Groups = new System.Windows.Forms.FlowLayoutPanel();
-            this.FBTN_PictureSlideshow = new PhotoManagerClient.FlashButton();
+            this.FBTN_PhotoToSlideshow = new PhotoManagerClient.FlashButton();
             this.FBTN_ViewPictureInfo = new PhotoManagerClient.FlashButton();
             this.FBTN_DeletePicture = new PhotoManagerClient.FlashButton();
             this.FBTN_EditPicture = new PhotoManagerClient.FlashButton();
@@ -87,7 +87,7 @@
             // 
             // GBX_Users
             // 
-            this.GBX_Users.Controls.Add(this.checkBox2);
+            this.GBX_Users.Controls.Add(this.CBX_ExcludeMine);
             this.GBX_Users.Controls.Add(this.CBX_UsersList);
             this.GBX_Users.Location = new System.Drawing.Point(307, 3);
             this.GBX_Users.Name = "GBX_Users";
@@ -96,15 +96,16 @@
             this.GBX_Users.TabStop = false;
             this.GBX_Users.Text = "Users";
             // 
-            // checkBox2
+            // CBX_ExcludeMine
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(6, 19);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(161, 24);
-            this.checkBox2.TabIndex = 9;
-            this.checkBox2.Text = "Exclude my photos";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.CBX_ExcludeMine.AutoSize = true;
+            this.CBX_ExcludeMine.Location = new System.Drawing.Point(6, 19);
+            this.CBX_ExcludeMine.Name = "CBX_ExcludeMine";
+            this.CBX_ExcludeMine.Size = new System.Drawing.Size(161, 24);
+            this.CBX_ExcludeMine.TabIndex = 9;
+            this.CBX_ExcludeMine.Text = "Exclude my photos";
+            this.CBX_ExcludeMine.UseVisualStyleBackColor = true;
+            this.CBX_ExcludeMine.CheckedChanged += new System.EventHandler(this.CBX_ExcludeMine_CheckedChanged);
             // 
             // CBX_UsersList
             // 
@@ -142,34 +143,39 @@
             // MI_Account_Login
             // 
             this.MI_Account_Login.Name = "MI_Account_Login";
-            this.MI_Account_Login.Size = new System.Drawing.Size(117, 22);
+            this.MI_Account_Login.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.L)));
+            this.MI_Account_Login.Size = new System.Drawing.Size(154, 22);
             this.MI_Account_Login.Text = "Login";
             this.MI_Account_Login.Click += new System.EventHandler(this.MI_Account_Login_Click);
             // 
             // MI_Account_Profil
             // 
             this.MI_Account_Profil.Name = "MI_Account_Profil";
-            this.MI_Account_Profil.Size = new System.Drawing.Size(117, 22);
+            this.MI_Account_Profil.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.P)));
+            this.MI_Account_Profil.Size = new System.Drawing.Size(154, 22);
             this.MI_Account_Profil.Text = "Profil";
             this.MI_Account_Profil.Click += new System.EventHandler(this.MI_Account_Profil_Click);
             // 
             // Mi_Account_Create
             // 
             this.Mi_Account_Create.Name = "Mi_Account_Create";
-            this.Mi_Account_Create.Size = new System.Drawing.Size(117, 22);
+            this.Mi_Account_Create.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.C)));
+            this.Mi_Account_Create.Size = new System.Drawing.Size(154, 22);
             this.Mi_Account_Create.Text = "Create";
             this.Mi_Account_Create.Click += new System.EventHandler(this.Mi_Account_Create_Click);
             // 
             // MI_Blacklist
             // 
             this.MI_Blacklist.Name = "MI_Blacklist";
-            this.MI_Blacklist.Size = new System.Drawing.Size(117, 22);
+            this.MI_Blacklist.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.B)));
+            this.MI_Blacklist.Size = new System.Drawing.Size(154, 22);
             this.MI_Blacklist.Text = "Blacklist";
             // 
             // MI_Account_Exit
             // 
             this.MI_Account_Exit.Name = "MI_Account_Exit";
-            this.MI_Account_Exit.Size = new System.Drawing.Size(117, 22);
+            this.MI_Account_Exit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
+            this.MI_Account_Exit.Size = new System.Drawing.Size(154, 22);
             this.MI_Account_Exit.Text = "Exit";
             // 
             // layoutToolStripMenuItem
@@ -195,28 +201,32 @@
             // MI_Left
             // 
             this.MI_Left.Name = "MI_Left";
-            this.MI_Left.Size = new System.Drawing.Size(114, 22);
+            this.MI_Left.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.Left)));
+            this.MI_Left.Size = new System.Drawing.Size(175, 22);
             this.MI_Left.Text = "Left";
             this.MI_Left.Click += new System.EventHandler(this.MI_Left_Click);
             // 
             // MI_Right
             // 
             this.MI_Right.Name = "MI_Right";
-            this.MI_Right.Size = new System.Drawing.Size(114, 22);
+            this.MI_Right.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.Right)));
+            this.MI_Right.Size = new System.Drawing.Size(175, 22);
             this.MI_Right.Text = "Right";
             this.MI_Right.Click += new System.EventHandler(this.MI_Right_Click);
             // 
             // MI_Top
             // 
             this.MI_Top.Name = "MI_Top";
-            this.MI_Top.Size = new System.Drawing.Size(114, 22);
+            this.MI_Top.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.Up)));
+            this.MI_Top.Size = new System.Drawing.Size(175, 22);
             this.MI_Top.Text = "Top";
             this.MI_Top.Click += new System.EventHandler(this.MI_Top_Click);
             // 
             // MI_Bottom
             // 
             this.MI_Bottom.Name = "MI_Bottom";
-            this.MI_Bottom.Size = new System.Drawing.Size(114, 22);
+            this.MI_Bottom.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.Down)));
+            this.MI_Bottom.Size = new System.Drawing.Size(175, 22);
             this.MI_Bottom.Text = "Bottom";
             this.MI_Bottom.Click += new System.EventHandler(this.MI_Bottom_Click);
             // 
@@ -304,7 +314,7 @@
             this.MI_Help.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.displayHelpToolStripMenuItem,
             this.toolStripSeparator1,
-            this.aboutToolStripMenuItem});
+            this.MI_About});
             this.MI_Help.Name = "MI_Help";
             this.MI_Help.Size = new System.Drawing.Size(44, 20);
             this.MI_Help.Text = "Help";
@@ -322,16 +332,17 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(115, 6);
             // 
-            // aboutToolStripMenuItem
+            // MI_About
             // 
-            this.aboutToolStripMenuItem.Image = global::Client_PM.Properties.Resources.IMG_Info;
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
-            this.aboutToolStripMenuItem.Text = "About";
+            this.MI_About.Image = global::Client_PM.Properties.Resources.IMG_Info;
+            this.MI_About.Name = "MI_About";
+            this.MI_About.Size = new System.Drawing.Size(118, 22);
+            this.MI_About.Text = "About";
+            this.MI_About.Click += new System.EventHandler(this.MI_About_Click);
             // 
             // GBX_Keyword
             // 
-            this.GBX_Keyword.Controls.Add(this.checkBox3);
+            this.GBX_Keyword.Controls.Add(this.CBX_KeywordFilter);
             this.GBX_Keyword.Controls.Add(this.CBX_Keywords);
             this.GBX_Keyword.Location = new System.Drawing.Point(490, 3);
             this.GBX_Keyword.Name = "GBX_Keyword";
@@ -340,14 +351,15 @@
             this.GBX_Keyword.TabStop = false;
             this.GBX_Keyword.Text = "Keyword";
             // 
-            // checkBox3
+            // CBX_KeywordFilter
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(7, 24);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(15, 14);
-            this.checkBox3.TabIndex = 9;
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.CBX_KeywordFilter.AutoSize = true;
+            this.CBX_KeywordFilter.Location = new System.Drawing.Point(7, 24);
+            this.CBX_KeywordFilter.Name = "CBX_KeywordFilter";
+            this.CBX_KeywordFilter.Size = new System.Drawing.Size(15, 14);
+            this.CBX_KeywordFilter.TabIndex = 9;
+            this.CBX_KeywordFilter.UseVisualStyleBackColor = true;
+            this.CBX_KeywordFilter.CheckedChanged += new System.EventHandler(this.CBX_KeywordFilter_CheckedChanged);
             // 
             // CBX_Keywords
             // 
@@ -361,7 +373,7 @@
             // 
             // GBX_Commands
             // 
-            this.GBX_Commands.Controls.Add(this.FBTN_PictureSlideshow);
+            this.GBX_Commands.Controls.Add(this.FBTN_PhotoToSlideshow);
             this.GBX_Commands.Controls.Add(this.FBTN_ViewPictureInfo);
             this.GBX_Commands.Controls.Add(this.FBTN_DeletePicture);
             this.GBX_Commands.Controls.Add(this.FBTN_EditPicture);
@@ -375,7 +387,7 @@
             // 
             // GBX_Date
             // 
-            this.GBX_Date.Controls.Add(this.checkBox1);
+            this.GBX_Date.Controls.Add(this.CBX_DateFilter);
             this.GBX_Date.Controls.Add(this.DTP_To);
             this.GBX_Date.Controls.Add(this.DTP_From);
             this.GBX_Date.Location = new System.Drawing.Point(674, 3);
@@ -385,14 +397,15 @@
             this.GBX_Date.TabStop = false;
             this.GBX_Date.Text = "Date interval";
             // 
-            // checkBox1
+            // CBX_DateFilter
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(6, 25);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
-            this.checkBox1.TabIndex = 8;
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.CBX_DateFilter.AutoSize = true;
+            this.CBX_DateFilter.Location = new System.Drawing.Point(6, 25);
+            this.CBX_DateFilter.Name = "CBX_DateFilter";
+            this.CBX_DateFilter.Size = new System.Drawing.Size(15, 14);
+            this.CBX_DateFilter.TabIndex = 8;
+            this.CBX_DateFilter.UseVisualStyleBackColor = true;
+            this.CBX_DateFilter.CheckedChanged += new System.EventHandler(this.CBX_DateFilter_CheckedChanged);
             // 
             // DTP_To
             // 
@@ -400,6 +413,7 @@
             this.DTP_To.Name = "DTP_To";
             this.DTP_To.Size = new System.Drawing.Size(165, 26);
             this.DTP_To.TabIndex = 7;
+            this.DTP_To.ValueChanged += new System.EventHandler(this.DTP_To_ValueChanged);
             // 
             // DTP_From
             // 
@@ -407,6 +421,7 @@
             this.DTP_From.Name = "DTP_From";
             this.DTP_From.Size = new System.Drawing.Size(165, 26);
             this.DTP_From.TabIndex = 6;
+            this.DTP_From.ValueChanged += new System.EventHandler(this.DTP_From_ValueChanged);
             // 
             // GBX_Todo
             // 
@@ -431,21 +446,22 @@
             this.FLP_Groups.Size = new System.Drawing.Size(1022, 109);
             this.FLP_Groups.TabIndex = 11;
             // 
-            // FBTN_PictureSlideshow
+            // FBTN_PhotoToSlideshow
             // 
-            this.FBTN_PictureSlideshow.BackgroundImage = global::Client_PM.Properties.Resources.IMG_AddPicture_Neutral;
-            this.FBTN_PictureSlideshow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.FBTN_PictureSlideshow.ClickedImage = global::Client_PM.Properties.Resources.IMG_AddPicture_Clicked;
-            this.FBTN_PictureSlideshow.DisabledImage = global::Client_PM.Properties.Resources.IMG_AddPicture_Disabled;
-            this.FBTN_PictureSlideshow.Image = ((System.Drawing.Image)(resources.GetObject("FBTN_PictureSlideshow.Image")));
-            this.FBTN_PictureSlideshow.Location = new System.Drawing.Point(237, 32);
-            this.FBTN_PictureSlideshow.Name = "FBTN_PictureSlideshow";
-            this.FBTN_PictureSlideshow.NeutralImage = global::Client_PM.Properties.Resources.IMG_AddPicture_Neutral;
-            this.FBTN_PictureSlideshow.OverImage = global::Client_PM.Properties.Resources.IMG_AddPicture_Over;
-            this.FBTN_PictureSlideshow.Size = new System.Drawing.Size(45, 40);
-            this.FBTN_PictureSlideshow.TabIndex = 8;
-            this.FBTN_PictureSlideshow.Text = "Add/Remove picture to/from slideshow";
-            this.FBTN_PictureSlideshow.UseVisualStyleBackColor = true;
+            this.FBTN_PhotoToSlideshow.BackgroundImage = global::Client_PM.Properties.Resources.IMG_AddPicture_Neutral;
+            this.FBTN_PhotoToSlideshow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.FBTN_PhotoToSlideshow.ClickedImage = global::Client_PM.Properties.Resources.IMG_AddPicture_Clicked;
+            this.FBTN_PhotoToSlideshow.DisabledImage = global::Client_PM.Properties.Resources.IMG_AddPicture_Disabled;
+            this.FBTN_PhotoToSlideshow.Image = ((System.Drawing.Image)(resources.GetObject("FBTN_PhotoToSlideshow.Image")));
+            this.FBTN_PhotoToSlideshow.Location = new System.Drawing.Point(237, 32);
+            this.FBTN_PhotoToSlideshow.Name = "FBTN_PhotoToSlideshow";
+            this.FBTN_PhotoToSlideshow.NeutralImage = global::Client_PM.Properties.Resources.IMG_AddPicture_Neutral;
+            this.FBTN_PhotoToSlideshow.OverImage = global::Client_PM.Properties.Resources.IMG_AddPicture_Over;
+            this.FBTN_PhotoToSlideshow.Size = new System.Drawing.Size(45, 40);
+            this.FBTN_PhotoToSlideshow.TabIndex = 8;
+            this.FBTN_PhotoToSlideshow.Text = "Add/Remove picture to/from slideshow";
+            this.FBTN_PhotoToSlideshow.UseVisualStyleBackColor = true;
+            this.FBTN_PhotoToSlideshow.Click += new System.EventHandler(this.FBTN_PictureSlideshow_Click);
             // 
             // FBTN_ViewPictureInfo
             // 
@@ -479,6 +495,7 @@
             this.FBTN_DeletePicture.TabIndex = 6;
             this.FBTN_DeletePicture.Text = "Remove the picture";
             this.FBTN_DeletePicture.UseVisualStyleBackColor = true;
+            this.FBTN_DeletePicture.Click += new System.EventHandler(this.FBTN_DeletePicture_Click);
             // 
             // FBTN_EditPicture
             // 
@@ -495,6 +512,7 @@
             this.FBTN_EditPicture.TabIndex = 5;
             this.FBTN_EditPicture.Text = "Edit picture...";
             this.FBTN_EditPicture.UseVisualStyleBackColor = true;
+            this.FBTN_EditPicture.Click += new System.EventHandler(this.FBTN_EditPicture_Click);
             // 
             // FBTN_NewPicture
             // 
@@ -511,6 +529,7 @@
             this.FBTN_NewPicture.TabIndex = 4;
             this.FBTN_NewPicture.Text = "Upload a picture...";
             this.FBTN_NewPicture.UseVisualStyleBackColor = true;
+            this.FBTN_NewPicture.Click += new System.EventHandler(this.FBTN_NewPicture_Click);
             // 
             // FBTN_Blacklist
             // 
@@ -568,6 +587,7 @@
             this.Controls.Add(this.PhotoBrowser);
             this.Controls.Add(this.MS_Account);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KeyPreview = true;
             this.MainMenuStrip = this.MS_Account;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MinimumSize = new System.Drawing.Size(1055, 713);
@@ -610,7 +630,7 @@
         private System.Windows.Forms.ToolStripMenuItem MI_Blacklist;
         private System.Windows.Forms.ToolStripMenuItem layoutToolStripMenuItem;
         private PhotoManagerClient.FlashButton FBTN_Blacklist;
-        private PhotoManagerClient.FlashButton FBTN_PictureSlideshow;
+        private PhotoManagerClient.FlashButton FBTN_PhotoToSlideshow;
         private PhotoManagerClient.FlashButton FBTN_ViewPictureInfo;
         private PhotoManagerClient.FlashButton FBTN_DeletePicture;
         private PhotoManagerClient.FlashButton FBTN_EditPicture;
@@ -618,13 +638,13 @@
         private PhotoManagerClient.FlashButton FBTN_Slideshow;
         private System.Windows.Forms.DateTimePicker DTP_To;
         private System.Windows.Forms.DateTimePicker DTP_From;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox CBX_DateFilter;
+        private System.Windows.Forms.CheckBox CBX_ExcludeMine;
+        private System.Windows.Forms.CheckBox CBX_KeywordFilter;
         private System.Windows.Forms.ToolStripMenuItem MI_Help;
         private System.Windows.Forms.ToolStripMenuItem displayHelpToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem MI_About;
         private System.Windows.Forms.GroupBox GBX_Todo;
         private System.Windows.Forms.ToolStripMenuItem MI_HideGroups;
         private System.Windows.Forms.ToolStripMenuItem MI_BrowserDispo;

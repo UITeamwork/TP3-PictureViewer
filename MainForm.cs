@@ -20,10 +20,25 @@ namespace Client_PM
     public partial class MainForm : Form
     {
         private User Logged_User = null;
-        private bool Initializing = true;
         private DLG_PhotoInfo InfoOnSelected = new DLG_PhotoInfo();
         private PhotoFilter PhotoFilter;
         private bool PhotoBrowserIsExpanded = false;
+        #region FBTN_PhotoToSlideshow
+        private List<Image> AddToSlideShow = new List<Image>
+        {
+            Properties.Resources.IMG_AddPicture_Clicked,
+            Properties.Resources.IMG_AddPicture_Disabled,
+            Properties.Resources.IMG_AddPicture_Neutral,
+            Properties.Resources.IMG_AddPicture_Over
+        };
+        private List<Image> RemoveFromSlideShow = new List<Image>
+        {
+            Properties.Resources.IMG_RemovePicture_Clicked,
+            Properties.Resources.IMG_RemovePicture_Disabled,
+            Properties.Resources.IMG_RemovePicture_Neutral,
+            Properties.Resources.IMG_RemovePicture_Over
+        };
+        #endregion
 
         /// <summary>
         /// Constructed using <see cref="PhotoFilter.UsersList"/> that is loaded on construction. We don't want to load all users multiple times in the program.
@@ -39,6 +54,9 @@ namespace Client_PM
 
         private void MainForm_Shown(object sender, EventArgs e)
         {
+            DTP_From.MaxDate = DateTime.Now;
+            DTP_To.MaxDate = DateTime.Now;
+
             // Get server attention...
             WaitSplash.Show(this, "Connecting to Photo Manager...");
             string bidon = DBPhotosWebServices.GetServerImagesURLBase();
@@ -54,13 +72,20 @@ namespace Client_PM
             // PhotoIsOwnedByLoggedUser implies that the user is logged in and that a photo is currently selected
             bool PhotoIsOwnedByLoggedUser = PhotoIsSelected && PhotoBrowser.SelectedPhoto.OwnerId == Logged_User.Id;
 
+            // DLG_Slideshow.PhotoPool.Contains(PhotoBrowser.SelectedPhoto)
+            FBTN_PhotoToSlideshow.SetImages(PhotoIsOwnedByLoggedUser ? AddToSlideShow : RemoveFromSlideShow);
+            
             MI_Account_Profil.Enabled = UserIsLoggedIn;
             MI_Blacklist.Enabled = UserIsLoggedIn;
             FBTN_NewPicture.Enabled = UserIsLoggedIn;
             FBTN_ViewPictureInfo.Enabled = PhotoIsSelected;
             FBTN_EditPicture.Enabled = PhotoIsOwnedByLoggedUser;
             FBTN_DeletePicture.Enabled = PhotoIsOwnedByLoggedUser;
-            FBTN_PictureSlideshow.Enabled = PhotoIsSelected;
+            FBTN_PhotoToSlideshow.Enabled = PhotoIsSelected;
+            GBX_Date.Enabled = UserIsLoggedIn;
+            GBX_Keyword.Enabled = UserIsLoggedIn;
+            GBX_Todo.Enabled = UserIsLoggedIn;
+            GBX_Users.Enabled = UserIsLoggedIn;
         }
 
         private void LoadPhoto()
@@ -68,6 +93,16 @@ namespace Client_PM
             WaitSplash.Show(this, "Loading photos from server...");
             PhotoBrowser.LoadPhotos(PhotoFilter.GetPhotos());
             WaitSplash.Hide();
+        }
+
+        private void ShowAbout()
+        {
+            string aboutText =
+                "----- Authors -----\n" +
+                "Jérémie Lacroix\n" +
+                "Gabriel Fournier-Cloutier";
+            // About messagebox
+            MessageBox.Show(aboutText, "About Photo manager", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         #region Init Methods
@@ -102,10 +137,8 @@ namespace Client_PM
                 AllUsers.RemoveRange(0, 2); // Remove "only mine" and "all users"
 
                 Init_UsersList();
-                Initializing = true;
                 LoadPhoto();
                 Init_Keywords_List();
-                Initializing = false;
             }
             else
             {
@@ -203,6 +236,51 @@ namespace Client_PM
             InfoOnSelected.UpdateDLG();
         }
 
+        private void FBTN_NewPicture_Click(object sender, EventArgs e)
+        {
+            DLG_Photo dlg = new DLG_Photo();
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                throw new NotImplementedException("TODO : Upload the photo to the database");
+                //DBPhotosWebServices.CreatePhoto(dlg.Photo);
+            }
+        }
+
+        private void FBTN_EditPicture_Click(object sender, EventArgs e)
+        {
+            DLG_Photo dlg = new DLG_Photo();
+            // dlg.Photo = PhotoBrowser.SelectedPhoto;
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                throw new NotImplementedException("TODO : Apply the edits on the photo");
+                //DBPhotosWebServices.UpdatePhoto(dlg.Photo);
+            }
+        }
+
+        private void FBTN_DeletePicture_Click(object sender, EventArgs e)
+        {
+            DLG_Photo dlg = new DLG_Photo();
+            // dlg.Photo = PhotoBrowser.SelectedPhoto;
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                throw new NotImplementedException("TODO : Delete the photo");
+                // DBPhotosWebServices.DeletePhoto(dlg.Photo);
+            }
+        }
+
+        private void FBTN_PictureSlideshow_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException("TODO : Make DLG_Slideshow.PhotoPool public and static");
+            //if (!DLG_Slideshow.PhotoPool.Contains(PhotoBrowser.SelectedPhoto))
+            //{
+            //    DLG_Slideshow.PhotoPool.Add(PhotoBrowser.SelectedPhoto);
+            //}
+            //else
+            //{
+            //    DLG_Slideshow.PhotoPool.Remove(PhotoBrowser.SelectedPhoto);
+            //}
+        }
+
         #region Filters
         private void CBX_UsersList_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -222,23 +300,56 @@ namespace Client_PM
                     PhotoFilter.SetUserFilter(true, false, selectedUser.Id);
                 }
             }
-            Initializing = true;
             PhotoFilter.SetKeywordsFilter(false, "");
             LoadPhoto();
             Init_Keywords_List();
-            Initializing = false;
+        }
+
+        private void CBX_KeywordFilter_CheckedChanged(object sender, EventArgs e)
+        {
+            string keywords = (CBX_Keywords.SelectedItem != null ? CBX_Keywords.SelectedItem.ToString() : "");
+            PhotoFilter.SetKeywordsFilter(CBX_KeywordFilter.Checked, keywords);
+            LoadPhoto();
         }
 
         private void CBX_Keywords_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (!Initializing)
+            if (CBX_KeywordFilter.Checked)
             {
-                PhotoFilter.SetKeywordsFilter(true, CBX_Keywords.SelectedItem.ToString());
-
+                PhotoFilter.FilterByKeywords = true;
+                PhotoFilter.Keywords = CBX_Keywords.SelectedItem.ToString();
                 LoadPhoto();
-                PhotoBrowser.SelectNext();
-                PhotoBrowser.Focus();
             }
+        }
+
+        private void DTP_From_ValueChanged(object sender, EventArgs e)
+        {
+            if (CBX_DateFilter.Checked)
+            {
+                PhotoFilter.StartDate = DTP_From.Value;
+                LoadPhoto();
+            }
+        }
+
+        private void DTP_To_ValueChanged(object sender, EventArgs e)
+        {
+            if (CBX_DateFilter.Checked)
+            {
+                PhotoFilter.EndDate = DTP_To.Value;
+                LoadPhoto();
+            }
+        }
+
+        private void CBX_DateFilter_CheckedChanged(object sender, EventArgs e)
+        {
+            PhotoFilter.SetDateFilter(CBX_DateFilter.Checked, DTP_From.Value, DTP_To.Value);
+            LoadPhoto();
+        }
+
+        private void CBX_ExcludeMine_CheckedChanged(object sender, EventArgs e)
+        {
+            PhotoFilter.ExludeUserRequester = CBX_ExcludeMine.Checked;
+            LoadPhoto();
         }
         #endregion
 
@@ -307,6 +418,13 @@ namespace Client_PM
         {
             ChangeGroupVisibility(GBX_Todo, !GBX_Todo.Visible);
             MI_HStodo.Checked = !MI_HStodo.Checked;
+        }
+        #endregion
+
+        #region Help Menu
+        private void MI_About_Click(object sender, EventArgs e)
+        {
+            ShowAbout();
         }
         #endregion
 

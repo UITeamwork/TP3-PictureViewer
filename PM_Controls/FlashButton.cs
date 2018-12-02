@@ -152,5 +152,20 @@ namespace PhotoManagerClient
                 BackgroundImage = NeutralImage;
             }
         }
+
+        public void SetImages(List<Image> images)
+        {
+            if (images.Count == 4)
+            {
+                ClickedImage = images[0];
+                DisabledImage = images[1];
+                NeutralImage = images[2];
+                OverImage = images[3];
+            }
+            else
+            {
+                MessageBox.Show("SetImages() needs 4 images(Clicked, Disabled, Neutral and Over) to work");
+            }
+        }
     }
 }
