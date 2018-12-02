@@ -137,6 +137,7 @@ namespace PhotoManagerClient
             this.PBX_SelectedPhoto.Size = new System.Drawing.Size(421, 407);
             this.PBX_SelectedPhoto.TabIndex = 1;
             this.PBX_SelectedPhoto.TabStop = false;
+            this.PBX_SelectedPhoto.DoubleClick += new System.EventHandler(this.PBX_SelectedPhoto_DoubleClick);
             // 
             // PhotosList
             // 
@@ -232,6 +233,21 @@ namespace PhotoManagerClient
             }
         }
 
+        public void ToggleHidePhotosList()
+        {
+            PhotosList.Visible = !PhotosList.Visible;
+            if (!PhotosList.Visible)
+            {
+                PBX_SelectedPhoto.Width = this.Width;
+                PBX_SelectedPhoto.Location = new Point(0, 0);
+            }
+            else
+            {
+                PBX_SelectedPhoto.Width = this.Width - (PhotosList.Width + margin);
+                PBX_SelectedPhoto.Location = new Point(PhotosList.Width + margin, 0);
+            }
+        }
+
         /// <summary>
         /// Retire du fureteur la photo sélectionnée
         /// </summary>
@@ -321,6 +337,16 @@ namespace PhotoManagerClient
         private void PhotosBrowser_Resize(object sender, EventArgs e)
         {
             Placement = _PhotoBrowserPlacement;
+        }
+
+        private void PBX_SelectedPhoto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PBX_SelectedPhoto_DoubleClick(object sender, EventArgs e)
+        {
+            ToggleHidePhotosList();
         }
     }
 }

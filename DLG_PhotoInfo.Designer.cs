@@ -237,6 +237,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Photo Info";
+            this.TopMost = true;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DLG_PhotoInfo_FormClosing);
             this.GBX_Owner.ResumeLayout(false);
             this.GBX_Owner.PerformLayout();

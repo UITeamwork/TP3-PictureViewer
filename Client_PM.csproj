@@ -151,6 +151,9 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PM_Controls\PhotosBrowser.resx">
+      <DependentUpon>PhotosBrowser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -235,18 +238,6 @@
     <None Include="Resources\IMG_Delete_Clicked.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\IMG_Search_Neutral.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\IMG_Search_Over.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\IMG_Search_Clicked.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\IMG_Search_Disabled.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\IMG_Upload_Clicked.png" />
   </ItemGroup>
   <ItemGroup>
@@ -257,30 +248,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\IMG_Upload_Over.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\IMG_AddVideo_Over.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\IMG_AddVideo_Clicked.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\IMG_AddVideo_Disabled.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\IMG_AddVideo_Neutral.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\IMG_RemoveVideo_Over.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\IMG_RemoveVideo_Clicked.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\IMG_RemoveVideo_Disabled.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\IMG_RemoveVideo_Neutral.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\IMG_Recycle_Clicked.png" />
@@ -335,6 +302,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\IMG_Info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_AddPicture_Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_AddPicture_Clicked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_AddPicture_Disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_AddPicture_Neutral.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_RemovePicture_Over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_RemovePicture_Clicked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_RemovePicture_Disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_RemovePicture_Neutral.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

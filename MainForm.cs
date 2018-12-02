@@ -23,6 +23,7 @@ namespace Client_PM
         private bool Initializing = true;
         private DLG_PhotoInfo InfoOnSelected = new DLG_PhotoInfo();
         private PhotoFilter PhotoFilter;
+        private bool PhotoBrowserIsExpanded = false;
 
         /// <summary>
         /// Constructed using <see cref="PhotoFilter.UsersList"/> that is loaded on construction. We don't want to load all users multiple times in the program.
@@ -62,6 +63,14 @@ namespace Client_PM
             FBTN_PictureSlideshow.Enabled = PhotoIsSelected;
         }
 
+        private void LoadPhoto()
+        {
+            WaitSplash.Show(this, "Loading photos from server...");
+            PhotoBrowser.LoadPhotos(PhotoFilter.GetPhotos());
+            WaitSplash.Hide();
+        }
+
+        #region Init Methods
         private void Init_UsersList()
         {
             foreach (User user in PhotoFilter.UsersList)
@@ -71,14 +80,6 @@ namespace Client_PM
             }
             CBX_UsersList.SelectedIndex = 0;
         }
-
-        private void LoadPhoto()
-        {
-            WaitSplash.Show(this, "Loading photos from server...");
-            PhotoBrowser.LoadPhotos(PhotoFilter.GetPhotos());
-            WaitSplash.Hide();
-        }
-
         private void Init_Keywords_List()
         {
             CBX_Keywords.Items.Clear();
@@ -117,6 +118,57 @@ namespace Client_PM
             Text = "Photo Manager Client application -" + (Logged_User != null ? Logged_User.Name : "Not Connected");
             Update_UI();
         }
+        #endregion
+
+        #region Hide/Show Groups Methods
+        private void HideShowAllGroups(bool isShow)
+        {
+            foreach(GroupBox group in FLP_Groups.Controls)
+            {
+                ChangeGroupVisibility(group, isShow);
+            }
+            foreach (var DropDownItem in MI_HideGroups.DropDownItems)
+            {
+                if (DropDownItem is ToolStripMenuItem) { (DropDownItem as ToolStripMenuItem).Checked = isShow; }
+            }
+        }
+
+        private bool AllGroupsAreHidden()
+        {
+            foreach(Control group in FLP_Groups.Controls)
+            {
+                if (group.Visible)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        private void ChangeGroupVisibility(GroupBox gbx, bool isVisible)
+        {
+            FLP_Groups.Visible = (isVisible ? isVisible : FLP_Groups.Visible);
+            gbx.Visible = isVisible;
+
+            if (AllGroupsAreHidden())
+            {
+                if (!PhotoBrowserIsExpanded)
+                {
+                    PhotoBrowser.Location = FLP_Groups.Location;
+                    PhotoBrowser.Height += FLP_Groups.Height;
+                    FLP_Groups.Visible = false;
+                    PhotoBrowserIsExpanded = true;
+                }
+            }
+            else if (PhotoBrowserIsExpanded)
+            {
+                PhotoBrowser.Location = new Point(PhotoBrowser.Location.X, PhotoBrowser.Location.Y + FLP_Groups.Height);
+                PhotoBrowser.Height -= FLP_Groups.Height;
+                FLP_Groups.Visible = true;
+                PhotoBrowserIsExpanded = false;
+            }
+        }
+        #endregion
 
         #region Control Events
         private void PhotoBrowser_SelectedChanged(object sender, EventArgs e)
@@ -129,6 +181,29 @@ namespace Client_PM
             }
         }
 
+        private void FBTN_Blacklist_Click(object sender, EventArgs e)
+        {
+            // TODO : Get result from dialog and reload the images to hide blacklisted users
+            if (new DLG_BlackList().ShowDialog() == DialogResult.OK)
+            {
+                // Do something...
+            }
+        }
+
+        private void FBTN_Slideshow_Click(object sender, EventArgs e)
+        {
+            DLG_Slideshow dlg = new DLG_Slideshow();
+            dlg.ShowDialog();
+        }
+
+        private void FBTN_ViewPictureInfo_Click(object sender, EventArgs e)
+        {
+            // PhotoBrowser.SelectedPhoto will not be null since the button is not accessible if it's the case
+            InfoOnSelected.SelectedPhoto = PhotoBrowser.SelectedPhoto;
+            InfoOnSelected.UpdateDLG();
+        }
+
+        #region Filters
         private void CBX_UsersList_SelectedIndexChanged(object sender, EventArgs e)
         {
             User selectedUser = (User)CBX_UsersList.SelectedItem;
@@ -158,7 +233,6 @@ namespace Client_PM
         {
             if (!Initializing)
             {
-
                 PhotoFilter.SetKeywordsFilter(true, CBX_Keywords.SelectedItem.ToString());
 
                 LoadPhoto();
@@ -166,49 +240,76 @@ namespace Client_PM
                 PhotoBrowser.Focus();
             }
         }
-
-        private void FBTN_Blacklist_Click(object sender, EventArgs e)
-        {
-            // TODO : Get result from dialog and reload the images to hide blacklisted users
-            if (new DLG_BlackList().ShowDialog() == DialogResult.OK)
-            {
-                // Do something...
-            }
-        }
-
-        private void FBTN_Slideshow_Click(object sender, EventArgs e)
-        {
-            DLG_Slideshow dlg = new DLG_Slideshow();
-            dlg.ShowDialog();
-        }
-
-        private void FBTN_ViewPictureInfo_Click(object sender, EventArgs e)
-        {
-            // PhotoBrowser.SelectedPhoto will not be null since the button is not accessible if it's the case
-            InfoOnSelected.SelectedPhoto = PhotoBrowser.SelectedPhoto;
-            InfoOnSelected.UpdateDLG();
-        }
+        #endregion
 
         #region Layout Menu
-        private void BTN_Left_Click(object sender, EventArgs e)
+
+        #region Browser Disposition
+        private void MI_Left_Click(object sender, EventArgs e)
         {
             PhotoBrowser.Placement = PhotoBrowserPlacement.Left;
         }
 
-        private void BTN_Top_Click(object sender, EventArgs e)
+        private void MI_Top_Click(object sender, EventArgs e)
         {
             PhotoBrowser.Placement = PhotoBrowserPlacement.Top;
         }
 
-        private void BTN_Right_Click(object sender, EventArgs e)
+        private void MI_Right_Click(object sender, EventArgs e)
         {
             PhotoBrowser.Placement = PhotoBrowserPlacement.Right;
         }
 
-        private void BTN_Bottom_Click(object sender, EventArgs e)
+        private void MI_Bottom_Click(object sender, EventArgs e)
         {
             PhotoBrowser.Placement = PhotoBrowserPlacement.Bottom;
         }
+        #endregion
+
+        #region Hide/Show Groups
+        private void MI_HideAll_Click(object sender, EventArgs e)
+        {
+            HideShowAllGroups(false);
+        }
+
+        private void MI_ShowAll_Click(object sender, EventArgs e)
+        {
+            HideShowAllGroups(true);
+            MI_ShowAll.Checked = false;
+            MI_HideAll.Checked = false;
+        }
+
+        private void MI_HSCommands_Click(object sender, EventArgs e)
+        {
+            ChangeGroupVisibility(GBX_Commands, !GBX_Commands.Visible);
+            MI_HSCommands.Checked = !MI_HSCommands.Checked;
+        }
+
+        private void MI_HSUserFilter_Click(object sender, EventArgs e)
+        {
+            ChangeGroupVisibility(GBX_Users, !GBX_Users.Visible);
+            MI_HSUserFilter.Checked = !MI_HSUserFilter.Checked;
+        }
+
+        private void MI_HSKeywordFilter_Click(object sender, EventArgs e)
+        {
+            ChangeGroupVisibility(GBX_Keyword, !GBX_Keyword.Visible);
+            MI_HSKeywordFilter.Checked = !MI_HSKeywordFilter.Checked;
+        }
+
+        private void MI_HSDateFilter_Click(object sender, EventArgs e)
+        {
+            ChangeGroupVisibility(GBX_Date, !GBX_Date.Visible);
+            MI_HSDateFilter.Checked = !MI_HSDateFilter.Checked;
+        }
+
+        private void MI_HStodo_Click(object sender, EventArgs e)
+        {
+            ChangeGroupVisibility(GBX_Todo, !GBX_Todo.Visible);
+            MI_HStodo.Checked = !MI_HStodo.Checked;
+        }
+        #endregion
+
         #endregion
 
         #region Account Menu

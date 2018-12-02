@@ -63,9 +63,9 @@ namespace Client_PM.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap IMG_AddVideo_Clicked {
+        internal static System.Drawing.Bitmap IMG_AddPicture_Clicked {
             get {
-                object obj = ResourceManager.GetObject("IMG_AddVideo_Clicked", resourceCulture);
+                object obj = ResourceManager.GetObject("IMG_AddPicture_Clicked", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace Client_PM.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap IMG_AddVideo_Disabled {
+        internal static System.Drawing.Bitmap IMG_AddPicture_Disabled {
             get {
-                object obj = ResourceManager.GetObject("IMG_AddVideo_Disabled", resourceCulture);
+                object obj = ResourceManager.GetObject("IMG_AddPicture_Disabled", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace Client_PM.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap IMG_AddVideo_Neutral {
+        internal static System.Drawing.Bitmap IMG_AddPicture_Neutral {
             get {
-                object obj = ResourceManager.GetObject("IMG_AddVideo_Neutral", resourceCulture);
+                object obj = ResourceManager.GetObject("IMG_AddPicture_Neutral", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace Client_PM.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap IMG_AddVideo_Over {
+        internal static System.Drawing.Bitmap IMG_AddPicture_Over {
             get {
-                object obj = ResourceManager.GetObject("IMG_AddVideo_Over", resourceCulture);
+                object obj = ResourceManager.GetObject("IMG_AddPicture_Over", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -323,9 +323,9 @@ namespace Client_PM.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap IMG_RemoveVideo_Clicked {
+        internal static System.Drawing.Bitmap IMG_RemovePicture_Clicked {
             get {
-                object obj = ResourceManager.GetObject("IMG_RemoveVideo_Clicked", resourceCulture);
+                object obj = ResourceManager.GetObject("IMG_RemovePicture_Clicked", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -333,9 +333,9 @@ namespace Client_PM.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap IMG_RemoveVideo_Disabled {
+        internal static System.Drawing.Bitmap IMG_RemovePicture_Disabled {
             get {
-                object obj = ResourceManager.GetObject("IMG_RemoveVideo_Disabled", resourceCulture);
+                object obj = ResourceManager.GetObject("IMG_RemovePicture_Disabled", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -343,9 +343,9 @@ namespace Client_PM.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap IMG_RemoveVideo_Neutral {
+        internal static System.Drawing.Bitmap IMG_RemovePicture_Neutral {
             get {
-                object obj = ResourceManager.GetObject("IMG_RemoveVideo_Neutral", resourceCulture);
+                object obj = ResourceManager.GetObject("IMG_RemovePicture_Neutral", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -353,9 +353,9 @@ namespace Client_PM.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap IMG_RemoveVideo_Over {
+        internal static System.Drawing.Bitmap IMG_RemovePicture_Over {
             get {
-                object obj = ResourceManager.GetObject("IMG_RemoveVideo_Over", resourceCulture);
+                object obj = ResourceManager.GetObject("IMG_RemovePicture_Over", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -396,46 +396,6 @@ namespace Client_PM.Properties {
         internal static System.Drawing.Bitmap IMG_Rotate_Over {
             get {
                 object obj = ResourceManager.GetObject("IMG_Rotate_Over", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap IMG_Search_Clicked {
-            get {
-                object obj = ResourceManager.GetObject("IMG_Search_Clicked", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap IMG_Search_Disabled {
-            get {
-                object obj = ResourceManager.GetObject("IMG_Search_Disabled", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap IMG_Search_Neutral {
-            get {
-                object obj = ResourceManager.GetObject("IMG_Search_Neutral", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap IMG_Search_Over {
-            get {
-                object obj = ResourceManager.GetObject("IMG_Search_Over", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
