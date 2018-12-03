@@ -81,7 +81,7 @@ namespace Client_PM
             // PhotoIsOwnedByLoggedUser implies that the user is logged in and that a photo is currently selected
             bool PhotoIsOwnedByLoggedUser = PhotoIsSelected && PhotoBrowser.SelectedPhoto.OwnerId == Logged_User.Id;
 
-            FBTN_PhotoToSlideshow.SetImages(PhotoIsSelected && DLG_Slideshow.SlideShowList.Contains(PhotoBrowser.SelectedPhoto.Id) ?  RemoveFromSlideShow : AddToSlideShow);
+            FBTN_PhotoToSlideshow.SetImages(PhotoIsSelected && DLG_Slideshow.SlideShowList.Contains(PhotoBrowser.SelectedPhoto.Id) ? RemoveFromSlideShow:AddToSlideShow);
             
             MI_Account_Profil.Enabled = UserIsLoggedIn;
             MI_Blacklist.Enabled = UserIsLoggedIn;
@@ -550,6 +550,12 @@ namespace Client_PM
         {
             PhotoBrowser.ToggleHidePhotosList();
             MI_HSPhotoList.Checked = !MI_HSPhotoList.Checked;
+        }
+
+        private void displayHelpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DLG_Help help = new DLG_Help();
+            help.ShowDialog();
         }
     }
 }

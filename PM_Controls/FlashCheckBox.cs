@@ -36,8 +36,7 @@ namespace CustomControls
             Size = new Size(36, 36);
             BackgroundImageLayout = ImageLayout.Zoom;
 
-            this.CheckStateChanged += FlashCheckBox_CheckStateChanged;
-
+           
             ToolTip tp = new ToolTip();
             tp.SetToolTip(this, Text);
             this.CheckStateChanged += FlashCheckBox_CheckStateChanged;
@@ -51,11 +50,7 @@ namespace CustomControls
             
         }
 
-        private void FlashCheckBox_CheckStateChanged(object sender, EventArgs e)
-        {
-            ChangeBgImage(FlashState.Neutral);
-        }
-
+       
         protected override void OnTextChanged(EventArgs e)
         {
             base.OnTextChanged(e);
