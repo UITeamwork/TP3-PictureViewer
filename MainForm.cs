@@ -23,6 +23,7 @@ namespace Client_PM
         private DLG_PhotoInfo InfoOnSelected = new DLG_PhotoInfo();
         private PhotoFilter PhotoFilter;
         private bool PhotoBrowserIsExpanded = false;
+        private int InitialBrowserHeight;
         private List<Photo> photos;
         
          
@@ -62,6 +63,7 @@ namespace Client_PM
             Load_Settings();
             DTP_From.MaxDate = DateTime.Now;
             DTP_To.MaxDate = DateTime.Now;
+            InitialBrowserHeight = PhotoBrowser.Height;
 
             // Get server attention...
             WaitSplash.Show(this, "Connecting to Photo Manager...");
@@ -90,7 +92,7 @@ namespace Client_PM
             FBTN_PhotoToSlideshow.Enabled = PhotoIsSelected;
             GBX_Date.Enabled = UserIsLoggedIn;
             GBX_Keyword.Enabled = UserIsLoggedIn;
-            GBX_Todo.Enabled = UserIsLoggedIn;
+            GBX_Managers.Enabled = UserIsLoggedIn;
             GBX_Users.Enabled = UserIsLoggedIn;
         }
 
@@ -190,23 +192,25 @@ namespace Client_PM
             FLP_Groups.Visible = (isVisible ? isVisible : FLP_Groups.Visible);
             gbx.Visible = isVisible;
 
+            PhotoBrowser.ToggleHidePhotosList();
             if (AllGroupsAreHidden())
             {
                 if (!PhotoBrowserIsExpanded)
                 {
+                    PhotoBrowser.Height = InitialBrowserHeight + FLP_Groups.Height;
                     PhotoBrowser.Location = FLP_Groups.Location;
-                    PhotoBrowser.Height += FLP_Groups.Height;
                     FLP_Groups.Visible = false;
                     PhotoBrowserIsExpanded = true;
                 }
             }
             else if (PhotoBrowserIsExpanded)
             {
-                PhotoBrowser.Location = new Point(PhotoBrowser.Location.X, PhotoBrowser.Location.Y + FLP_Groups.Height);
                 PhotoBrowser.Height -= FLP_Groups.Height;
+                PhotoBrowser.Location = new Point(PhotoBrowser.Location.X, PhotoBrowser.Location.Y + FLP_Groups.Height);
                 FLP_Groups.Visible = true;
                 PhotoBrowserIsExpanded = false;
             }
+            PhotoBrowser.ToggleHidePhotosList();
         }
         #endregion
 
@@ -221,6 +225,7 @@ namespace Client_PM
             }
         }
 
+        #region Flash Buttons Events
         private void FBTN_Blacklist_Click(object sender, EventArgs e)
         {
             // TODO : Get result from dialog and reload the images to hide blacklisted users
@@ -288,6 +293,7 @@ namespace Client_PM
                 DLG_Slideshow.SlideShowList.Remove(PhotoBrowser.SelectedPhoto.Id);
             }
         }
+        #endregion
 
         #region Filters
         private void CBX_UsersList_SelectedIndexChanged(object sender, EventArgs e)
@@ -424,8 +430,8 @@ namespace Client_PM
 
         private void MI_HStodo_Click(object sender, EventArgs e)
         {
-            ChangeGroupVisibility(GBX_Todo, !GBX_Todo.Visible);
-            MI_HStodo.Checked = !MI_HStodo.Checked;
+            ChangeGroupVisibility(GBX_Managers, !GBX_Managers.Visible);
+            MI_HSManagers.Checked = !MI_HSManagers.Checked;
         }
         #endregion
 
@@ -529,5 +535,21 @@ namespace Client_PM
                 }
         }
         #endregion
+
+        private void PhotoBrowser_SizeChanged(object sender, EventArgs e)
+        {
+            this.Text = PhotoBrowser.Height.ToString();
+        }
+
+        private void MI_HSPhotoList_Click(object sender, EventArgs e)
+        {
+            PhotoBrowser.ToggleHidePhotosList();
+        }
+
+        private void PhotoBrowser_DoubleClick(object sender, EventArgs e)
+        {
+            PhotoBrowser.ToggleHidePhotosList();
+            MI_HSPhotoList.Checked = !MI_HSPhotoList.Checked;
+        }
     }
 }
