@@ -35,10 +35,10 @@
             this.BTN_Previous = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.flashCheckBox1 = new CustomControls.FlashCheckBox();
             this.PN_Controls = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.Timer = new System.Windows.Forms.Timer(this.components);
-            this.flashCheckBox1 = new CustomControls.FlashCheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.TrckB_SlideshowSpeed)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.PN_Controls.SuspendLayout();
@@ -50,6 +50,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TrckB_SlideshowSpeed.Location = new System.Drawing.Point(13, 82);
             this.TrckB_SlideshowSpeed.Margin = new System.Windows.Forms.Padding(4);
+            this.TrckB_SlideshowSpeed.Maximum = 6;
             this.TrckB_SlideshowSpeed.Name = "TrckB_SlideshowSpeed";
             this.TrckB_SlideshowSpeed.Size = new System.Drawing.Size(561, 45);
             this.TrckB_SlideshowSpeed.TabIndex = 1;
@@ -103,6 +104,26 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(585, 47);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
+            // flashCheckBox1
+            // 
+            this.flashCheckBox1.BackgroundImage = global::Client_PM.Properties.Resources.IMG_Shuffle_Neutral;
+            this.flashCheckBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.flashCheckBox1.CheckedClickedImage = global::Client_PM.Properties.Resources.IMG_Shuffle_Checked_Clicked;
+            this.flashCheckBox1.CheckedDisabledImage = global::Client_PM.Properties.Resources.IMG_Shuffle_Checked_Disabled;
+            this.flashCheckBox1.CheckedNeutralImage = global::Client_PM.Properties.Resources.IMG_Shuffle_Checked_Neutral;
+            this.flashCheckBox1.CheckedOverImage = global::Client_PM.Properties.Resources.IMG_Shuffle_Checked_Over;
+            this.flashCheckBox1.ClickedImage = global::Client_PM.Properties.Resources.IMG_Shuffle_Clicked;
+            this.flashCheckBox1.DisabledImage = global::Client_PM.Properties.Resources.IMG_Shuffle_Disabled;
+            this.flashCheckBox1.Image = ((System.Drawing.Image)(resources.GetObject("flashCheckBox1.Image")));
+            this.flashCheckBox1.Location = new System.Drawing.Point(267, 3);
+            this.flashCheckBox1.Name = "flashCheckBox1";
+            this.flashCheckBox1.NeutralImage = global::Client_PM.Properties.Resources.IMG_Shuffle_Neutral;
+            this.flashCheckBox1.OverImage = global::Client_PM.Properties.Resources.IMG_Shuffle_Over;
+            this.flashCheckBox1.Size = new System.Drawing.Size(50, 41);
+            this.flashCheckBox1.TabIndex = 5;
+            this.flashCheckBox1.Text = "flashCheckBox1";
+            this.flashCheckBox1.UseVisualStyleBackColor = true;
+            // 
             // PN_Controls
             // 
             this.PN_Controls.BackColor = System.Drawing.SystemColors.ControlDarkDark;
@@ -129,26 +150,6 @@
             // 
             this.Timer.Interval = 5000;
             this.Timer.Tick += new System.EventHandler(this.Timer_Tick);
-            // 
-            // flashCheckBox1
-            // 
-            this.flashCheckBox1.BackgroundImage = global::Client_PM.Properties.Resources.IMG_Shuffle_Neutral;
-            this.flashCheckBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.flashCheckBox1.CheckedClickedImage = global::Client_PM.Properties.Resources.IMG_Shuffle_Checked_Clicked;
-            this.flashCheckBox1.CheckedDisabledImage = global::Client_PM.Properties.Resources.IMG_Shuffle_Checked_Disabled;
-            this.flashCheckBox1.CheckedNeutralImage = global::Client_PM.Properties.Resources.IMG_Shuffle_Checked_Neutral;
-            this.flashCheckBox1.CheckedOverImage = global::Client_PM.Properties.Resources.IMG_Shuffle_Checked_Over;
-            this.flashCheckBox1.ClickedImage = global::Client_PM.Properties.Resources.IMG_Shuffle_Clicked;
-            this.flashCheckBox1.DisabledImage = global::Client_PM.Properties.Resources.IMG_Shuffle_Disabled;
-            this.flashCheckBox1.Image = ((System.Drawing.Image)(resources.GetObject("flashCheckBox1.Image")));
-            this.flashCheckBox1.Location = new System.Drawing.Point(267, 3);
-            this.flashCheckBox1.Name = "flashCheckBox1";
-            this.flashCheckBox1.NeutralImage = global::Client_PM.Properties.Resources.IMG_Shuffle_Neutral;
-            this.flashCheckBox1.OverImage = global::Client_PM.Properties.Resources.IMG_Shuffle_Over;
-            this.flashCheckBox1.Size = new System.Drawing.Size(50, 41);
-            this.flashCheckBox1.TabIndex = 5;
-            this.flashCheckBox1.Text = "flashCheckBox1";
-            this.flashCheckBox1.UseVisualStyleBackColor = true;
             // 
             // DLG_Slideshow
             // 

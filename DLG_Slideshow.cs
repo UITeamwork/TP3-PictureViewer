@@ -52,10 +52,7 @@ namespace Client_PM
                 this.WindowState = FormWindowState.Normal;
             }
         }
-        private void TrckB_SlideshowSpeed_Scroll(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void DLG_Slideshow_Load(object sender, EventArgs e)
         {
@@ -98,9 +95,9 @@ namespace Client_PM
                 case Keys.F11: Fullscreen(); break;
                 case Keys.P: Timer.Start(); break;
                 case Keys.S: Timer.Stop(); break;
-                // case Keys.R: RandomOrder = !RandomOrder; SetPhotosOrder(); break;
-                // case Keys.Down: Timer.Interval = (Timer.Interval < 60000 ? SlideshowTimer.Interval + 250 : SlideshowTimer.Interval); break;
-                //  case Keys.Up: Timer.Interval = (Timer.Interval > 500 ? SlideshowTimer.Interval - 250 : SlideshowTimer.Interval); break;
+                 //case Keys.R: RandomOrder = !RandomOrder; SetPhotosOrder(); break;
+                case Keys.Left: Timer.Interval = (Timer.Interval < 10000 ? Timer.Interval + 1000 : Timer.Interval); if (TrckB_SlideshowSpeed.Value < 6) { TrckB_SlideshowSpeed.Value = TrckB_SlideshowSpeed.Value + 1; } break;
+                case Keys.Right: Timer.Interval = (Timer.Interval > 500 ? Timer.Interval - 1000 : Timer.Interval); if(TrckB_SlideshowSpeed.Value > 0) { TrckB_SlideshowSpeed.Value = TrckB_SlideshowSpeed.Value - 1; } break;
                 case Keys.Escape: Timer.Stop(); Close(); break;
             }
         }
@@ -126,6 +123,30 @@ namespace Client_PM
             //SetPhotosOrder();
             // Démarrer l'horloge
            Timer.Start();
+        }
+
+        private void TrckB_SlideshowSpeed_Scroll(object sender, EventArgs e)
+        {
+            if (TrckB_SlideshowSpeed.Value == 0)
+                Timer.Interval = 10000;
+            else if (TrckB_SlideshowSpeed.Value == 1)
+                Timer.Interval = 9000;
+            else if(TrckB_SlideshowSpeed.Value == 2)
+                Timer.Interval = 8000;
+            else if(TrckB_SlideshowSpeed.Value == 3)
+                Timer.Interval = 7000;
+            else if(TrckB_SlideshowSpeed.Value == 4)
+                Timer.Interval = 6000;
+            else if (TrckB_SlideshowSpeed.Value == 5)
+                Timer.Interval = 5000;
+            else if (TrckB_SlideshowSpeed.Value == 6)
+                Timer.Interval = 4000;
+            else if (TrckB_SlideshowSpeed.Value == 6)
+                Timer.Interval = 3000;
+            else if (TrckB_SlideshowSpeed.Value == 6)
+                Timer.Interval = 2000;
+            else if (TrckB_SlideshowSpeed.Value == 6)
+                Timer.Interval = 1000;
         }
     }
 }
