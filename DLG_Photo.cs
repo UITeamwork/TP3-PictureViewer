@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PhotoManagerClient;
 
 namespace Client_PM
 {
     public partial class DLG_Photo : Form
     {
+        public Photo Photo;
         public DLG_Photo()
         {
             InitializeComponent();
@@ -21,5 +23,7 @@ namespace Client_PM
         {
 
         }
+
+        
     }
 }

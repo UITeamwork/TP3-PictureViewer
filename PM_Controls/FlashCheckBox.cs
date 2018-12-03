@@ -38,6 +38,15 @@ namespace CustomControls
             
             ToolTip tp = new ToolTip();
             tp.SetToolTip(this, Text);
+            this.CheckStateChanged += FlashCheckBox_CheckStateChanged;
+
+
+        }
+
+        private void FlashCheckBox_CheckStateChanged(object sender, EventArgs e)
+        {
+            ChangeBgImage(FlashState.Neutral);
+            
         }
 
         protected override void OnTextChanged(EventArgs e)

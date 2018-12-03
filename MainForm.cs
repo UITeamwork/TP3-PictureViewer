@@ -23,6 +23,9 @@ namespace Client_PM
         private DLG_PhotoInfo InfoOnSelected = new DLG_PhotoInfo();
         private PhotoFilter PhotoFilter;
         private bool PhotoBrowserIsExpanded = false;
+        private List<Photo> photos;
+        
+         
         #region FBTN_PhotoToSlideshow
         private List<Image> AddToSlideShow = new List<Image>
         {
@@ -48,12 +51,15 @@ namespace Client_PM
 
         public MainForm()
         {
+            photos = DBPhotosWebServices.GetAllPhotos();
+            
             InitializeComponent();
             Text = "Photo Manager Client application - Not connected";
         }
 
         private void MainForm_Shown(object sender, EventArgs e)
         {
+            Load_Settings();
             DTP_From.MaxDate = DateTime.Now;
             DTP_To.MaxDate = DateTime.Now;
 
@@ -61,6 +67,7 @@ namespace Client_PM
             WaitSplash.Show(this, "Connecting to Photo Manager...");
             string bidon = DBPhotosWebServices.GetServerImagesURLBase();
             WaitSplash.Hide();
+            Properties.Settings.Default.FirstExecution = false;
             Update_UI();
         }
 
@@ -72,8 +79,7 @@ namespace Client_PM
             // PhotoIsOwnedByLoggedUser implies that the user is logged in and that a photo is currently selected
             bool PhotoIsOwnedByLoggedUser = PhotoIsSelected && PhotoBrowser.SelectedPhoto.OwnerId == Logged_User.Id;
 
-            // DLG_Slideshow.PhotoPool.Contains(PhotoBrowser.SelectedPhoto)
-            FBTN_PhotoToSlideshow.SetImages(PhotoIsOwnedByLoggedUser ? AddToSlideShow : RemoveFromSlideShow);
+            FBTN_PhotoToSlideshow.SetImages(PhotoIsSelected && DLG_Slideshow.SlideShowList.Contains(PhotoBrowser.SelectedPhoto.Id) ?  RemoveFromSlideShow : AddToSlideShow);
             
             MI_Account_Profil.Enabled = UserIsLoggedIn;
             MI_Blacklist.Enabled = UserIsLoggedIn;
@@ -100,7 +106,8 @@ namespace Client_PM
             string aboutText =
                 "----- Authors -----\n" +
                 "Jérémie Lacroix\n" +
-                "Gabriel Fournier-Cloutier";
+                "Gabriel Fournier-Cloutier\n"
+                +"Novembre 2018";
             // About messagebox
             MessageBox.Show(aboutText, "About Photo manager", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
@@ -226,6 +233,8 @@ namespace Client_PM
         private void FBTN_Slideshow_Click(object sender, EventArgs e)
         {
             DLG_Slideshow dlg = new DLG_Slideshow();
+            
+            dlg.PhotoPool = photos;
             dlg.ShowDialog();
         }
 
@@ -270,15 +279,14 @@ namespace Client_PM
 
         private void FBTN_PictureSlideshow_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException("TODO : Make DLG_Slideshow.PhotoPool public and static");
-            //if (!DLG_Slideshow.PhotoPool.Contains(PhotoBrowser.SelectedPhoto))
-            //{
-            //    DLG_Slideshow.PhotoPool.Add(PhotoBrowser.SelectedPhoto);
-            //}
-            //else
-            //{
-            //    DLG_Slideshow.PhotoPool.Remove(PhotoBrowser.SelectedPhoto);
-            //}
+            if (!DLG_Slideshow.SlideShowList.Contains(PhotoBrowser.SelectedPhoto.Id))
+            {
+                DLG_Slideshow.SlideShowList.Add(PhotoBrowser.SelectedPhoto.Id);
+            }
+            else
+            {
+                DLG_Slideshow.SlideShowList.Remove(PhotoBrowser.SelectedPhoto.Id);
+            }
         }
 
         #region Filters
@@ -471,6 +479,55 @@ namespace Client_PM
         }
         #endregion
 
+
+
+        #endregion
+
+        #region Settings
+
+        private void Load_Settings()
+        {
+            if (!Properties.Settings.Default.FirstExecution)
+            {
+                LoadSlideShowList();
+            }
+            else
+            {
+                
+                DLG_Slideshow.SlideShowList = new List<int>();
+            }
+        }
+
+        private void Save_settings()
+        {
+            Properties.Settings.Default.FirstExecution = false;
+            SaveSlideShowList();
+            Properties.Settings.Default.Save();
+        }
+        private void LoadSlideShowList()
+        {
+            DLG_Slideshow.SlideShowList = new List<int>();
+            if (Properties.Settings.Default.SlideShowList != null)
+            {
+                foreach (string stringPhotoId in Properties.Settings.Default.SlideShowList)
+                {
+                    int photoId = int.Parse(stringPhotoId);
+                    DLG_Slideshow.SlideShowList.Add(photoId);
+                }
+            }
+        }
+
+        private void SaveSlideShowList()
+        {
+            if (Properties.Settings.Default.SlideShowList == null)
+                Properties.Settings.Default.SlideShowList = new System.Collections.Specialized.StringCollection();
+            Properties.Settings.Default.SlideShowList.Clear();
+            if (DLG_Slideshow.SlideShowList != null)
+                foreach (int photoId in DLG_Slideshow.SlideShowList)
+                {
+                    Properties.Settings.Default.SlideShowList.Add(photoId.ToString());
+                }
+        }
         #endregion
     }
 }

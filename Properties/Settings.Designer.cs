@@ -46,5 +46,28 @@ namespace Client_PM.Properties {
                 this["Login_Password"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Collections.Specialized.StringCollection SlideShowList {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["SlideShowList"]));
+            }
+            set {
+                this["SlideShowList"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool FirstExecution {
+            get {
+                return ((bool)(this["FirstExecution"]));
+            }
+            set {
+                this["FirstExecution"] = value;
+            }
+        }
     }
 }

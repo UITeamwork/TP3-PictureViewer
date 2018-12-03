@@ -33,12 +33,12 @@
             this.TrckB_SlideshowSpeed = new System.Windows.Forms.TrackBar();
             this.LAB_SlideshowSpeed = new System.Windows.Forms.Label();
             this.BTN_Previous = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BTN_Next = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.flashCheckBox1 = new CustomControls.FlashCheckBox();
             this.PN_Controls = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.Timer = new System.Windows.Forms.Timer(this.components);
+            this.flashCheckBox1 = new CustomControls.FlashCheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.TrckB_SlideshowSpeed)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.PN_Controls.SuspendLayout();
@@ -75,16 +75,18 @@
             this.BTN_Previous.TabIndex = 3;
             this.BTN_Previous.Text = "<<";
             this.BTN_Previous.UseVisualStyleBackColor = true;
+            this.BTN_Previous.Click += new System.EventHandler(this.BTN_Previous_Click);
             // 
-            // button1
+            // BTN_Next
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(548, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(34, 31);
-            this.button1.TabIndex = 4;
-            this.button1.Text = ">>";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BTN_Next.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BTN_Next.Location = new System.Drawing.Point(548, 3);
+            this.BTN_Next.Name = "BTN_Next";
+            this.BTN_Next.Size = new System.Drawing.Size(34, 31);
+            this.BTN_Next.TabIndex = 4;
+            this.BTN_Next.Text = ">>";
+            this.BTN_Next.UseVisualStyleBackColor = true;
+            this.BTN_Next.Click += new System.EventHandler(this.BTN_Next_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -94,7 +96,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.button1, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.BTN_Next, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.flashCheckBox1, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.BTN_Previous, 0, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 0);
@@ -103,26 +105,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(585, 47);
             this.tableLayoutPanel1.TabIndex = 6;
-            // 
-            // flashCheckBox1
-            // 
-            this.flashCheckBox1.BackgroundImage = global::Client_PM.Properties.Resources.IMG_Shuffle_Neutral;
-            this.flashCheckBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.flashCheckBox1.CheckedClickedImage = global::Client_PM.Properties.Resources.IMG_Shuffle_Checked_Clicked;
-            this.flashCheckBox1.CheckedDisabledImage = global::Client_PM.Properties.Resources.IMG_Shuffle_Checked_Disabled;
-            this.flashCheckBox1.CheckedNeutralImage = global::Client_PM.Properties.Resources.IMG_Shuffle_Checked_Neutral;
-            this.flashCheckBox1.CheckedOverImage = global::Client_PM.Properties.Resources.IMG_Shuffle_Checked_Over;
-            this.flashCheckBox1.ClickedImage = global::Client_PM.Properties.Resources.IMG_Shuffle_Clicked;
-            this.flashCheckBox1.DisabledImage = global::Client_PM.Properties.Resources.IMG_Shuffle_Disabled;
-            this.flashCheckBox1.Image = ((System.Drawing.Image)(resources.GetObject("flashCheckBox1.Image")));
-            this.flashCheckBox1.Location = new System.Drawing.Point(267, 3);
-            this.flashCheckBox1.Name = "flashCheckBox1";
-            this.flashCheckBox1.NeutralImage = global::Client_PM.Properties.Resources.IMG_Shuffle_Neutral;
-            this.flashCheckBox1.OverImage = global::Client_PM.Properties.Resources.IMG_Shuffle_Over;
-            this.flashCheckBox1.Size = new System.Drawing.Size(50, 41);
-            this.flashCheckBox1.TabIndex = 5;
-            this.flashCheckBox1.Text = "flashCheckBox1";
-            this.flashCheckBox1.UseVisualStyleBackColor = true;
             // 
             // PN_Controls
             // 
@@ -150,6 +132,27 @@
             // 
             this.Timer.Interval = 5000;
             this.Timer.Tick += new System.EventHandler(this.Timer_Tick);
+            // 
+            // flashCheckBox1
+            // 
+            this.flashCheckBox1.BackgroundImage = global::Client_PM.Properties.Resources.IMG_Shuffle_Neutral;
+            this.flashCheckBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.flashCheckBox1.CheckedClickedImage = global::Client_PM.Properties.Resources.IMG_Shuffle_Checked_Clicked;
+            this.flashCheckBox1.CheckedDisabledImage = global::Client_PM.Properties.Resources.IMG_Shuffle_Checked_Disabled;
+            this.flashCheckBox1.CheckedNeutralImage = global::Client_PM.Properties.Resources.IMG_Shuffle_Checked_Neutral;
+            this.flashCheckBox1.CheckedOverImage = global::Client_PM.Properties.Resources.IMG_Shuffle_Checked_Over;
+            this.flashCheckBox1.ClickedImage = global::Client_PM.Properties.Resources.IMG_Shuffle_Clicked;
+            this.flashCheckBox1.DisabledImage = global::Client_PM.Properties.Resources.IMG_Shuffle_Disabled;
+            this.flashCheckBox1.Image = ((System.Drawing.Image)(resources.GetObject("flashCheckBox1.Image")));
+            this.flashCheckBox1.Location = new System.Drawing.Point(267, 3);
+            this.flashCheckBox1.Name = "flashCheckBox1";
+            this.flashCheckBox1.NeutralImage = global::Client_PM.Properties.Resources.IMG_Shuffle_Neutral;
+            this.flashCheckBox1.OverImage = global::Client_PM.Properties.Resources.IMG_Shuffle_Over;
+            this.flashCheckBox1.Size = new System.Drawing.Size(50, 41);
+            this.flashCheckBox1.TabIndex = 5;
+            this.flashCheckBox1.Text = "flashCheckBox1";
+            this.flashCheckBox1.UseVisualStyleBackColor = true;
+            this.flashCheckBox1.CheckedChanged += new System.EventHandler(this.flashCheckBox1_CheckedChanged);
             // 
             // DLG_Slideshow
             // 
@@ -184,7 +187,7 @@
         private System.Windows.Forms.TrackBar TrckB_SlideshowSpeed;
         private System.Windows.Forms.Label LAB_SlideshowSpeed;
         private System.Windows.Forms.Button BTN_Previous;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BTN_Next;
         private CustomControls.FlashCheckBox flashCheckBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel PN_Controls;
