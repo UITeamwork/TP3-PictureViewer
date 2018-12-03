@@ -53,7 +53,8 @@
             this.MI_HSUserFilter = new System.Windows.Forms.ToolStripMenuItem();
             this.MI_HSKeywordFilter = new System.Windows.Forms.ToolStripMenuItem();
             this.MI_HSDateFilter = new System.Windows.Forms.ToolStripMenuItem();
-            this.MI_HStodo = new System.Windows.Forms.ToolStripMenuItem();
+            this.MI_HSManagers = new System.Windows.Forms.ToolStripMenuItem();
+            this.MI_HSPhotoList = new System.Windows.Forms.ToolStripMenuItem();
             this.MI_Help = new System.Windows.Forms.ToolStripMenuItem();
             this.displayHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -66,7 +67,7 @@
             this.CBX_DateFilter = new System.Windows.Forms.CheckBox();
             this.DTP_To = new System.Windows.Forms.DateTimePicker();
             this.DTP_From = new System.Windows.Forms.DateTimePicker();
-            this.GBX_Todo = new System.Windows.Forms.GroupBox();
+            this.GBX_Managers = new System.Windows.Forms.GroupBox();
             this.FLP_Groups = new System.Windows.Forms.FlowLayoutPanel();
             this.FBTN_PhotoToSlideshow = new PhotoManagerClient.FlashButton();
             this.FBTN_ViewPictureInfo = new PhotoManagerClient.FlashButton();
@@ -81,7 +82,7 @@
             this.GBX_Keyword.SuspendLayout();
             this.GBX_Commands.SuspendLayout();
             this.GBX_Date.SuspendLayout();
-            this.GBX_Todo.SuspendLayout();
+            this.GBX_Managers.SuspendLayout();
             this.FLP_Groups.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -240,7 +241,8 @@
             this.MI_HSUserFilter,
             this.MI_HSKeywordFilter,
             this.MI_HSDateFilter,
-            this.MI_HStodo});
+            this.MI_HSManagers,
+            this.MI_HSPhotoList});
             this.MI_HideGroups.Name = "MI_HideGroups";
             this.MI_HideGroups.Size = new System.Drawing.Size(178, 22);
             this.MI_HideGroups.Text = "Hide Commands";
@@ -248,28 +250,30 @@
             // MI_HideAll
             // 
             this.MI_HideAll.Name = "MI_HideAll";
-            this.MI_HideAll.Size = new System.Drawing.Size(188, 22);
+            this.MI_HideAll.Size = new System.Drawing.Size(252, 22);
             this.MI_HideAll.Text = "Hide All";
             this.MI_HideAll.Click += new System.EventHandler(this.MI_HideAll_Click);
             // 
             // MI_ShowAll
             // 
             this.MI_ShowAll.Name = "MI_ShowAll";
-            this.MI_ShowAll.Size = new System.Drawing.Size(188, 22);
+            this.MI_ShowAll.Size = new System.Drawing.Size(252, 22);
             this.MI_ShowAll.Text = "Show All";
             this.MI_ShowAll.Click += new System.EventHandler(this.MI_ShowAll_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(185, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(249, 6);
             // 
             // MI_HSCommands
             // 
             this.MI_HSCommands.Checked = true;
             this.MI_HSCommands.CheckState = System.Windows.Forms.CheckState.Checked;
             this.MI_HSCommands.Name = "MI_HSCommands";
-            this.MI_HSCommands.Size = new System.Drawing.Size(188, 22);
+            this.MI_HSCommands.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
+            | System.Windows.Forms.Keys.C)));
+            this.MI_HSCommands.Size = new System.Drawing.Size(252, 22);
             this.MI_HSCommands.Text = "Toggle Commands";
             this.MI_HSCommands.Click += new System.EventHandler(this.MI_HSCommands_Click);
             // 
@@ -278,7 +282,9 @@
             this.MI_HSUserFilter.Checked = true;
             this.MI_HSUserFilter.CheckState = System.Windows.Forms.CheckState.Checked;
             this.MI_HSUserFilter.Name = "MI_HSUserFilter";
-            this.MI_HSUserFilter.Size = new System.Drawing.Size(188, 22);
+            this.MI_HSUserFilter.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
+            | System.Windows.Forms.Keys.U)));
+            this.MI_HSUserFilter.Size = new System.Drawing.Size(252, 22);
             this.MI_HSUserFilter.Text = "Toggle User Filter";
             this.MI_HSUserFilter.Click += new System.EventHandler(this.MI_HSUserFilter_Click);
             // 
@@ -287,7 +293,9 @@
             this.MI_HSKeywordFilter.Checked = true;
             this.MI_HSKeywordFilter.CheckState = System.Windows.Forms.CheckState.Checked;
             this.MI_HSKeywordFilter.Name = "MI_HSKeywordFilter";
-            this.MI_HSKeywordFilter.Size = new System.Drawing.Size(188, 22);
+            this.MI_HSKeywordFilter.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
+            | System.Windows.Forms.Keys.K)));
+            this.MI_HSKeywordFilter.Size = new System.Drawing.Size(252, 22);
             this.MI_HSKeywordFilter.Text = "Toggle Keyword Filter";
             this.MI_HSKeywordFilter.Click += new System.EventHandler(this.MI_HSKeywordFilter_Click);
             // 
@@ -296,18 +304,31 @@
             this.MI_HSDateFilter.Checked = true;
             this.MI_HSDateFilter.CheckState = System.Windows.Forms.CheckState.Checked;
             this.MI_HSDateFilter.Name = "MI_HSDateFilter";
-            this.MI_HSDateFilter.Size = new System.Drawing.Size(188, 22);
+            this.MI_HSDateFilter.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
+            | System.Windows.Forms.Keys.D)));
+            this.MI_HSDateFilter.Size = new System.Drawing.Size(252, 22);
             this.MI_HSDateFilter.Text = "Toggle Date Filter";
             this.MI_HSDateFilter.Click += new System.EventHandler(this.MI_HSDateFilter_Click);
             // 
-            // MI_HStodo
+            // MI_HSManagers
             // 
-            this.MI_HStodo.Checked = true;
-            this.MI_HStodo.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.MI_HStodo.Name = "MI_HStodo";
-            this.MI_HStodo.Size = new System.Drawing.Size(188, 22);
-            this.MI_HStodo.Text = "Toggle todo";
-            this.MI_HStodo.Click += new System.EventHandler(this.MI_HStodo_Click);
+            this.MI_HSManagers.Checked = true;
+            this.MI_HSManagers.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.MI_HSManagers.Name = "MI_HSManagers";
+            this.MI_HSManagers.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
+            | System.Windows.Forms.Keys.M)));
+            this.MI_HSManagers.Size = new System.Drawing.Size(252, 22);
+            this.MI_HSManagers.Text = "Toggle Managers";
+            this.MI_HSManagers.Click += new System.EventHandler(this.MI_HStodo_Click);
+            // 
+            // MI_HSPhotoList
+            // 
+            this.MI_HSPhotoList.CheckOnClick = true;
+            this.MI_HSPhotoList.Name = "MI_HSPhotoList";
+            this.MI_HSPhotoList.ShortcutKeys = System.Windows.Forms.Keys.F11;
+            this.MI_HSPhotoList.Size = new System.Drawing.Size(252, 22);
+            this.MI_HSPhotoList.Text = "Toggle Photo List";
+            this.MI_HSPhotoList.Click += new System.EventHandler(this.MI_HSPhotoList_Click);
             // 
             // MI_Help
             // 
@@ -423,16 +444,16 @@
             this.DTP_From.TabIndex = 6;
             this.DTP_From.ValueChanged += new System.EventHandler(this.DTP_From_ValueChanged);
             // 
-            // GBX_Todo
+            // GBX_Managers
             // 
-            this.GBX_Todo.Controls.Add(this.FBTN_Blacklist);
-            this.GBX_Todo.Controls.Add(this.FBTN_Slideshow);
-            this.GBX_Todo.Location = new System.Drawing.Point(896, 3);
-            this.GBX_Todo.Name = "GBX_Todo";
-            this.GBX_Todo.Size = new System.Drawing.Size(122, 94);
-            this.GBX_Todo.TabIndex = 10;
-            this.GBX_Todo.TabStop = false;
-            this.GBX_Todo.Text = "todo";
+            this.GBX_Managers.Controls.Add(this.FBTN_Blacklist);
+            this.GBX_Managers.Controls.Add(this.FBTN_Slideshow);
+            this.GBX_Managers.Location = new System.Drawing.Point(896, 3);
+            this.GBX_Managers.Name = "GBX_Managers";
+            this.GBX_Managers.Size = new System.Drawing.Size(122, 94);
+            this.GBX_Managers.TabIndex = 10;
+            this.GBX_Managers.TabStop = false;
+            this.GBX_Managers.Text = "Managers";
             // 
             // FLP_Groups
             // 
@@ -440,7 +461,7 @@
             this.FLP_Groups.Controls.Add(this.GBX_Users);
             this.FLP_Groups.Controls.Add(this.GBX_Keyword);
             this.FLP_Groups.Controls.Add(this.GBX_Date);
-            this.FLP_Groups.Controls.Add(this.GBX_Todo);
+            this.FLP_Groups.Controls.Add(this.GBX_Managers);
             this.FLP_Groups.Location = new System.Drawing.Point(12, 27);
             this.FLP_Groups.Name = "FLP_Groups";
             this.FLP_Groups.Size = new System.Drawing.Size(1022, 109);
@@ -577,6 +598,7 @@
             this.PhotoBrowser.Size = new System.Drawing.Size(1015, 526);
             this.PhotoBrowser.TabIndex = 0;
             this.PhotoBrowser.SelectedChanged += new PhotoManagerClient.PhotosBrowser.SelectedChangedHandler(this.PhotoBrowser_SelectedChanged);
+            this.PhotoBrowser.DoubleClick += new System.EventHandler(this.PhotoBrowser_DoubleClick);
             // 
             // MainForm
             // 
@@ -605,7 +627,7 @@
             this.GBX_Commands.ResumeLayout(false);
             this.GBX_Date.ResumeLayout(false);
             this.GBX_Date.PerformLayout();
-            this.GBX_Todo.ResumeLayout(false);
+            this.GBX_Managers.ResumeLayout(false);
             this.FLP_Groups.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -645,7 +667,7 @@
         private System.Windows.Forms.ToolStripMenuItem displayHelpToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem MI_About;
-        private System.Windows.Forms.GroupBox GBX_Todo;
+        private System.Windows.Forms.GroupBox GBX_Managers;
         private System.Windows.Forms.ToolStripMenuItem MI_HideGroups;
         private System.Windows.Forms.ToolStripMenuItem MI_BrowserDispo;
         private System.Windows.Forms.ToolStripMenuItem MI_Left;
@@ -659,8 +681,9 @@
         private System.Windows.Forms.ToolStripMenuItem MI_HSUserFilter;
         private System.Windows.Forms.ToolStripMenuItem MI_HSKeywordFilter;
         private System.Windows.Forms.ToolStripMenuItem MI_HSDateFilter;
-        private System.Windows.Forms.ToolStripMenuItem MI_HStodo;
+        private System.Windows.Forms.ToolStripMenuItem MI_HSManagers;
         private System.Windows.Forms.FlowLayoutPanel FLP_Groups;
+        private System.Windows.Forms.ToolStripMenuItem MI_HSPhotoList;
     }
 }
 

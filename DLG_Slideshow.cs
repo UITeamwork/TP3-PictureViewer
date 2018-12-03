@@ -16,7 +16,7 @@ namespace Client_PM
     {
 
 
-        public List<int> SlideShowList { get; set; }
+        public List<int> SlideShowList = new List<int>();
         
         public List<Photo> PhotoPool { get; set; }
 

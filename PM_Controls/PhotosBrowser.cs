@@ -43,6 +43,7 @@ namespace PhotoManagerClient
         private const int space = 105;
         private const int margin = 6;
 
+        private bool Initializing = true;
         private PhotoBrowserPlacement _PhotoBrowserPlacement = PhotoBrowserPlacement.Left;
 
         /// <summary>
@@ -64,40 +65,48 @@ namespace PhotoManagerClient
                         PhotosList.Location = new Point(0, 0);
                         PhotosList.Width = space;
                         PhotosList.Height = Height;
-
-                        PBX_SelectedPhoto.Location = new Point(PhotosList.Width + margin, 0);
-                        PBX_SelectedPhoto.Width = Width - PhotosList.Width - margin;
-                        PBX_SelectedPhoto.Height = Height;
+                        if (Initializing || PhotosList.Visible)
+                        {
+                            PBX_SelectedPhoto.Location = new Point(PhotosList.Width + margin, 0);
+                            PBX_SelectedPhoto.Width = Width - PhotosList.Width - margin;
+                            PBX_SelectedPhoto.Height = Height;
+                        }
                         break;
 
                     case PhotoBrowserPlacement.Right:
                         PhotosList.Location = new Point(Width - space, 0);
                         PhotosList.Width = space;
                         PhotosList.Height = this.Height;
-
-                        PBX_SelectedPhoto.Location = new Point(0, 0);
-                        PBX_SelectedPhoto.Width = Width - PhotosList.Width - margin;
-                        PBX_SelectedPhoto.Height = Height;
+                        if (Initializing || PhotosList.Visible)
+                        {
+                            PBX_SelectedPhoto.Location = new Point(0, 0);
+                            PBX_SelectedPhoto.Width = Width - PhotosList.Width - margin;
+                            PBX_SelectedPhoto.Height = Height;
+                        }
                         break;
 
                     case PhotoBrowserPlacement.Top:
                         PhotosList.Location = new Point(0, 0);
                         PhotosList.Width = Width;
                         PhotosList.Height = space;
-
-                        PBX_SelectedPhoto.Location = new Point(0, PhotosList.Height + margin);
-                        PBX_SelectedPhoto.Width = Width;
-                        PBX_SelectedPhoto.Height = Height - PhotosList.Height - margin;
+                        if (Initializing || PhotosList.Visible)
+                        {
+                            PBX_SelectedPhoto.Location = new Point(0, PhotosList.Height + margin);
+                            PBX_SelectedPhoto.Width = Width;
+                            PBX_SelectedPhoto.Height = Height - PhotosList.Height - margin;
+                        }
                         break;
 
                     case PhotoBrowserPlacement.Bottom:
                         PhotosList.Location = new Point(0, Height - space);
                         PhotosList.Width = Width;
                         PhotosList.Height = space;
-
-                        PBX_SelectedPhoto.Location = new Point(0, 0);
-                        PBX_SelectedPhoto.Width = Width;
-                        PBX_SelectedPhoto.Height = Height - PhotosList.Height - margin;
+                        if (Initializing || PhotosList.Visible)
+                        {
+                            PBX_SelectedPhoto.Location = new Point(0, 0);
+                            PBX_SelectedPhoto.Width = Width;
+                            PBX_SelectedPhoto.Height = Height - PhotosList.Height - margin;
+                        }
                         break;
                 }
             }
@@ -137,7 +146,6 @@ namespace PhotoManagerClient
             this.PBX_SelectedPhoto.Size = new System.Drawing.Size(421, 407);
             this.PBX_SelectedPhoto.TabIndex = 1;
             this.PBX_SelectedPhoto.TabStop = false;
-            this.PBX_SelectedPhoto.DoubleClick += new System.EventHandler(this.PBX_SelectedPhoto_DoubleClick);
             // 
             // PhotosList
             // 
@@ -164,7 +172,6 @@ namespace PhotoManagerClient
             this.Resize += new System.EventHandler(this.PhotosBrowser_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.PBX_SelectedPhoto)).EndInit();
             this.ResumeLayout(false);
-
         }
 
         /// <summary>
@@ -235,16 +242,49 @@ namespace PhotoManagerClient
 
         public void ToggleHidePhotosList()
         {
+            Initializing = false;
             PhotosList.Visible = !PhotosList.Visible;
             if (!PhotosList.Visible)
             {
-                PBX_SelectedPhoto.Width = this.Width;
-                PBX_SelectedPhoto.Location = new Point(0, 0);
+                // Expand the photo
+                switch (Placement)
+                {
+                    case PhotoBrowserPlacement.Left:
+                    case PhotoBrowserPlacement.Right:
+                        PBX_SelectedPhoto.Width = this.Width;
+                        PBX_SelectedPhoto.Location = new Point(0, 0);
+                        break;
+                    case PhotoBrowserPlacement.Bottom:
+                    case PhotoBrowserPlacement.Top:
+                        PBX_SelectedPhoto.Height = this.Height;
+                        PBX_SelectedPhoto.Location = new Point(0, 0);
+                        break;
+                        
+                }
             }
             else
             {
-                PBX_SelectedPhoto.Width = this.Width - (PhotosList.Width + margin);
-                PBX_SelectedPhoto.Location = new Point(PhotosList.Width + margin, 0);
+                // Restore the PhotosList and shrink the selected photo
+                switch (Placement)
+                {
+                    case PhotoBrowserPlacement.Left:
+                        PBX_SelectedPhoto.Width = this.Width - (PhotosList.Width + margin);
+                        PBX_SelectedPhoto.Location = new Point(PhotosList.Width + margin, 0);
+                        break;
+                    case PhotoBrowserPlacement.Right:
+                        PBX_SelectedPhoto.Width = this.Width - (PhotosList.Width + margin);
+                        PBX_SelectedPhoto.Location = new Point(0, 0);
+                        break;
+                    case PhotoBrowserPlacement.Bottom:
+                        PBX_SelectedPhoto.Height = this.Height - (PhotosList.Height + margin);
+                        PBX_SelectedPhoto.Location = new Point(0, 0);
+                        break;
+                    case PhotoBrowserPlacement.Top:
+                        PBX_SelectedPhoto.Height = this.Height - (PhotosList.Height + margin);
+                        PBX_SelectedPhoto.Location = new Point(0, PhotosList.Height + margin);
+                        break;
+                }
+                Placement = Placement;
             }
         }
 
@@ -295,7 +335,6 @@ namespace PhotoManagerClient
                 {
                     GetoriginalImageOfSelectedPhoto();
                     SelectedPhoto = GetSelectedPhoto();
-
                 }
             }
             else
@@ -330,23 +369,12 @@ namespace PhotoManagerClient
                 case Keys.Up:
                 case Keys.Left: SelectPrevious(); parentForm = FindParentForm(); break;
             }
-
             if (parentForm != null)
                 parentForm.ActiveControl = this;
         }
         private void PhotosBrowser_Resize(object sender, EventArgs e)
         {
             Placement = _PhotoBrowserPlacement;
-        }
-
-        private void PBX_SelectedPhoto_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PBX_SelectedPhoto_DoubleClick(object sender, EventArgs e)
-        {
-            ToggleHidePhotosList();
         }
     }
 }
