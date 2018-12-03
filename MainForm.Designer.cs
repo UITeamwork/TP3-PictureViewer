@@ -250,6 +250,8 @@
             // MI_HideAll
             // 
             this.MI_HideAll.Name = "MI_HideAll";
+            this.MI_HideAll.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
+            | System.Windows.Forms.Keys.H)));
             this.MI_HideAll.Size = new System.Drawing.Size(252, 22);
             this.MI_HideAll.Text = "Hide All";
             this.MI_HideAll.Click += new System.EventHandler(this.MI_HideAll_Click);
@@ -257,6 +259,8 @@
             // MI_ShowAll
             // 
             this.MI_ShowAll.Name = "MI_ShowAll";
+            this.MI_ShowAll.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
+            | System.Windows.Forms.Keys.S)));
             this.MI_ShowAll.Size = new System.Drawing.Size(252, 22);
             this.MI_ShowAll.Text = "Show All";
             this.MI_ShowAll.Click += new System.EventHandler(this.MI_ShowAll_Click);

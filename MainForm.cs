@@ -11,12 +11,6 @@ using System.Windows.Forms;
 
 namespace Client_PM
 {
-    /* TODO :
-    // About messagebox
-    MessageBox.Show("Lorem Ipsum", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
-    // Tooltips "FromDate" and "ToDate"
-    */
-
     public partial class MainForm : Form
     {
         private User Logged_User = null;
@@ -24,8 +18,7 @@ namespace Client_PM
         private PhotoFilter PhotoFilter;
         private bool PhotoBrowserIsExpanded = false;
         private int InitialBrowserHeight;
-        private List<Photo> photos;
-        
+        public static List<Photo> photos;
          
         #region FBTN_PhotoToSlideshow
         private List<Image> AddToSlideShow = new List<Image>
@@ -82,7 +75,8 @@ namespace Client_PM
             bool PhotoIsOwnedByLoggedUser = PhotoIsSelected && PhotoBrowser.SelectedPhoto.OwnerId == Logged_User.Id;
 
             FBTN_PhotoToSlideshow.SetImages(PhotoIsSelected && DLG_Slideshow.SlideShowList.Contains(PhotoBrowser.SelectedPhoto.Id) ?  RemoveFromSlideShow : AddToSlideShow);
-            
+            FBTN_PhotoToSlideshow.BackgroundImage = (FBTN_PhotoToSlideshow.Enabled ? FBTN_PhotoToSlideshow.NeutralImage : FBTN_PhotoToSlideshow.DisabledImage);
+
             MI_Account_Profil.Enabled = UserIsLoggedIn;
             MI_Blacklist.Enabled = UserIsLoggedIn;
             FBTN_NewPicture.Enabled = UserIsLoggedIn;
@@ -217,12 +211,12 @@ namespace Client_PM
         #region Control Events
         private void PhotoBrowser_SelectedChanged(object sender, EventArgs e)
         {
-            Update_UI();
             if (InfoOnSelected.Visible)
             {
                 InfoOnSelected.SelectedPhoto = PhotoBrowser.SelectedPhoto;
                 InfoOnSelected.UpdateDLG();
             }
+            Update_UI();
         }
 
         #region Flash Buttons Events
@@ -292,6 +286,7 @@ namespace Client_PM
             {
                 DLG_Slideshow.SlideShowList.Remove(PhotoBrowser.SelectedPhoto.Id);
             }
+            Update_UI();
         }
         #endregion
 
@@ -438,7 +433,7 @@ namespace Client_PM
         #region Help Menu
         private void MI_About_Click(object sender, EventArgs e)
         {
-            ShowAbout();
+            new AboutBox1().ShowDialog();
         }
         #endregion
 
@@ -484,9 +479,6 @@ namespace Client_PM
             }
         }
         #endregion
-
-
-
         #endregion
 
         #region Settings
@@ -499,7 +491,6 @@ namespace Client_PM
             }
             else
             {
-                
                 DLG_Slideshow.SlideShowList = new List<int>();
             }
         }
@@ -535,11 +526,6 @@ namespace Client_PM
                 }
         }
         #endregion
-
-        private void PhotoBrowser_SizeChanged(object sender, EventArgs e)
-        {
-            this.Text = PhotoBrowser.Height.ToString();
-        }
 
         private void MI_HSPhotoList_Click(object sender, EventArgs e)
         {
