@@ -16,7 +16,7 @@ namespace Client_PM
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DLG_Slideshow());
+            Application.Run(new MainForm());
         }
     }
 }
