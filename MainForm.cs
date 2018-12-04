@@ -258,7 +258,7 @@ namespace Client_PM
         private void FBTN_EditPicture_Click(object sender, EventArgs e)
         {
             DLG_Photo dlg = new DLG_Photo();
-            // dlg.Photo = PhotoBrowser.SelectedPhoto;
+            dlg.Photo = PhotoBrowser.SelectedPhoto;
             if (dlg.ShowDialog() == DialogResult.OK)
             {
                 throw new NotImplementedException("TODO : Apply the edits on the photo");

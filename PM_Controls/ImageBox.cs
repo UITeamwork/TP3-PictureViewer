@@ -123,5 +123,9 @@ namespace PhotoManagerClient
             ImportImageFormFile();
         }
 
+        public void RotateBgImage()
+        {
+            BackgroundImage.RotateFlip(RotateFlipType.Rotate180FlipNone);
+        }
     }
 }

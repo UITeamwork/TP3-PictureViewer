@@ -154,6 +154,7 @@ namespace PhotoManagerClient
             this.PhotosList.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.PhotosList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PhotosList.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.PhotosList.IgnoreMouseInteractions = false;
             this.PhotosList.Location = new System.Drawing.Point(0, 0);
             this.PhotosList.Name = "PhotosList";
             this.PhotosList.SelectedPhotoBox = null;
@@ -172,6 +173,7 @@ namespace PhotoManagerClient
             this.Resize += new System.EventHandler(this.PhotosBrowser_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.PBX_SelectedPhoto)).EndInit();
             this.ResumeLayout(false);
+
         }
 
         /// <summary>
