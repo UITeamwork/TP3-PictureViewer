@@ -38,6 +38,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.WB_HelpBrowser = new System.Windows.Forms.WebBrowser();
             this.imageBox1 = new PhotoManagerClient.ImageBox();
             this.imageBox2 = new PhotoManagerClient.ImageBox();
             this.imageBox6 = new PhotoManagerClient.ImageBox();
@@ -45,7 +46,6 @@
             this.imageBox5 = new PhotoManagerClient.ImageBox();
             this.imageBox4 = new PhotoManagerClient.ImageBox();
             this.imageBox3 = new PhotoManagerClient.ImageBox();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imageBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageBox2)).BeginInit();
@@ -59,13 +59,13 @@
             // BTN_Close
             // 
             this.BTN_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BTN_Close.Location = new System.Drawing.Point(656, 411);
+            this.BTN_Close.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.BTN_Close.Location = new System.Drawing.Point(589, 409);
             this.BTN_Close.Name = "BTN_Close";
-            this.BTN_Close.Size = new System.Drawing.Size(75, 23);
+            this.BTN_Close.Size = new System.Drawing.Size(75, 24);
             this.BTN_Close.TabIndex = 4;
             this.BTN_Close.Text = "Close";
             this.BTN_Close.UseVisualStyleBackColor = true;
-            this.BTN_Close.Click += new System.EventHandler(this.BTN_Close_Click);
             // 
             // label1
             // 
@@ -168,6 +168,15 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(212, 385);
             this.tableLayoutPanel1.TabIndex = 19;
+            // 
+            // WB_HelpBrowser
+            // 
+            this.WB_HelpBrowser.Location = new System.Drawing.Point(233, 11);
+            this.WB_HelpBrowser.MinimumSize = new System.Drawing.Size(20, 20);
+            this.WB_HelpBrowser.Name = "WB_HelpBrowser";
+            this.WB_HelpBrowser.Size = new System.Drawing.Size(429, 385);
+            this.WB_HelpBrowser.TabIndex = 20;
+            this.WB_HelpBrowser.Url = new System.Uri("", System.UriKind.Relative);
             // 
             // imageBox1
             // 
@@ -295,28 +304,20 @@
             this.imageBox3.TabIndex = 7;
             this.imageBox3.TabStop = false;
             // 
-            // webBrowser1
-            // 
-            this.webBrowser1.Location = new System.Drawing.Point(233, 11);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(429, 385);
-            this.webBrowser1.TabIndex = 20;
-            this.webBrowser1.Url = new System.Uri("", System.UriKind.Relative);
-            this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
-            // 
             // DLG_Help
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(743, 446);
-            this.Controls.Add(this.webBrowser1);
+            this.CancelButton = this.BTN_Close;
+            this.ClientSize = new System.Drawing.Size(673, 441);
+            this.Controls.Add(this.WB_HelpBrowser);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.BTN_Close);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DLG_Help";
             this.Text = "DLG_Help";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DLG_Help_FormClosing);
             this.Load += new System.EventHandler(this.DLG_Help_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
@@ -348,6 +349,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.WebBrowser WB_HelpBrowser;
     }
 }

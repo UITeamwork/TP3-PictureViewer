@@ -148,12 +148,13 @@
             // intervalle
             // 
             this.intervalle.AutoSize = true;
+            this.intervalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.intervalle.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.intervalle.Location = new System.Drawing.Point(0, 24);
             this.intervalle.Name = "intervalle";
-            this.intervalle.Size = new System.Drawing.Size(73, 18);
+            this.intervalle.Size = new System.Drawing.Size(62, 18);
             this.intervalle.TabIndex = 8;
-            this.intervalle.Text = "intervalle :";
+            this.intervalle.Text = "Interval :";
             // 
             // Timer
             // 
@@ -197,12 +198,13 @@
             // Timer_Interval
             // 
             this.Timer_Interval.AutoSize = true;
+            this.Timer_Interval.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Timer_Interval.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Timer_Interval.Location = new System.Drawing.Point(79, 24);
+            this.Timer_Interval.Location = new System.Drawing.Point(68, 24);
             this.Timer_Interval.Name = "Timer_Interval";
-            this.Timer_Interval.Size = new System.Drawing.Size(46, 18);
+            this.Timer_Interval.Size = new System.Drawing.Size(40, 18);
             this.Timer_Interval.TabIndex = 13;
-            this.Timer_Interval.Text = "label3";
+            this.Timer_Interval.Text = "0000";
             // 
             // DLG_Slideshow
             // 

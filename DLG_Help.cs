@@ -15,48 +15,33 @@ namespace Client_PM
 {
     public partial class DLG_Help : Form
     {
-        
-        public string FileName;
+        private static readonly string CREATED_FILE_NAME = "HelpData";
+
+        public string ContentFromResources { get; set; }
+
         public DLG_Help()
         {
             InitializeComponent();
         }
 
-        private void BTN_Close_Click(object sender, EventArgs e)
+        private void LoadHelpFile()
         {
-            this.Close();
-        }
-
-        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
-        {
-
+            // Create an absolute path leading to the created file (local file url)
+            Uri url = new Uri(string.Format(@"file:///{0}/{1}", Directory.GetCurrentDirectory(), CREATED_FILE_NAME + ".html"));
+            // Load the file in the WebBrowser
+            WB_HelpBrowser.Navigate(url);
         }
 
         private void DLG_Help_Load(object sender, EventArgs e)
         {
+            // Take all the content of a file and write to an external .html file (created in the same place as the executable)
+            File.WriteAllBytes(CREATED_FILE_NAME + ".html", Encoding.ASCII.GetBytes(ContentFromResources));
+            LoadHelpFile();
+        }
 
-            
-            string curDir = Directory.GetCurrentDirectory();
-
-            string ResourcesDir = @"C:\Users\201756835\Source\Repos\TP3-PictureViewer2\Resources\HTMLPage1.html";
-                /*System.Reflection.Assembly.GetExecutingAssembly().Location + @"\..\..\Resources\" + FileName + ".html"*/;
-            File.Exists(ResourcesDir);
-            //File.Copy(ResourcesDir, curDir);
-            //webBrowser1.Source = new Uri(new System.IO.FileInfo("page.html").FullName);
-            //Uri UrlNavigate = new Uri(Tool.htm); 
-            Uri UrlNavigate = new Uri(String.Format("file:///{0}/{1}.html", curDir, FileName));
-
-            webBrowser1.Navigate(UrlNavigate);
-
-            //webBrowser1.DocumentText = html;
-
-            //string[] a = Assembly.GetEntryAssembly().GetManifestResourceNames();
-            //foreach (string s in a) Debug.WriteLine("\t" + s);
-            //string html = null;
-            //using (var s = Assembly.GetExecutingAssembly().GetManifestResourceStream("[HTMLpage1.html]"))
-            //using (var r = new StreamReader(s))
-            //html = r.ReadToEnd();
-            //webBrowser1.DocumentText = html;
+        private void DLG_Help_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            File.Delete(Directory.GetCurrentDirectory() + "//" + CREATED_FILE_NAME + ".html");
         }
     }
 }

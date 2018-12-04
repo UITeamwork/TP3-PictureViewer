@@ -227,10 +227,8 @@ namespace Client_PM
         {
             DLG_Help help = new DLG_Help
             {
-                FileName = "To do"
+                ContentFromResources = Properties.Resources.HTMLPage1
             };
         }
-
-        
     }
 }
