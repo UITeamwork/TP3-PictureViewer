@@ -77,6 +77,7 @@ namespace Client_PM
             FBTN_PhotoToSlideshow.SetImages(PhotoIsSelected && DLG_Slideshow.SlideShowList.Contains(PhotoBrowser.SelectedPhoto.Id) ?  RemoveFromSlideShow : AddToSlideShow);
             FBTN_PhotoToSlideshow.BackgroundImage = (FBTN_PhotoToSlideshow.Enabled ? FBTN_PhotoToSlideshow.NeutralImage : FBTN_PhotoToSlideshow.DisabledImage);
 
+
             MI_Account_Profil.Enabled = UserIsLoggedIn;
             MI_Blacklist.Enabled = UserIsLoggedIn;
             FBTN_NewPicture.Enabled = UserIsLoggedIn;
@@ -536,6 +537,12 @@ namespace Client_PM
         {
             PhotoBrowser.ToggleHidePhotosList();
             MI_HSPhotoList.Checked = !MI_HSPhotoList.Checked;
+        }
+
+        private void displayHelpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DLG_Help help = new DLG_Help();
+            help.ShowDialog();
         }
     }
 }
