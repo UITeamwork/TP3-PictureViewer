@@ -17,10 +17,11 @@ namespace Client_PM
         public static Dictionary<int, Image> UserThumbnails;
         public static List<int> BlacklistedUsers = new List<int>();
 
-        public DLG_BlackList()
+        public int LoggedUserId { get; set; }
+
+        public DLG_BlackList(int loggedUserId)
         {
             InitializeComponent();
-            BlacklistedUsers.Add(1);
         }
 
         private void DLG_BlackList_Load(object sender, EventArgs e)
@@ -28,9 +29,9 @@ namespace Client_PM
             InitUserThumbnails();
             InitListViewsImages();
 
-            var blackListedUsers = MainForm.AllUsers.Where(u => BlacklistedUsers.Contains(u.Id)).ToList();
+            var blackListedUsers = MainForm.AllUsers.Where(u => BlacklistedUsers.Contains(u.Id) && u.Id != LoggedUserId).ToList();
             PopulateListView(LV_BlacklistedUsers, blackListedUsers);
-            var acceptedUser = MainForm.AllUsers.Where(u => !BlacklistedUsers.Contains(u.Id)).ToList();
+            var acceptedUser = MainForm.AllUsers.Where(u => !BlacklistedUsers.Contains(u.Id) && u.Id != LoggedUserId).ToList();
             PopulateListView(LV_AcceptedUsers, acceptedUser);
         }
 

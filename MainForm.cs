@@ -223,7 +223,7 @@ namespace Client_PM
         private void FBTN_Blacklist_Click(object sender, EventArgs e)
         {
             // TODO : Get result from dialog and reload the images to hide blacklisted users
-            if (new DLG_BlackList().ShowDialog() == DialogResult.OK)
+            if (new DLG_BlackList(Logged_User.Id).ShowDialog() == DialogResult.OK)
             {
                 // Do something...
             }
