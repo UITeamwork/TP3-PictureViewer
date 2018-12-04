@@ -103,7 +103,7 @@ namespace Client_PM
         {
             switch (e.KeyCode)
             {
-                //  case Keys.F1: ShowHelp(); break;
+               case Keys.F1: ShowHelp(); break;
                 case Keys.F11: Fullscreen(); break;
                 case Keys.P: Timer.Start(); break;
                 case Keys.S: Timer.Stop(); break;
@@ -114,10 +114,14 @@ namespace Client_PM
                     { flashCheckBox1.Checked = false; }
                     
                     break;
-                        case Keys.Left: Timer.Interval = (Timer.Interval < 10000 ? Timer.Interval + 1000 : Timer.Interval); if (TrckB_SlideshowSpeed.Value < 6) { TrckB_SlideshowSpeed.Value = TrckB_SlideshowSpeed.Value + 1; } break;
-                case Keys.Right: Timer.Interval = (Timer.Interval > 500 ? Timer.Interval - 1000 : Timer.Interval); if (TrckB_SlideshowSpeed.Value > 0) { TrckB_SlideshowSpeed.Value = TrckB_SlideshowSpeed.Value - 1; } break;
+                case Keys.Down: Timer.Interval = (Timer.Interval < 10000 ? Timer.Interval + 1000 : Timer.Interval);if (TrckB_SlideshowSpeed.Value > 0) { TrckB_SlideshowSpeed.Value = TrckB_SlideshowSpeed.Value - 1; } break;
+                case Keys.Up: Timer.Interval = (Timer.Interval > 1500 ? Timer.Interval - 1000 : Timer.Interval); if (TrckB_SlideshowSpeed.Value < 9) { TrckB_SlideshowSpeed.Value = TrckB_SlideshowSpeed.Value + 1; }  break;
                 case Keys.Escape: Timer.Stop(); Close(); break;
+                case Keys.Left: BTN_Previous.PerformClick(); break;
+                case Keys.Right: BTN_Next.PerformClick(); break;
             }
+            e.SuppressKeyPress = true;
+            Timer_Interval.Text = Timer.Interval.ToString();
         }
 
         private void DLG_Slideshow_DoubleClick(object sender, EventArgs e)
@@ -165,6 +169,7 @@ namespace Client_PM
                 Timer.Interval = 2000;
             else if (TrckB_SlideshowSpeed.Value == 6)
                 Timer.Interval = 1000;
+            Timer_Interval.Text = Timer.Interval.ToString();
         }
 
         private void BTN_Previous_Click(object sender, EventArgs e)
@@ -217,5 +222,12 @@ namespace Client_PM
         {
             ShufflePhotosOrder();
         }
+
+        void ShowHelp()
+        {
+
+        }
+
+        
     }
 }
