@@ -26,6 +26,8 @@ namespace PhotoManagerClient
         private bool _Selected;
         private bool _Overed { get; set; }
 
+        public bool IgnoreMouseInteractions { get; set; }
+
         /// <summary>
         /// Indicateur de sélection
         /// </summary>
@@ -56,7 +58,10 @@ namespace PhotoManagerClient
         /// <param name="clickHandler"></param>
         public void SetClickListener(EventHandler clickHandler)
         {
-            this.Click += clickHandler;
+            if (!IgnoreMouseInteractions)
+            {
+                this.Click += clickHandler;
+            }
         }
 
         private void DrawBorder(Graphics DC, Color color)
@@ -89,9 +94,12 @@ namespace PhotoManagerClient
         /// <param name="e"></param>
         protected override void OnMouseEnter(EventArgs e)
         {
-            base.OnMouseEnter(e);
-            _Overed = true;
-            Refresh();
+            if (!IgnoreMouseInteractions)
+            {
+                base.OnMouseEnter(e);
+                _Overed = true;
+                Refresh();
+            }
         }
         /// <summary>
         /// Surchage
@@ -99,9 +107,12 @@ namespace PhotoManagerClient
         /// <param name="e"></param>
         protected override void OnMouseLeave(EventArgs e)
         {
-            base.OnMouseLeave(e);
-            _Overed = false;
-            Refresh();
+            if (!IgnoreMouseInteractions)
+            {
+                base.OnMouseLeave(e);
+                _Overed = false;
+                Refresh();
+            }
         }
         private void UnselectBrothers()
         {
@@ -138,8 +149,11 @@ namespace PhotoManagerClient
         /// <param name="e"></param>
         protected override void OnClick(EventArgs e)
         {
-            base.OnClick(e);
-            Select();
+            if (!IgnoreMouseInteractions)
+            {
+                base.OnClick(e);
+                Select();
+            }
         }
         private void InitializeComponent()
         {
@@ -200,6 +214,8 @@ namespace PhotoManagerClient
         /// Référence sur la boite de photo sélectionnée
         /// </summary>
         private PhotoBox _SelectedPhotoBox;
+
+        public bool IgnoreMouseInteractions { get; set; }
 
         /// <summary>
         /// Référence sur la boite de photo sélectionnée
@@ -264,6 +280,7 @@ namespace PhotoManagerClient
         public void AddPhoto(Photo photo)
         {
             PhotoBox photoBox = new PhotoBox(photo);
+            photoBox.IgnoreMouseInteractions = IgnoreMouseInteractions;
             photoBox.SetClickListener(ImagesLayout_Click);
             Controls.Add(photoBox);
         }

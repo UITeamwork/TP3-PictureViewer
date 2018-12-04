@@ -13,21 +13,112 @@ namespace Client_PM
 {
     public partial class DLG_BlackList : Form
     {
-        public static List<Image> UserThumbnails;
-
-        // TODO : Load all photos of selected user that are not private
+        // userId, avatarThumbnail
+        public static Dictionary<int, Image> UserThumbnails;
+        public static List<int> BlacklistedUsers = new List<int>();
 
         public DLG_BlackList()
         {
             InitializeComponent();
+            BlacklistedUsers.Add(1);
         }
 
-        private static void AddDroppedItemToListView(ListView lv, DragEventArgs e)
+        private void DLG_BlackList_Load(object sender, EventArgs e)
+        {
+            InitUserThumbnails();
+            InitListViewsImages();
+
+            var blackListedUsers = MainForm.AllUsers.Where(u => BlacklistedUsers.Contains(u.Id)).ToList();
+            PopulateListView(LV_BlacklistedUsers, blackListedUsers);
+            var acceptedUser = MainForm.AllUsers.Where(u => !BlacklistedUsers.Contains(u.Id)).ToList();
+            PopulateListView(LV_AcceptedUsers, acceptedUser);
+        }
+
+        private void PopulateListView(ListView toInit, List<User> population)
+        {
+            foreach (var user in population)
+            {
+                toInit.Items.Add(" ", user.Id.ToString()).SubItems.AddRange(new string[] { user.Name, " ", user.Id.ToString() });
+                toInit.Items[toInit.Items.Count - 1].UseItemStyleForSubItems = false;
+            }
+        }
+
+        private void AddUserToListView(ListView lv, User toAdd)
+        {
+            lv.Items.Add(" ", toAdd.Id.ToString()).SubItems.AddRange(new string[] { toAdd.Name, " ", toAdd.Id.ToString() });
+            lv.Items[lv.Items.Count - 1].UseItemStyleForSubItems = false;
+        }
+        private void AddUserToListView(ListView lv, ListViewItem toAdd)
+        {
+            lv.Items.Add(" ", toAdd.SubItems[3].Text).SubItems.AddRange(new string[] { toAdd.SubItems[1].Text, " ", toAdd.SubItems[3].Text });
+            lv.Items[lv.Items.Count - 1].UseItemStyleForSubItems = false;
+        }
+
+        private void InitListViewsImages()
+        {
+            LV_AcceptedUsers.LargeImageList = new ImageList { ImageSize = new Size(50, 50) };
+            LV_BlacklistedUsers.LargeImageList = new ImageList { ImageSize = new Size(50, 50) };
+
+            foreach (var keyValuePair in UserThumbnails)
+            {
+                LV_AcceptedUsers.LargeImageList.Images.Add(keyValuePair.Key.ToString(), keyValuePair.Value);
+                LV_BlacklistedUsers.LargeImageList.Images.Add(keyValuePair.Key.ToString(), keyValuePair.Value);
+            }
+        }
+
+        private void InitUserThumbnails()
+        {
+            if (UserThumbnails == null)
+            {
+                UserThumbnails = new Dictionary<int, Image>();
+                foreach (var user in MainForm.AllUsers)
+                {
+                    if (user.GetAvatarThumbnailImage() != null)
+                    {
+                        UserThumbnails.Add(user.Id, user.GetAvatarThumbnailImage());
+                    }
+                }
+            }
+        }
+
+        private void DisplayPhotosOfSelectedUser(ListView lv)
+        {
+            if (lv.SelectedItems != null && lv.SelectedItems.Count == 1)
+            {
+                ImgL_SelectedUserImages.Clear();
+                var userPhotos = MainForm.photos.Where(p => p.OwnerId.ToString() == lv.SelectedItems[0].SubItems[3].Text).ToList();
+                foreach (var photo in userPhotos)
+                {
+                    ImgL_SelectedUserImages.AddPhoto(photo);
+                }
+            }
+        }
+
+        private void AddDroppedItemToListView(ListView lv, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(typeof(ListViewItem)))
             {
                 ListViewItem item = (ListViewItem)e.Data.GetData(typeof(ListViewItem));
-                lv.Items.Add(item.Text, item.ImageIndex);
+                AddUserToListView(lv, item);
+            }
+        }
+
+        private void RemoveDroppedItemFromListView(ListView lv, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(typeof(ListViewItem)))
+            {
+                ListViewItem item = (ListViewItem)e.Data.GetData(typeof(ListViewItem));
+                if (lv.Items.Contains(item))
+                {
+                    lv.Items.Remove(item);
+                }
+            }
+        }
+        private void RemoveDroppedItemFromListView(ListView lv, ListViewItem item)
+        {
+            if (lv.Items.Contains(item))
+            {
+                lv.Items.Remove(item);
             }
         }
 
@@ -64,43 +155,49 @@ namespace Client_PM
                 e.Effect = DragDropEffects.None;
         }
 
-        private void DLG_BlackList_Load(object sender, EventArgs e)
-        {
-            // Initialize the users thumbnails
-            if (UserThumbnails == null)
-            {
-                UserThumbnails = new List<Image>();
-                foreach (var user in MainForm.AllUsers)
-                {
-                    if (user.GetAvatarThumbnailImage() != null)
-                    {
-                        UserThumbnails.Add(user.GetAvatarThumbnailImage());
-                    }
-                }
-            }
-            LV_AcceptedUsers.LargeImageList = new ImageList();
-            LV_AcceptedUsers.LargeImageList.ImageSize = new Size(50, 50);
-            LV_AcceptedUsers.LargeImageList.Images.AddRange(UserThumbnails.ToArray());
-            LV_BlacklistedUsers.LargeImageList = new ImageList();
-            LV_BlacklistedUsers.LargeImageList.Images.AddRange(UserThumbnails.ToArray());
-
-            // Fill the listviews with the users
-            int index = 0;
-            foreach (var user in MainForm.AllUsers)
-            {
-                LV_AcceptedUsers.Items.Add(user.Name, index).SubItems.AddRange(new string[] { " ", " " });
-                ++index;
-            }
-        }
-
         private void LV_AcceptedUsers_DragDrop(object sender, DragEventArgs e)
         {
+            RemoveDroppedItemFromListView(LV_AcceptedUsers, e);
+            RemoveDroppedItemFromListView(LV_BlacklistedUsers, e);
             AddDroppedItemToListView(LV_AcceptedUsers, e);
         }
 
         private void LV_BlacklistedUsers_DragDrop(object sender, DragEventArgs e)
         {
+            RemoveDroppedItemFromListView(LV_AcceptedUsers, e);
+            RemoveDroppedItemFromListView(LV_BlacklistedUsers, e);
             AddDroppedItemToListView(LV_BlacklistedUsers, e);
+        }
+
+        private void LV_AcceptedUsers_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            DisplayPhotosOfSelectedUser(LV_AcceptedUsers);
+        }
+
+        private void LV_BlacklistedUsers_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            DisplayPhotosOfSelectedUser(LV_BlacklistedUsers);
+        }
+
+        private void DLG_BlackList_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyData)
+            {
+                case Keys.Right:
+                    if (LV_AcceptedUsers.SelectedItems != null && LV_AcceptedUsers.SelectedItems.Count == 1)
+                    {
+                        AddUserToListView(LV_BlacklistedUsers, LV_AcceptedUsers.SelectedItems[0]);
+                        RemoveDroppedItemFromListView(LV_AcceptedUsers, LV_AcceptedUsers.SelectedItems[0]);
+                    }
+                    break;
+                case Keys.Left:
+                    if (LV_BlacklistedUsers.SelectedItems != null && LV_BlacklistedUsers.SelectedItems.Count == 1)
+                    {
+                        AddUserToListView(LV_AcceptedUsers, LV_BlacklistedUsers.SelectedItems[0]);
+                        RemoveDroppedItemFromListView(LV_BlacklistedUsers, LV_BlacklistedUsers.SelectedItems[0]);
+                    }
+                    break;
+            }
         }
     }
 }
