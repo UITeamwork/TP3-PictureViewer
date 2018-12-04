@@ -61,7 +61,7 @@ namespace Client_PM
 
         private void DLG_Slideshow_MouseMove(object sender, MouseEventArgs e)
         {
-            label1.Text = e.Location.Y.ToString();
+            intervalle.Text = e.Location.Y.ToString();
             if (!PN_Controls.Visible)
             {
                 PN_Controls.Visible = e.Location.Y > (ClientRectangle.Height - Show_Controls_Zone);
@@ -225,7 +225,10 @@ namespace Client_PM
 
         void ShowHelp()
         {
-
+            DLG_Help help = new DLG_Help
+            {
+                FileName = "To do"
+            };
         }
 
         

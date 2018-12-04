@@ -303,6 +303,7 @@
             this.webBrowser1.Size = new System.Drawing.Size(429, 385);
             this.webBrowser1.TabIndex = 20;
             this.webBrowser1.Url = new System.Uri("", System.UriKind.Relative);
+            this.webBrowser1.DocumentCompleted += new System.Windows.Forms.WebBrowserDocumentCompletedEventHandler(this.webBrowser1_DocumentCompleted);
             // 
             // DLG_Help
             // 
@@ -316,6 +317,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DLG_Help";
             this.Text = "DLG_Help";
+            this.Load += new System.EventHandler(this.DLG_Help_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imageBox1)).EndInit();

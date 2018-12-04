@@ -337,5 +337,10 @@
   <ItemGroup>
     <None Include="Resources\IMG_RemovePicture_Neutral.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\HTMLPage1.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

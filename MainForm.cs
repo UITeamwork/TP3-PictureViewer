@@ -542,6 +542,7 @@ namespace Client_PM
         private void displayHelpToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DLG_Help help = new DLG_Help();
+            help.FileName = "HTMLPage1";
             help.ShowDialog();
         }
     }

@@ -37,7 +37,7 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.flashCheckBox1 = new CustomControls.FlashCheckBox();
             this.PN_Controls = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.intervalle = new System.Windows.Forms.Label();
             this.Timer = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.filesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -145,15 +145,15 @@
             this.PN_Controls.Size = new System.Drawing.Size(591, 131);
             this.PN_Controls.TabIndex = 7;
             // 
-            // label1
+            // intervalle
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(0, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 18);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "label1";
+            this.intervalle.AutoSize = true;
+            this.intervalle.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.intervalle.Location = new System.Drawing.Point(0, 24);
+            this.intervalle.Name = "intervalle";
+            this.intervalle.Size = new System.Drawing.Size(73, 18);
+            this.intervalle.TabIndex = 8;
+            this.intervalle.Text = "intervalle :";
             // 
             // Timer
             // 
@@ -184,21 +184,21 @@
             // 
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.helpToolStripMenuItem.Text = "help";
             // 
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
             this.closeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.closeToolStripMenuItem.Text = "Close";
             // 
             // Timer_Interval
             // 
             this.Timer_Interval.AutoSize = true;
             this.Timer_Interval.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.Timer_Interval.Location = new System.Drawing.Point(52, 24);
+            this.Timer_Interval.Location = new System.Drawing.Point(79, 24);
             this.Timer_Interval.Name = "Timer_Interval";
             this.Timer_Interval.Size = new System.Drawing.Size(46, 18);
             this.Timer_Interval.TabIndex = 13;
@@ -213,7 +213,7 @@
             this.ClientSize = new System.Drawing.Size(591, 461);
             this.Controls.Add(this.Timer_Interval);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.intervalle);
             this.Controls.Add(this.PN_Controls);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -246,7 +246,7 @@
         private CustomControls.FlashCheckBox flashCheckBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel PN_Controls;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label intervalle;
         private System.Windows.Forms.Timer Timer;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem filesToolStripMenuItem;
