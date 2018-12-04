@@ -62,14 +62,13 @@ namespace Client_PM.Properties {
         
         /// <summary>
         ///   Recherche une chaîne localisée semblable à &lt;!DOCTYPE html&gt;
-        ///
         ///&lt;html lang=&quot;en&quot; xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
         ///&lt;head&gt;
         ///    &lt;meta charset=&quot;utf-8&quot; /&gt;
         ///    &lt;title&gt;&lt;/title&gt;
         ///&lt;/head&gt;
         ///&lt;body&gt;
-        ///
+        ///    This is some resource HTML
         ///&lt;/body&gt;
         ///&lt;/html&gt;.
         /// </summary>
@@ -255,6 +254,16 @@ namespace Client_PM.Properties {
         internal static System.Drawing.Bitmap IMG_Info {
             get {
                 object obj = ResourceManager.GetObject("IMG_Info", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap IMG_Network {
+            get {
+                object obj = ResourceManager.GetObject("IMG_Network", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
