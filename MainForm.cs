@@ -434,7 +434,7 @@ namespace Client_PM
         #region Help Menu
         private void MI_About_Click(object sender, EventArgs e)
         {
-            new AboutBox1().ShowDialog();
+            new DLG_About().ShowDialog();
         }
         #endregion
 

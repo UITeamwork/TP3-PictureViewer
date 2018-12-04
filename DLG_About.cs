@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace Client_PM
 {
-    partial class AboutBox1 : Form
+    partial class DLG_About : Form
     {
-        public AboutBox1()
+        public DLG_About()
         {
             InitializeComponent();
             this.Text = String.Format("À propos de {0}", AssemblyTitle);

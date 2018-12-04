@@ -5,11 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Client_PM")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("PhotoManager Client")]
+[assembly: AssemblyDescription("PhotoManager Client allows you to view photos from other users of" +
+    " the application share your favorite photos")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Client_PM")]
+[assembly: AssemblyCompany("Created by Jérémie Lacroix and Gabriel Fournier-Cloutier")]
+[assembly: AssemblyProduct("PhotoManager Client")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

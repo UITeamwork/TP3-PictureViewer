@@ -262,6 +262,16 @@ namespace Client_PM.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap IMG_Network {
+            get {
+                object obj = ResourceManager.GetObject("IMG_Network", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap IMG_Play_Clicked {
             get {
                 object obj = ResourceManager.GetObject("IMG_Play_Clicked", resourceCulture);
