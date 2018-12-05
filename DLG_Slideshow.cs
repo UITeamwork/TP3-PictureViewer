@@ -128,8 +128,8 @@ namespace Client_PM
                 case Keys.Down: Timer.Interval = (Timer.Interval < 10000 ? Timer.Interval + 1000 : Timer.Interval);if (TrckB_SlideshowSpeed.Value > 0) { TrckB_SlideshowSpeed.Value = TrckB_SlideshowSpeed.Value - 1; } break;
                 case Keys.Up: Timer.Interval = (Timer.Interval > 1500 ? Timer.Interval - 1000 : Timer.Interval); if (TrckB_SlideshowSpeed.Value < 9) { TrckB_SlideshowSpeed.Value = TrckB_SlideshowSpeed.Value + 1; }  break;
                 case Keys.Escape: Timer.Stop(); Close(); break;
-                case Keys.Left: BTN_Previous.PerformClick(); break;
-                case Keys.Right: BTN_Next.PerformClick(); break;
+                case Keys.Left: Previous_Image(); break;
+                case Keys.Right: Next_Image(); break;
             }
             e.SuppressKeyPress = true;
             int timer = Timer.Interval / 1000;

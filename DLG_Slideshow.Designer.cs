@@ -74,7 +74,7 @@
             this.LAB_SlideshowSpeed.Name = "LAB_SlideshowSpeed";
             this.LAB_SlideshowSpeed.Size = new System.Drawing.Size(120, 18);
             this.LAB_SlideshowSpeed.TabIndex = 2;
-            this.LAB_SlideshowSpeed.Text = "Slideshow speed";
+            this.LAB_SlideshowSpeed.Text = "DLG_Slideshow speed";
             // 
             // BTN_Previous
             // 
@@ -239,7 +239,7 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(756, 19);
             this.tableLayoutPanel2.TabIndex = 16;
             // 
-            // Slideshow
+            // DLG_Slideshow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -256,7 +256,7 @@
             this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Slideshow";
+            this.Name = "DLG_Slideshow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DLG_Slideshow";
             this.Load += new System.EventHandler(this.DLG_Slideshow_Load);
