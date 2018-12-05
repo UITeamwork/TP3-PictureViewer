@@ -96,7 +96,7 @@ namespace Client_PM
         private void LoadPhoto()
         {
             WaitSplash.Show(this, "Loading photos from server...");
-            PhotoBrowser.LoadPhotos(PhotoFilter.GetPhotos());
+            PhotoBrowser.LoadPhotos(PhotoFilter.GetPhotos().Where(p => !DLG_BlackList.BlacklistedUsers.Contains(p.OwnerId)).ToList());
             WaitSplash.Hide();
         }
 
@@ -219,10 +219,9 @@ namespace Client_PM
         #region Flash Buttons Events
         private void FBTN_Blacklist_Click(object sender, EventArgs e)
         {
-            // TODO : Get result from dialog and reload the images to hide blacklisted users
             if (new DLG_BlackList(Logged_User.Id).ShowDialog() == DialogResult.OK)
             {
-                // Do something...
+                LoadPhoto();
             }
         }
 

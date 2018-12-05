@@ -121,9 +121,12 @@ namespace Client_PM
 
         private void FBTN_RotateImage_Click(object sender, EventArgs e)
         {
-            Image temp = (Image)ImgBX_Image.BackgroundImage.Clone();
-            temp.RotateFlip(RotateFlipType.Rotate90FlipNone);
-            ImgBX_Image.BackgroundImage = temp;
+            ImgBX_Image.RotateBgImage();
+        }
+
+        private void ImgBX_Image_BackgroundImageChanged(object sender, EventArgs e)
+        {
+            UpdateUI();
         }
     }
 }

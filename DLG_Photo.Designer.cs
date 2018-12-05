@@ -192,6 +192,7 @@
             this.ImgBX_Image.Size = new System.Drawing.Size(269, 241);
             this.ImgBX_Image.TabIndex = 3;
             this.ImgBX_Image.TabStop = false;
+            this.ImgBX_Image.BackgroundImageChanged += new System.EventHandler(this.ImgBX_Image_BackgroundImageChanged);
             // 
             // label5
             // 
