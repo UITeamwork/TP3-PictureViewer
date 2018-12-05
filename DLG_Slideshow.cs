@@ -32,6 +32,7 @@ namespace Client_PM
 
         public DLG_Slideshow()
         {
+            Load_Settings();
             InitializeComponent();
             ToolTip tooltip1 = new ToolTip();
             tooltip1.SetToolTip(BTN_Next, "See next image...");
@@ -59,7 +60,7 @@ namespace Client_PM
         private void DLG_Slideshow_Load(object sender, EventArgs e)
         {
 
-            Load_Settings();
+
             PN_Controls.Visible = false;
            
             LBL_Menu.Visible = true;
@@ -281,9 +282,17 @@ namespace Client_PM
         }
 
         void Load_Settings()
-        {
-            this.Location = Properties.Settings.Default.DLG_SLIDESHOW_LOCATION;
-            this.Size = Properties.Settings.Default.DLG_SLIDESHOW_SIZE;
+        {if (Properties.Settings.Default.DLG_SLIDESHOW_SIZE != new Size(0, 0))
+            {
+                this.Size = Properties.Settings.Default.DLG_SLIDESHOW_SIZE;
+            }
+        if (Properties.Settings.Default.DLG_SLIDESHOW_LOCATION != new Point(0,0))
+            {
+                this.Location = Properties.Settings.Default.DLG_SLIDESHOW_LOCATION;
+            }
+        
+            
+           
         }
 
         void Save_settings()
