@@ -60,6 +60,8 @@ namespace Client_PM
 
         private void DLG_Slideshow_Load(object sender, EventArgs e)
         {
+
+            Load_Settings();
             PN_Controls.Visible = false;
            
             LBL_Menu.Visible = true;
@@ -116,7 +118,7 @@ namespace Client_PM
         {
             switch (e.KeyCode)
             {
-               case Keys.F1: ShowHelp(); break;
+                case Keys.F1: ShowHelp(); break;
                 case Keys.F11: Fullscreen(); break;
                 case Keys.P: Timer.Start(); break;
                 case Keys.S: Timer.Stop(); break;
@@ -271,6 +273,30 @@ namespace Client_PM
             }
         }
 
-      
+        private void ToolStrip_Reset_Click(object sender, EventArgs e)
+        {
+            DialogResult =   MessageBox.Show("Are you sure you want to delete all photos from the slide show list?", "Reset", MessageBoxButtons.YesNo);
+            if (DialogResult == DialogResult.Yes)
+            {
+                SlideShowList = new List<int>();
+            }
+        }
+
+        void Load_Settings()
+        {
+            this.Location = Properties.Settings.Default.DLG_SLIDESHOW_LOCATION;
+            this.Size = Properties.Settings.Default.DLG_SLIDESHOW_SIZE;
+        }
+
+        void Save_settings()
+        {
+            Properties.Settings.Default.DLG_SLIDESHOW_LOCATION = this.Location;
+            Properties.Settings.Default.DLG_SLIDESHOW_SIZE = this.Size;
+        }
+
+        private void DLG_Slideshow_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Save_settings();
+        }
     }
 }

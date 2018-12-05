@@ -43,6 +43,7 @@
             this.filesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStrip_Reset = new System.Windows.Forms.ToolStripMenuItem();
             this.Timer_Interval = new System.Windows.Forms.Label();
             this.LBL_Menu = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -72,7 +73,7 @@
             this.LAB_SlideshowSpeed.Location = new System.Drawing.Point(13, 60);
             this.LAB_SlideshowSpeed.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LAB_SlideshowSpeed.Name = "LAB_SlideshowSpeed";
-            this.LAB_SlideshowSpeed.Size = new System.Drawing.Size(120, 18);
+            this.LAB_SlideshowSpeed.Size = new System.Drawing.Size(159, 18);
             this.LAB_SlideshowSpeed.TabIndex = 2;
             this.LAB_SlideshowSpeed.Text = "DLG_Slideshow speed";
             // 
@@ -180,7 +181,8 @@
             // 
             this.filesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.helpToolStripMenuItem,
-            this.closeToolStripMenuItem});
+            this.closeToolStripMenuItem,
+            this.ToolStrip_Reset});
             this.filesToolStripMenuItem.Name = "filesToolStripMenuItem";
             this.filesToolStripMenuItem.Size = new System.Drawing.Size(42, 20);
             this.filesToolStripMenuItem.Text = "Files";
@@ -189,7 +191,7 @@
             // 
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.helpToolStripMenuItem.Text = "help";
             this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
             // 
@@ -197,9 +199,17 @@
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
             this.closeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.closeToolStripMenuItem.Text = "Close";
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
+            // 
+            // ToolStrip_Reset
+            // 
+            this.ToolStrip_Reset.Name = "ToolStrip_Reset";
+            this.ToolStrip_Reset.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
+            this.ToolStrip_Reset.Size = new System.Drawing.Size(178, 22);
+            this.ToolStrip_Reset.Text = "Reset photo";
+            this.ToolStrip_Reset.Click += new System.EventHandler(this.ToolStrip_Reset_Click);
             // 
             // Timer_Interval
             // 
@@ -259,6 +269,7 @@
             this.Name = "DLG_Slideshow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DLG_Slideshow";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DLG_Slideshow_FormClosing);
             this.Load += new System.EventHandler(this.DLG_Slideshow_Load);
             this.Shown += new System.EventHandler(this.DLG_Slideshow_Shown);
             this.DoubleClick += new System.EventHandler(this.DLG_Slideshow_DoubleClick);
@@ -294,5 +305,6 @@
         private System.Windows.Forms.Label Timer_Interval;
         private System.Windows.Forms.Label LBL_Menu;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.ToolStripMenuItem ToolStrip_Reset;
     }
 }
