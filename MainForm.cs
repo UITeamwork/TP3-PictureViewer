@@ -52,6 +52,8 @@ namespace Client_PM
 
         private void MainForm_Shown(object sender, EventArgs e)
         {
+            
+            this.StartPosition = Properties.Settings.Default.DLG_MAINFORM_LOCATION;
             WaitSplash.Show(this, "Initializing(this might take a moment)...");
             photos = DBPhotosWebServices.GetAllPhotos();
             Load_Settings();
@@ -518,10 +520,14 @@ namespace Client_PM
                 LoadSlideShowList();
                 LoadBlacklist();
             }
+            this.Size = Properties.Settings.Default.DLG_MAINFORM_SIZE;
+            this.Location = Properties.Settings.Default.DLG_MAINFORM_LOCATION;
         }
 
         private void Save_settings()
         {
+            Properties.Settings.Default.DLG_MAINFORM_SIZE = this.Size;
+            Properties.Settings.Default.DLG_MAINFORM_LOCATION = this.Location;
             Properties.Settings.Default.FirstExecution = false;
             SaveSlideShowList();
             SaveBlacklist();

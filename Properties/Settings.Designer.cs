@@ -80,5 +80,53 @@ namespace Client_PM.Properties {
                 this["Blacklist"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Point DLG_MAINFORM_LOCATION {
+            get {
+                return ((global::System.Drawing.Point)(this["DLG_MAINFORM_LOCATION"]));
+            }
+            set {
+                this["DLG_MAINFORM_LOCATION"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Point DLG_SLIDESHOW_LOCATION {
+            get {
+                return ((global::System.Drawing.Point)(this["DLG_SLIDESHOW_LOCATION"]));
+            }
+            set {
+                this["DLG_SLIDESHOW_LOCATION"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Size DLG_MAINFORM_SIZE {
+            get {
+                return ((global::System.Drawing.Size)(this["DLG_MAINFORM_SIZE"]));
+            }
+            set {
+                this["DLG_MAINFORM_SIZE"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Size DLG_SLIDESHOW_SIZE {
+            get {
+                return ((global::System.Drawing.Size)(this["DLG_SLIDESHOW_SIZE"]));
+            }
+            set {
+                this["DLG_SLIDESHOW_SIZE"] = value;
+            }
+        }
     }
 }
