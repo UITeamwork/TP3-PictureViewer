@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace Client_PM
 {
-    public partial class DLG_Slideshow : Form
+    public partial class Slideshow : Form
     {
-
+       
 
         public static List<int> SlideShowList { get; set; }
 
@@ -32,9 +32,13 @@ namespace Client_PM
 
         private int Show_Controls_Zone = 20;
 
-        public DLG_Slideshow()
+        public Slideshow()
         {
             InitializeComponent();
+            ToolTip tooltip1 = new ToolTip();
+            tooltip1.SetToolTip(BTN_Next, "See next image...");
+            ToolTip tooltip2 = new ToolTip();
+            tooltip1.SetToolTip(BTN_Previous, "See previous image...");
         }
 
         private void Fullscreen()
@@ -57,13 +61,22 @@ namespace Client_PM
         private void DLG_Slideshow_Load(object sender, EventArgs e)
         {
             PN_Controls.Visible = false;
+           
+            LBL_Menu.Visible = true;
+            tableLayoutPanel2.Location = new Point(0, 350);
+            tableLayoutPanel1.Visible = true;
+           
+            LBL_Menu.ForeColor = System.Drawing.Color.White;
         }
 
         private void DLG_Slideshow_MouseMove(object sender, MouseEventArgs e)
         {
-            intervalle.Text = e.Location.Y.ToString();
+            
             if (!PN_Controls.Visible)
             {
+               
+                LBL_Menu.Visible = true;
+                
                 PN_Controls.Visible = e.Location.Y > (ClientRectangle.Height - Show_Controls_Zone);
             }
             else
@@ -121,7 +134,8 @@ namespace Client_PM
                 case Keys.Right: BTN_Next.PerformClick(); break;
             }
             e.SuppressKeyPress = true;
-            Timer_Interval.Text = Timer.Interval.ToString();
+            int timer = Timer.Interval / 1000;
+            Timer_Interval.Text = timer.ToString() + "s";
         }
 
         private void DLG_Slideshow_DoubleClick(object sender, EventArgs e)
@@ -163,13 +177,14 @@ namespace Client_PM
                 Timer.Interval = 5000;
             else if (TrckB_SlideshowSpeed.Value == 6)
                 Timer.Interval = 4000;
-            else if (TrckB_SlideshowSpeed.Value == 6)
+            else if (TrckB_SlideshowSpeed.Value == 7)
                 Timer.Interval = 3000;
-            else if (TrckB_SlideshowSpeed.Value == 6)
+            else if (TrckB_SlideshowSpeed.Value == 8)
                 Timer.Interval = 2000;
-            else if (TrckB_SlideshowSpeed.Value == 6)
+            else if (TrckB_SlideshowSpeed.Value == 9)
                 Timer.Interval = 1000;
-            Timer_Interval.Text = Timer.Interval.ToString();
+            int timer = Timer.Interval / 1000;
+            Timer_Interval.Text = timer.ToString() + "s";
         }
 
         private void BTN_Previous_Click(object sender, EventArgs e)
@@ -227,8 +242,35 @@ namespace Client_PM
         {
             DLG_Help help = new DLG_Help
             {
-                ContentFromResources = Properties.Resources.HTMLPage1
+                ContentFromResources = Properties.Resources.HTMLPage2,
+                slideshow = true
             };
+            help.ShowDialog();
         }
+
+        private void closeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowHelp();
+        }
+
+        private void PN_Controls_VisibleChanged(object sender, EventArgs e)
+        {
+            if (PN_Controls.Visible)
+            {
+                LBL_Menu.Visible = false;
+                tableLayoutPanel2.Visible = false;
+            }
+            else
+            { LBL_Menu.Visible = true;
+                tableLayoutPanel2.Visible = true;
+            }
+        }
+
+      
     }
 }

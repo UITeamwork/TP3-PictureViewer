@@ -74,7 +74,7 @@ namespace Client_PM
             // PhotoIsOwnedByLoggedUser implies that the user is logged in and that a photo is currently selected
             bool PhotoIsOwnedByLoggedUser = PhotoIsSelected && PhotoBrowser.SelectedPhoto.OwnerId == Logged_User.Id;
 
-            FBTN_PhotoToSlideshow.SetImages(PhotoIsSelected && DLG_Slideshow.SlideShowList.Contains(PhotoBrowser.SelectedPhoto.Id) ?  RemoveFromSlideShow : AddToSlideShow);
+            FBTN_PhotoToSlideshow.SetImages(PhotoIsSelected && Slideshow.SlideShowList.Contains(PhotoBrowser.SelectedPhoto.Id) ?  RemoveFromSlideShow : AddToSlideShow);
             FBTN_PhotoToSlideshow.BackgroundImage = (FBTN_PhotoToSlideshow.Enabled ? FBTN_PhotoToSlideshow.NeutralImage : FBTN_PhotoToSlideshow.DisabledImage);
 
 
@@ -232,7 +232,7 @@ namespace Client_PM
 
         private void FBTN_Slideshow_Click(object sender, EventArgs e)
         {
-            DLG_Slideshow dlg = new DLG_Slideshow();
+            Slideshow dlg = new Slideshow();
             
             dlg.PhotoPool = photos;
             dlg.ShowDialog();
@@ -279,13 +279,13 @@ namespace Client_PM
 
         private void FBTN_PictureSlideshow_Click(object sender, EventArgs e)
         {
-            if (!DLG_Slideshow.SlideShowList.Contains(PhotoBrowser.SelectedPhoto.Id))
+            if (!Slideshow.SlideShowList.Contains(PhotoBrowser.SelectedPhoto.Id))
             {
-                DLG_Slideshow.SlideShowList.Add(PhotoBrowser.SelectedPhoto.Id);
+                Slideshow.SlideShowList.Add(PhotoBrowser.SelectedPhoto.Id);
             }
             else
             {
-                DLG_Slideshow.SlideShowList.Remove(PhotoBrowser.SelectedPhoto.Id);
+                Slideshow.SlideShowList.Remove(PhotoBrowser.SelectedPhoto.Id);
             }
             Update_UI();
         }
@@ -492,7 +492,7 @@ namespace Client_PM
             }
             else
             {
-                DLG_Slideshow.SlideShowList = new List<int>();
+                Slideshow.SlideShowList = new List<int>();
             }
         }
 
@@ -504,13 +504,13 @@ namespace Client_PM
         }
         private void LoadSlideShowList()
         {
-            DLG_Slideshow.SlideShowList = new List<int>();
+            Slideshow.SlideShowList = new List<int>();
             if (Properties.Settings.Default.SlideShowList != null)
             {
                 foreach (string stringPhotoId in Properties.Settings.Default.SlideShowList)
                 {
                     int photoId = int.Parse(stringPhotoId);
-                    DLG_Slideshow.SlideShowList.Add(photoId);
+                    Slideshow.SlideShowList.Add(photoId);
                 }
             }
         }
@@ -520,8 +520,8 @@ namespace Client_PM
             if (Properties.Settings.Default.SlideShowList == null)
                 Properties.Settings.Default.SlideShowList = new System.Collections.Specialized.StringCollection();
             Properties.Settings.Default.SlideShowList.Clear();
-            if (DLG_Slideshow.SlideShowList != null)
-                foreach (int photoId in DLG_Slideshow.SlideShowList)
+            if (Slideshow.SlideShowList != null)
+                foreach (int photoId in Slideshow.SlideShowList)
                 {
                     Properties.Settings.Default.SlideShowList.Add(photoId.ToString());
                 }
