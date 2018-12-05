@@ -43,12 +43,13 @@
             this.CBX_Shared = new System.Windows.Forms.CheckBox();
             this.FBTN_RotateImage = new PhotoManagerClient.FlashButton();
             this.ImgBX_Image = new PhotoManagerClient.ImageBox();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.ImgBX_Image)).BeginInit();
             this.SuspendLayout();
             // 
             // TBX_Title
             // 
-            this.TBX_Title.Location = new System.Drawing.Point(14, 31);
+            this.TBX_Title.Location = new System.Drawing.Point(16, 31);
             this.TBX_Title.Margin = new System.Windows.Forms.Padding(4);
             this.TBX_Title.Name = "TBX_Title";
             this.TBX_Title.Size = new System.Drawing.Size(269, 24);
@@ -56,7 +57,7 @@
             // 
             // DTP_Date
             // 
-            this.DTP_Date.Location = new System.Drawing.Point(304, 84);
+            this.DTP_Date.Location = new System.Drawing.Point(306, 84);
             this.DTP_Date.Margin = new System.Windows.Forms.Padding(4);
             this.DTP_Date.Name = "DTP_Date";
             this.DTP_Date.Size = new System.Drawing.Size(175, 24);
@@ -65,7 +66,7 @@
             // 
             // RTBX_Description
             // 
-            this.RTBX_Description.Location = new System.Drawing.Point(304, 140);
+            this.RTBX_Description.Location = new System.Drawing.Point(306, 140);
             this.RTBX_Description.Margin = new System.Windows.Forms.Padding(4);
             this.RTBX_Description.Name = "RTBX_Description";
             this.RTBX_Description.Size = new System.Drawing.Size(269, 113);
@@ -75,7 +76,7 @@
             // BTN_Cancel
             // 
             this.BTN_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BTN_Cancel.Location = new System.Drawing.Point(498, 301);
+            this.BTN_Cancel.Location = new System.Drawing.Point(509, 301);
             this.BTN_Cancel.Margin = new System.Windows.Forms.Padding(4);
             this.BTN_Cancel.Name = "BTN_Cancel";
             this.BTN_Cancel.Size = new System.Drawing.Size(80, 28);
@@ -86,7 +87,7 @@
             // BTN_Ok
             // 
             this.BTN_Ok.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.BTN_Ok.Location = new System.Drawing.Point(410, 301);
+            this.BTN_Ok.Location = new System.Drawing.Point(421, 301);
             this.BTN_Ok.Margin = new System.Windows.Forms.Padding(4);
             this.BTN_Ok.Name = "BTN_Ok";
             this.BTN_Ok.Size = new System.Drawing.Size(80, 28);
@@ -97,7 +98,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 9);
+            this.label1.Location = new System.Drawing.Point(13, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(35, 18);
@@ -107,7 +108,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(301, 9);
+            this.label2.Location = new System.Drawing.Point(303, 9);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(244, 18);
@@ -117,7 +118,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(301, 118);
+            this.label3.Location = new System.Drawing.Point(303, 118);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(83, 18);
@@ -127,7 +128,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(301, 63);
+            this.label4.Location = new System.Drawing.Point(303, 63);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(39, 18);
@@ -136,7 +137,7 @@
             // 
             // TBX_Keywords
             // 
-            this.TBX_Keywords.Location = new System.Drawing.Point(304, 31);
+            this.TBX_Keywords.Location = new System.Drawing.Point(306, 31);
             this.TBX_Keywords.Margin = new System.Windows.Forms.Padding(4);
             this.TBX_Keywords.Name = "TBX_Keywords";
             this.TBX_Keywords.Size = new System.Drawing.Size(269, 24);
@@ -148,7 +149,7 @@
             this.CBX_Shared.Checked = true;
             this.CBX_Shared.CheckState = System.Windows.Forms.CheckState.Indeterminate;
             this.CBX_Shared.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CBX_Shared.Location = new System.Drawing.Point(493, 85);
+            this.CBX_Shared.Location = new System.Drawing.Point(495, 85);
             this.CBX_Shared.Name = "CBX_Shared";
             this.CBX_Shared.Size = new System.Drawing.Size(80, 22);
             this.CBX_Shared.TabIndex = 13;
@@ -163,7 +164,7 @@
             this.FBTN_RotateImage.DisabledImage = global::Client_PM.Properties.Resources.IMG_Rotate_Disabled;
             this.FBTN_RotateImage.Enabled = false;
             this.FBTN_RotateImage.Image = ((System.Drawing.Image)(resources.GetObject("FBTN_RotateImage.Image")));
-            this.FBTN_RotateImage.Location = new System.Drawing.Point(319, 269);
+            this.FBTN_RotateImage.Location = new System.Drawing.Point(328, 269);
             this.FBTN_RotateImage.Margin = new System.Windows.Forms.Padding(4);
             this.FBTN_RotateImage.Name = "FBTN_RotateImage";
             this.FBTN_RotateImage.NeutralImage = global::Client_PM.Properties.Resources.IMG_Rotate_Neutral;
@@ -183,14 +184,24 @@
             this.ImgBX_Image.ControlToolTipText = "You can either drag & drop, paste image from clipboard or choose an image file wi" +
     "th context menu.";
             this.ImgBX_Image.ImportImageText = "Import image from file...";
-            this.ImgBX_Image.Location = new System.Drawing.Point(14, 63);
+            this.ImgBX_Image.Location = new System.Drawing.Point(16, 84);
             this.ImgBX_Image.Margin = new System.Windows.Forms.Padding(4);
             this.ImgBX_Image.Name = "ImgBX_Image";
             this.ImgBX_Image.OpenFileDialogTitle = "Please choose image an file";
             this.ImgBX_Image.PasteMenuText = "Paste image from clipboard";
-            this.ImgBX_Image.Size = new System.Drawing.Size(269, 262);
+            this.ImgBX_Image.Size = new System.Drawing.Size(269, 241);
             this.ImgBX_Image.TabIndex = 3;
             this.ImgBX_Image.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(13, 63);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(48, 18);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Photo";
             // 
             // DLG_Photo
             // 
@@ -198,7 +209,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.BTN_Cancel;
-            this.ClientSize = new System.Drawing.Size(585, 336);
+            this.ClientSize = new System.Drawing.Size(594, 336);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.CBX_Shared);
             this.Controls.Add(this.TBX_Keywords);
             this.Controls.Add(this.label4);
@@ -244,5 +256,6 @@
         private System.Windows.Forms.TextBox TBX_Keywords;
         private System.Windows.Forms.CheckBox CBX_Shared;
         private PhotoManagerClient.ImageBox ImgBX_Image;
+        private System.Windows.Forms.Label label5;
     }
 }

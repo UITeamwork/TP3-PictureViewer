@@ -50,12 +50,12 @@ namespace Client_PM
         }
         private bool Validate_TBX_Username(ref string message)
         {
-            message = "Nom d'usager manquant";
+            message = "The username cannot be empty";
             return TBX_Username.Text != "";
         }
         private bool Validate_TBX_Username_OnSubmit(ref string message)
         {
-            message = "Nom d'usager déjà utilisé";
+            message = "This username is already in use";
             if (User != null)
                 return !DBPhotosWebServices.UserNameAlreadyUsed(User.Id, TBX_Username.Text);
             else
@@ -63,18 +63,18 @@ namespace Client_PM
         }
         private bool Validate_TBX_Password(ref string message)
         {
-            message = "Mot de passe manquant";
+            message = "The password cannot be empty";
             return TBX_Password.Text != "";
         }
         private bool Validate_TBX_verifyPassword(ref string message)
         {
-            message = "Mot de passe ne correspond avec vérification";
+            message = "The passwords do not match";
             return TBX_VerifyPassword.Text == TBX_Password.Text;
         }
 
         private bool Validate_IBX_Avatar(ref string message)
         {
-            message = "Veuillez vhoisir votre avatar.";
+            message = "The profile picture cannot be empty";
             return IBX_Avatar.BackgroundImage != null;
         }
 
@@ -101,7 +101,7 @@ namespace Client_PM
 
         private void BTN_DeleteAccount_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Êtes-vous sûr de vouloir effacer votre compte et toutes vos photos?", "Attention!", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("Are you sure you want to delete your account and all your photos??", "Warning : Your account will be deleted", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 DBPhotosWebServices.DeleteUser(User.Id);
                 User = null;
