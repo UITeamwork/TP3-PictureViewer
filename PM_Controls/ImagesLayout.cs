@@ -279,10 +279,13 @@ namespace PhotoManagerClient
         /// <param name="photo"></param>
         public void AddPhoto(Photo photo)
         {
-            PhotoBox photoBox = new PhotoBox(photo);
-            photoBox.IgnoreMouseInteractions = IgnoreMouseInteractions;
-            photoBox.SetClickListener(ImagesLayout_Click);
-            Controls.Add(photoBox);
+            if (photo.GetOriginalImage() != null)
+            {
+                PhotoBox photoBox = new PhotoBox(photo);
+                photoBox.IgnoreMouseInteractions = IgnoreMouseInteractions;
+                photoBox.SetClickListener(ImagesLayout_Click);
+                Controls.Add(photoBox);
+            }
         }
 
         /// <summary>

@@ -18,6 +18,7 @@ namespace Client_PM
         private PhotoFilter PhotoFilter = null;
         private bool PhotoBrowserIsExpanded = false;
         private int InitialBrowserHeight;
+        private bool Initializing = true;
 
         public static List<Photo> photos;
          
@@ -127,10 +128,13 @@ namespace Client_PM
             if (Logged_User != null)
             {
                 PhotoFilter = new PhotoFilter(Logged_User.Id);
-                AllUsers.AddRange(PhotoFilter.UsersList);
-                AllUsers.Add(Logged_User);
-                AllUsers.RemoveRange(0, 2); // Remove "only mine" and "all users"
-
+                if(Initializing)
+                {
+                    AllUsers.AddRange(PhotoFilter.UsersList);
+                    AllUsers.Add(Logged_User);
+                    AllUsers.RemoveRange(0, 2); // Remove "only mine" and "all users"
+                    Initializing = false;
+                }
                 Init_UsersList();
                 LoadPhoto();
                 Init_Keywords_List();
@@ -210,11 +214,6 @@ namespace Client_PM
             }
             Update_UI();
         }
-        private void PhotoBrowser_DoubleClick(object sender, EventArgs e)
-        {
-            PhotoBrowser.ToggleHidePhotosList();
-            MI_HSPhotoList.Checked = !MI_HSPhotoList.Checked;
-        }
 
         #region Flash Buttons Events
         private void FBTN_Blacklist_Click(object sender, EventArgs e)
@@ -236,7 +235,7 @@ namespace Client_PM
         {
             // PhotoBrowser.SelectedPhoto will not be null since the button is not accessible if it's the case
             InfoOnSelected.SelectedPhoto = PhotoBrowser.SelectedPhoto;
-            InfoOnSelected.UpdateDLG();
+            InfoOnSelected.UpdateDLG();        
         }
 
         private void FBTN_NewPicture_Click(object sender, EventArgs e)

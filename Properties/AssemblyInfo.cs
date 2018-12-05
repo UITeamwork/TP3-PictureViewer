@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 // associated with an assembly.
 [assembly: AssemblyTitle("PhotoManager Client Application")]
 [assembly: AssemblyDescription("PhotoManager Client allows you to view photos from other users of" +
-    " the application share your favorite photos")]
+    " the application share your favorite photos with them")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Created by Jérémie Lacroix and Gabriel Fournier-Cloutier")]
 [assembly: AssemblyProduct("PhotoManager Client Application")]

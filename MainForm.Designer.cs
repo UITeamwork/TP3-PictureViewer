@@ -63,19 +63,19 @@
             this.CBX_KeywordFilter = new System.Windows.Forms.CheckBox();
             this.CBX_Keywords = new System.Windows.Forms.ComboBox();
             this.GBX_Commands = new System.Windows.Forms.GroupBox();
-            this.GBX_Date = new System.Windows.Forms.GroupBox();
-            this.CBX_DateFilter = new System.Windows.Forms.CheckBox();
-            this.DTP_To = new System.Windows.Forms.DateTimePicker();
-            this.DTP_From = new System.Windows.Forms.DateTimePicker();
-            this.GBX_Managers = new System.Windows.Forms.GroupBox();
-            this.FLP_Groups = new System.Windows.Forms.FlowLayoutPanel();
             this.FBTN_PhotoToSlideshow = new PhotoManagerClient.FlashButton();
             this.FBTN_ViewPictureInfo = new PhotoManagerClient.FlashButton();
             this.FBTN_DeletePicture = new PhotoManagerClient.FlashButton();
             this.FBTN_EditPicture = new PhotoManagerClient.FlashButton();
             this.FBTN_NewPicture = new PhotoManagerClient.FlashButton();
+            this.GBX_Date = new System.Windows.Forms.GroupBox();
+            this.CBX_DateFilter = new System.Windows.Forms.CheckBox();
+            this.DTP_To = new System.Windows.Forms.DateTimePicker();
+            this.DTP_From = new System.Windows.Forms.DateTimePicker();
+            this.GBX_Managers = new System.Windows.Forms.GroupBox();
             this.FBTN_Blacklist = new PhotoManagerClient.FlashButton();
             this.FBTN_Slideshow = new PhotoManagerClient.FlashButton();
+            this.FLP_Groups = new System.Windows.Forms.FlowLayoutPanel();
             this.PhotoBrowser = new PhotoManagerClient.PhotosBrowser();
             this.GBX_Users.SuspendLayout();
             this.MS_Account.SuspendLayout();
@@ -145,7 +145,7 @@
             // 
             this.MI_Account_Login.Name = "MI_Account_Login";
             this.MI_Account_Login.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.L)));
-            this.MI_Account_Login.Size = new System.Drawing.Size(180, 22);
+            this.MI_Account_Login.Size = new System.Drawing.Size(154, 22);
             this.MI_Account_Login.Text = "Login";
             this.MI_Account_Login.Click += new System.EventHandler(this.MI_Account_Login_Click);
             // 
@@ -153,7 +153,7 @@
             // 
             this.MI_Account_Profil.Name = "MI_Account_Profil";
             this.MI_Account_Profil.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.P)));
-            this.MI_Account_Profil.Size = new System.Drawing.Size(180, 22);
+            this.MI_Account_Profil.Size = new System.Drawing.Size(154, 22);
             this.MI_Account_Profil.Text = "Profil";
             this.MI_Account_Profil.Click += new System.EventHandler(this.MI_Account_Profil_Click);
             // 
@@ -161,7 +161,7 @@
             // 
             this.Mi_Account_Create.Name = "Mi_Account_Create";
             this.Mi_Account_Create.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.C)));
-            this.Mi_Account_Create.Size = new System.Drawing.Size(180, 22);
+            this.Mi_Account_Create.Size = new System.Drawing.Size(154, 22);
             this.Mi_Account_Create.Text = "Create";
             this.Mi_Account_Create.Click += new System.EventHandler(this.Mi_Account_Create_Click);
             // 
@@ -169,7 +169,7 @@
             // 
             this.MI_Blacklist.Name = "MI_Blacklist";
             this.MI_Blacklist.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.B)));
-            this.MI_Blacklist.Size = new System.Drawing.Size(180, 22);
+            this.MI_Blacklist.Size = new System.Drawing.Size(154, 22);
             this.MI_Blacklist.Text = "Blacklist";
             this.MI_Blacklist.Click += new System.EventHandler(this.MI_Blacklist_Click);
             // 
@@ -177,7 +177,7 @@
             // 
             this.MI_Account_Exit.Name = "MI_Account_Exit";
             this.MI_Account_Exit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.MI_Account_Exit.Size = new System.Drawing.Size(180, 22);
+            this.MI_Account_Exit.Size = new System.Drawing.Size(154, 22);
             this.MI_Account_Exit.Text = "Exit";
             this.MI_Account_Exit.Click += new System.EventHandler(this.MI_Account_Exit_Click);
             // 
@@ -414,67 +414,6 @@
             this.GBX_Commands.TabStop = false;
             this.GBX_Commands.Text = "Commands";
             // 
-            // GBX_Date
-            // 
-            this.GBX_Date.Controls.Add(this.CBX_DateFilter);
-            this.GBX_Date.Controls.Add(this.DTP_To);
-            this.GBX_Date.Controls.Add(this.DTP_From);
-            this.GBX_Date.Location = new System.Drawing.Point(674, 3);
-            this.GBX_Date.Name = "GBX_Date";
-            this.GBX_Date.Size = new System.Drawing.Size(216, 94);
-            this.GBX_Date.TabIndex = 1;
-            this.GBX_Date.TabStop = false;
-            this.GBX_Date.Text = "Date interval";
-            // 
-            // CBX_DateFilter
-            // 
-            this.CBX_DateFilter.AutoSize = true;
-            this.CBX_DateFilter.Location = new System.Drawing.Point(6, 25);
-            this.CBX_DateFilter.Name = "CBX_DateFilter";
-            this.CBX_DateFilter.Size = new System.Drawing.Size(15, 14);
-            this.CBX_DateFilter.TabIndex = 0;
-            this.CBX_DateFilter.UseVisualStyleBackColor = true;
-            this.CBX_DateFilter.CheckedChanged += new System.EventHandler(this.CBX_DateFilter_CheckedChanged);
-            // 
-            // DTP_To
-            // 
-            this.DTP_To.Location = new System.Drawing.Point(27, 58);
-            this.DTP_To.Name = "DTP_To";
-            this.DTP_To.Size = new System.Drawing.Size(181, 26);
-            this.DTP_To.TabIndex = 0;
-            this.DTP_To.ValueChanged += new System.EventHandler(this.DTP_To_ValueChanged);
-            // 
-            // DTP_From
-            // 
-            this.DTP_From.Location = new System.Drawing.Point(27, 24);
-            this.DTP_From.Name = "DTP_From";
-            this.DTP_From.Size = new System.Drawing.Size(181, 26);
-            this.DTP_From.TabIndex = 1;
-            this.DTP_From.ValueChanged += new System.EventHandler(this.DTP_From_ValueChanged);
-            // 
-            // GBX_Managers
-            // 
-            this.GBX_Managers.Controls.Add(this.FBTN_Blacklist);
-            this.GBX_Managers.Controls.Add(this.FBTN_Slideshow);
-            this.GBX_Managers.Location = new System.Drawing.Point(896, 3);
-            this.GBX_Managers.Name = "GBX_Managers";
-            this.GBX_Managers.Size = new System.Drawing.Size(122, 94);
-            this.GBX_Managers.TabIndex = 10;
-            this.GBX_Managers.TabStop = false;
-            this.GBX_Managers.Text = "Managers";
-            // 
-            // FLP_Groups
-            // 
-            this.FLP_Groups.Controls.Add(this.GBX_Commands);
-            this.FLP_Groups.Controls.Add(this.GBX_Users);
-            this.FLP_Groups.Controls.Add(this.GBX_Keyword);
-            this.FLP_Groups.Controls.Add(this.GBX_Date);
-            this.FLP_Groups.Controls.Add(this.GBX_Managers);
-            this.FLP_Groups.Location = new System.Drawing.Point(12, 27);
-            this.FLP_Groups.Name = "FLP_Groups";
-            this.FLP_Groups.Size = new System.Drawing.Size(1022, 109);
-            this.FLP_Groups.TabIndex = 11;
-            // 
             // FBTN_PhotoToSlideshow
             // 
             this.FBTN_PhotoToSlideshow.BackgroundImage = global::Client_PM.Properties.Resources.IMG_AddPicture_Neutral;
@@ -560,6 +499,55 @@
             this.FBTN_NewPicture.UseVisualStyleBackColor = true;
             this.FBTN_NewPicture.Click += new System.EventHandler(this.FBTN_NewPicture_Click);
             // 
+            // GBX_Date
+            // 
+            this.GBX_Date.Controls.Add(this.CBX_DateFilter);
+            this.GBX_Date.Controls.Add(this.DTP_To);
+            this.GBX_Date.Controls.Add(this.DTP_From);
+            this.GBX_Date.Location = new System.Drawing.Point(674, 3);
+            this.GBX_Date.Name = "GBX_Date";
+            this.GBX_Date.Size = new System.Drawing.Size(216, 94);
+            this.GBX_Date.TabIndex = 1;
+            this.GBX_Date.TabStop = false;
+            this.GBX_Date.Text = "Date interval";
+            // 
+            // CBX_DateFilter
+            // 
+            this.CBX_DateFilter.AutoSize = true;
+            this.CBX_DateFilter.Location = new System.Drawing.Point(6, 25);
+            this.CBX_DateFilter.Name = "CBX_DateFilter";
+            this.CBX_DateFilter.Size = new System.Drawing.Size(15, 14);
+            this.CBX_DateFilter.TabIndex = 0;
+            this.CBX_DateFilter.UseVisualStyleBackColor = true;
+            this.CBX_DateFilter.CheckedChanged += new System.EventHandler(this.CBX_DateFilter_CheckedChanged);
+            // 
+            // DTP_To
+            // 
+            this.DTP_To.Location = new System.Drawing.Point(27, 58);
+            this.DTP_To.Name = "DTP_To";
+            this.DTP_To.Size = new System.Drawing.Size(181, 26);
+            this.DTP_To.TabIndex = 0;
+            this.DTP_To.ValueChanged += new System.EventHandler(this.DTP_To_ValueChanged);
+            // 
+            // DTP_From
+            // 
+            this.DTP_From.Location = new System.Drawing.Point(27, 24);
+            this.DTP_From.Name = "DTP_From";
+            this.DTP_From.Size = new System.Drawing.Size(181, 26);
+            this.DTP_From.TabIndex = 1;
+            this.DTP_From.ValueChanged += new System.EventHandler(this.DTP_From_ValueChanged);
+            // 
+            // GBX_Managers
+            // 
+            this.GBX_Managers.Controls.Add(this.FBTN_Blacklist);
+            this.GBX_Managers.Controls.Add(this.FBTN_Slideshow);
+            this.GBX_Managers.Location = new System.Drawing.Point(896, 3);
+            this.GBX_Managers.Name = "GBX_Managers";
+            this.GBX_Managers.Size = new System.Drawing.Size(122, 94);
+            this.GBX_Managers.TabIndex = 10;
+            this.GBX_Managers.TabStop = false;
+            this.GBX_Managers.Text = "Managers";
+            // 
             // FBTN_Blacklist
             // 
             this.FBTN_Blacklist.BackgroundImage = global::Client_PM.Properties.Resources.IMG_Blacklist_Neutral;
@@ -594,6 +582,18 @@
             this.FBTN_Slideshow.UseVisualStyleBackColor = true;
             this.FBTN_Slideshow.Click += new System.EventHandler(this.FBTN_Slideshow_Click);
             // 
+            // FLP_Groups
+            // 
+            this.FLP_Groups.Controls.Add(this.GBX_Commands);
+            this.FLP_Groups.Controls.Add(this.GBX_Users);
+            this.FLP_Groups.Controls.Add(this.GBX_Keyword);
+            this.FLP_Groups.Controls.Add(this.GBX_Date);
+            this.FLP_Groups.Controls.Add(this.GBX_Managers);
+            this.FLP_Groups.Location = new System.Drawing.Point(12, 27);
+            this.FLP_Groups.Name = "FLP_Groups";
+            this.FLP_Groups.Size = new System.Drawing.Size(1022, 109);
+            this.FLP_Groups.TabIndex = 11;
+            // 
             // PhotoBrowser
             // 
             this.PhotoBrowser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -606,7 +606,6 @@
             this.PhotoBrowser.Size = new System.Drawing.Size(1015, 526);
             this.PhotoBrowser.TabIndex = 0;
             this.PhotoBrowser.SelectedChanged += new PhotoManagerClient.PhotosBrowser.SelectedChangedHandler(this.PhotoBrowser_SelectedChanged);
-            this.PhotoBrowser.DoubleClick += new System.EventHandler(this.PhotoBrowser_DoubleClick);
             // 
             // MainForm
             // 
