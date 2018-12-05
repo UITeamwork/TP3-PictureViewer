@@ -200,5 +200,26 @@ namespace Client_PM
                     break;
             }
         }
+
+        private void DLG_BlackList_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (DialogResult == DialogResult.OK)
+            {
+                BlacklistedUsers.Clear();
+                foreach (ListViewItem item in LV_BlacklistedUsers.Items)
+                {
+                    BlacklistedUsers.Add(int.Parse(item.SubItems[3].Text));
+                }
+            }
+        }
+
+        private void FBTN_ResetBlacklist_Click(object sender, EventArgs e)
+        {
+            foreach (ListViewItem item in LV_BlacklistedUsers.Items)
+            {
+                AddUserToListView(LV_AcceptedUsers, item);
+                RemoveDroppedItemFromListView(LV_BlacklistedUsers, item);
+            }
+        }
     }
 }

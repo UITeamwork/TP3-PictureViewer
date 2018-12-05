@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DLG_BlackList));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.BTN_Cancel = new System.Windows.Forms.Button();
@@ -42,6 +43,7 @@
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label3 = new System.Windows.Forms.Label();
             this.ImgL_SelectedUserImages = new PhotoManagerClient.ImagesLayout();
+            this.FBTN_ResetBlacklist = new PhotoManagerClient.FlashButton();
             this.SuspendLayout();
             // 
             // label1
@@ -151,6 +153,23 @@
             this.ImgL_SelectedUserImages.TabIndex = 11;
             this.ImgL_SelectedUserImages.WrapContents = false;
             // 
+            // FBTN_ResetBlacklist
+            // 
+            this.FBTN_ResetBlacklist.BackgroundImage = global::Client_PM.Properties.Resources.IMG_Recycle_Neutral;
+            this.FBTN_ResetBlacklist.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.FBTN_ResetBlacklist.ClickedImage = global::Client_PM.Properties.Resources.IMG_Recycle_Clicked;
+            this.FBTN_ResetBlacklist.DisabledImage = global::Client_PM.Properties.Resources.IMG_Recycle_Disabled;
+            this.FBTN_ResetBlacklist.Image = ((System.Drawing.Image)(resources.GetObject("FBTN_ResetBlacklist.Image")));
+            this.FBTN_ResetBlacklist.Location = new System.Drawing.Point(749, 2);
+            this.FBTN_ResetBlacklist.Name = "FBTN_ResetBlacklist";
+            this.FBTN_ResetBlacklist.NeutralImage = global::Client_PM.Properties.Resources.IMG_Recycle_Neutral;
+            this.FBTN_ResetBlacklist.OverImage = global::Client_PM.Properties.Resources.IMG_Recycle_Over;
+            this.FBTN_ResetBlacklist.Size = new System.Drawing.Size(30, 30);
+            this.FBTN_ResetBlacklist.TabIndex = 0;
+            this.FBTN_ResetBlacklist.Text = "Reset the blacklist";
+            this.FBTN_ResetBlacklist.UseVisualStyleBackColor = true;
+            this.FBTN_ResetBlacklist.Click += new System.EventHandler(this.FBTN_ResetBlacklist_Click);
+            // 
             // DLG_BlackList
             // 
             this.AcceptButton = this.BTN_OK;
@@ -158,6 +177,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.BTN_Cancel;
             this.ClientSize = new System.Drawing.Size(782, 634);
+            this.Controls.Add(this.FBTN_ResetBlacklist);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.ImgL_SelectedUserImages);
             this.Controls.Add(this.LV_BlacklistedUsers);
@@ -175,6 +195,7 @@
             this.Name = "DLG_BlackList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DLG_BlackList";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DLG_BlackList_FormClosing);
             this.Load += new System.EventHandler(this.DLG_BlackList_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.DLG_BlackList_KeyDown);
             this.ResumeLayout(false);
@@ -197,5 +218,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
+        private PhotoManagerClient.FlashButton FBTN_ResetBlacklist;
     }
 }

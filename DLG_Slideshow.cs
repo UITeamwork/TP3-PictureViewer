@@ -14,8 +14,6 @@ namespace Client_PM
 {
     public partial class DLG_Slideshow : Form
     {
-       
-
         public static List<int> SlideShowList { get; set; }
 
         public List<Photo> PhotoPool { get; set; }

@@ -39,8 +39,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.WB_HelpBrowser = new System.Windows.Forms.WebBrowser();
-            this.LBL_Command = new System.Windows.Forms.Label();
             this.imageBox1 = new PhotoManagerClient.ImageBox();
             this.imageBox2 = new PhotoManagerClient.ImageBox();
             this.imageBox6 = new PhotoManagerClient.ImageBox();
@@ -48,6 +46,8 @@
             this.imageBox5 = new PhotoManagerClient.ImageBox();
             this.imageBox4 = new PhotoManagerClient.ImageBox();
             this.imageBox3 = new PhotoManagerClient.ImageBox();
+            this.WB_HelpBrowser = new System.Windows.Forms.WebBrowser();
+            this.LBL_Command = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imageBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageBox2)).BeginInit();
@@ -62,7 +62,7 @@
             // 
             this.BTN_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BTN_Close.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BTN_Close.Location = new System.Drawing.Point(592, 430);
+            this.BTN_Close.Location = new System.Drawing.Point(735, 430);
             this.BTN_Close.Name = "BTN_Close";
             this.BTN_Close.Size = new System.Drawing.Size(75, 24);
             this.BTN_Close.TabIndex = 4;
@@ -170,25 +170,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(212, 369);
             this.tableLayoutPanel1.TabIndex = 19;
-            // 
-            // WB_HelpBrowser
-            // 
-            this.WB_HelpBrowser.Location = new System.Drawing.Point(233, 11);
-            this.WB_HelpBrowser.MinimumSize = new System.Drawing.Size(20, 20);
-            this.WB_HelpBrowser.Name = "WB_HelpBrowser";
-            this.WB_HelpBrowser.Size = new System.Drawing.Size(429, 399);
-            this.WB_HelpBrowser.TabIndex = 20;
-            this.WB_HelpBrowser.Url = new System.Uri("", System.UriKind.Relative);
-            // 
-            // LBL_Command
-            // 
-            this.LBL_Command.AutoSize = true;
-            this.LBL_Command.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.LBL_Command.Location = new System.Drawing.Point(12, 11);
-            this.LBL_Command.Name = "LBL_Command";
-            this.LBL_Command.Size = new System.Drawing.Size(86, 18);
-            this.LBL_Command.TabIndex = 21;
-            this.LBL_Command.Text = "Command :";
             // 
             // imageBox1
             // 
@@ -316,12 +297,31 @@
             this.imageBox3.TabIndex = 7;
             this.imageBox3.TabStop = false;
             // 
+            // WB_HelpBrowser
+            // 
+            this.WB_HelpBrowser.Location = new System.Drawing.Point(233, 11);
+            this.WB_HelpBrowser.MinimumSize = new System.Drawing.Size(20, 20);
+            this.WB_HelpBrowser.Name = "WB_HelpBrowser";
+            this.WB_HelpBrowser.Size = new System.Drawing.Size(574, 399);
+            this.WB_HelpBrowser.TabIndex = 20;
+            this.WB_HelpBrowser.Url = new System.Uri("", System.UriKind.Relative);
+            // 
+            // LBL_Command
+            // 
+            this.LBL_Command.AutoSize = true;
+            this.LBL_Command.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.LBL_Command.Location = new System.Drawing.Point(12, 11);
+            this.LBL_Command.Name = "LBL_Command";
+            this.LBL_Command.Size = new System.Drawing.Size(86, 18);
+            this.LBL_Command.TabIndex = 21;
+            this.LBL_Command.Text = "Command :";
+            // 
             // DLG_Help
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.BTN_Close;
-            this.ClientSize = new System.Drawing.Size(676, 462);
+            this.ClientSize = new System.Drawing.Size(819, 462);
             this.Controls.Add(this.LBL_Command);
             this.Controls.Add(this.WB_HelpBrowser);
             this.Controls.Add(this.tableLayoutPanel1);
