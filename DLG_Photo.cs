@@ -20,6 +20,7 @@ namespace Client_PM
 
         private ValidationProvider Provider;
         private bool InterfaceIsLocked = false;
+        private Image InitialImage;
 
         public Photo Photo;
 
@@ -33,7 +34,7 @@ namespace Client_PM
         private void DLG_Photo_Load(object sender, EventArgs e)
         {
             Provider = new ValidationProvider(this);
-            DTP_Date.MaxDate = DateTime.Now;
+            DTP_Date.MaxDate = Photo == null ? DateTime.Now : Photo.CreationDate;
 
             if (Photo == null)
             {
@@ -51,7 +52,10 @@ namespace Client_PM
 
         private void DLG_Photo_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DLGToData();
+            if (DialogResult == DialogResult.OK && !InterfaceIsLocked)
+            {
+                DLGToData();
+            }
         }
 
         private void UpdateUI()
@@ -73,16 +77,22 @@ namespace Client_PM
             CBX_Shared.CheckState = (Photo.Shared ? CheckState.Checked : CheckState.Unchecked);
             DTP_Date.Value = Photo.CreationDate;
             ImgBX_Image.BackgroundImage = Photo.GetOriginalImage();
+
+            InitialImage = ImgBX_Image.BackgroundImage;
         }
 
         private void DLGToData()
         {
+            WaitSplash.Show(this, "Processing...");
             Photo.Title = TBX_Title.Text;
             Photo.Keywords = TBX_Keywords.Text;
-            RTBX_Description.Text = Photo.Description;
+            Photo.Description = RTBX_Description.Text;
             Photo.Shared = CBX_Shared.Checked;
             Photo.CreationDate = DTP_Date.Value;
-            Photo.SetImage(ImgBX_Image.BackgroundImage);
+            if (InitialImage != ImgBX_Image.BackgroundImage)
+            {
+                Photo.SetImage(ImgBX_Image.BackgroundImage);
+            }
         }
 
         #region Validations

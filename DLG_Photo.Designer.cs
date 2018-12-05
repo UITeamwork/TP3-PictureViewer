@@ -61,6 +61,7 @@
             this.DTP_Date.Name = "DTP_Date";
             this.DTP_Date.Size = new System.Drawing.Size(175, 24);
             this.DTP_Date.TabIndex = 1;
+            this.DTP_Date.Value = new System.DateTime(2018, 12, 4, 19, 31, 24, 0);
             // 
             // RTBX_Description
             // 

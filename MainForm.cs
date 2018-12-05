@@ -243,7 +243,6 @@ namespace Client_PM
             DLG_Photo dlg = new DLG_Photo();
             if (dlg.ShowDialog() == DialogResult.OK)
             {
-                //MessageBox.Show(dlg.Photo.ToJson().ToString());
                 dlg.Photo.OwnerId = Logged_User.Id;
                 DBPhotosWebServices.CreatePhoto(dlg.Photo);
                 LoadPhoto();
@@ -256,8 +255,9 @@ namespace Client_PM
             dlg.Photo = PhotoBrowser.SelectedPhoto;
             if (dlg.ShowDialog() == DialogResult.OK)
             {
-                //MessageBox.Show(dlg.Photo.ToJson().ToString());
+                dlg.Photo.OwnerId = Logged_User.Id;
                 DBPhotosWebServices.UpdatePhoto(dlg.Photo);
+                LoadPhoto();
             }
         }
 
@@ -267,8 +267,9 @@ namespace Client_PM
             dlg.Photo = PhotoBrowser.SelectedPhoto;
             if (dlg.ShowDialog() == DialogResult.OK)
             {
-                //MessageBox.Show(dlg.Photo.ToJson().ToString());
+                dlg.Photo.OwnerId = Logged_User.Id;
                 DBPhotosWebServices.DeletePhoto(dlg.Photo);
+                LoadPhoto();
             }
         }
 
@@ -462,6 +463,7 @@ namespace Client_PM
             }
             else
             {
+                // Disconnect
                 Logged_User = null;
                 Setup_Logged_User();
             }
