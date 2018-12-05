@@ -15,7 +15,7 @@ namespace Client_PM
     {
         // userId, avatarThumbnail
         public static Dictionary<int, Image> UserThumbnails;
-        public static List<int> BlacklistedUsers = new List<int>();
+        public static List<int> BlacklistedUsers;
 
         public int LoggedUserId { get; set; }
 

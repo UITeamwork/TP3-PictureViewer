@@ -56,7 +56,7 @@
             this.MI_HSManagers = new System.Windows.Forms.ToolStripMenuItem();
             this.MI_HSPhotoList = new System.Windows.Forms.ToolStripMenuItem();
             this.MI_Help = new System.Windows.Forms.ToolStripMenuItem();
-            this.displayHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MI_DisplayHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.MI_About = new System.Windows.Forms.ToolStripMenuItem();
             this.GBX_Keyword = new System.Windows.Forms.GroupBox();
@@ -178,6 +178,7 @@
             this.MI_Account_Exit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
             this.MI_Account_Exit.Size = new System.Drawing.Size(154, 22);
             this.MI_Account_Exit.Text = "Exit";
+            this.MI_Account_Exit.Click += new System.EventHandler(this.MI_Account_Exit_Click);
             // 
             // layoutToolStripMenuItem
             // 
@@ -337,21 +338,22 @@
             // MI_Help
             // 
             this.MI_Help.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.displayHelpToolStripMenuItem,
+            this.MI_DisplayHelp,
             this.toolStripSeparator1,
             this.MI_About});
             this.MI_Help.Name = "MI_Help";
             this.MI_Help.Size = new System.Drawing.Size(44, 20);
             this.MI_Help.Text = "Help";
             // 
-            // displayHelpToolStripMenuItem
+            // MI_DisplayHelp
             // 
-            this.displayHelpToolStripMenuItem.Image = global::Client_PM.Properties.Resources.IMG_Help;
-            this.displayHelpToolStripMenuItem.Name = "displayHelpToolStripMenuItem";
-            this.displayHelpToolStripMenuItem.ShortcutKeyDisplayString = "F1";
-            this.displayHelpToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
-            this.displayHelpToolStripMenuItem.Text = "Help";
-            this.displayHelpToolStripMenuItem.Click += new System.EventHandler(this.displayHelpToolStripMenuItem_Click);
+            this.MI_DisplayHelp.Image = global::Client_PM.Properties.Resources.IMG_Help;
+            this.MI_DisplayHelp.Name = "MI_DisplayHelp";
+            this.MI_DisplayHelp.ShortcutKeyDisplayString = "";
+            this.MI_DisplayHelp.ShortcutKeys = System.Windows.Forms.Keys.F1;
+            this.MI_DisplayHelp.Size = new System.Drawing.Size(118, 22);
+            this.MI_DisplayHelp.Text = "Help";
+            this.MI_DisplayHelp.Click += new System.EventHandler(this.MI_DisplayHelp_Click);
             // 
             // toolStripSeparator1
             // 
@@ -622,6 +624,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Photo manager client application";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Shown += new System.EventHandler(this.MainForm_Shown);
             this.GBX_Users.ResumeLayout(false);
             this.GBX_Users.PerformLayout();
@@ -669,7 +672,7 @@
         private System.Windows.Forms.CheckBox CBX_ExcludeMine;
         private System.Windows.Forms.CheckBox CBX_KeywordFilter;
         private System.Windows.Forms.ToolStripMenuItem MI_Help;
-        private System.Windows.Forms.ToolStripMenuItem displayHelpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem MI_DisplayHelp;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem MI_About;
         private System.Windows.Forms.GroupBox GBX_Managers;

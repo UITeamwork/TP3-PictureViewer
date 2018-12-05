@@ -164,6 +164,9 @@
     <EmbeddedResource Include="PM_Controls\PhotosBrowser.resx">
       <DependentUpon>PhotosBrowser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PM_Controls\WaitSplash.resx">
+      <DependentUpon>WaitSplash.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>

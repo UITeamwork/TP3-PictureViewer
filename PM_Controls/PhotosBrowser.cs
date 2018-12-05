@@ -146,6 +146,7 @@ namespace PhotoManagerClient
             this.PBX_SelectedPhoto.Size = new System.Drawing.Size(421, 407);
             this.PBX_SelectedPhoto.TabIndex = 1;
             this.PBX_SelectedPhoto.TabStop = false;
+            this.PBX_SelectedPhoto.DoubleClick += new System.EventHandler(this.PBX_SelectedPhoto_DoubleClick);
             // 
             // PhotosList
             // 
@@ -377,6 +378,11 @@ namespace PhotoManagerClient
         private void PhotosBrowser_Resize(object sender, EventArgs e)
         {
             Placement = _PhotoBrowserPlacement;
+        }
+
+        private void PBX_SelectedPhoto_DoubleClick(object sender, EventArgs e)
+        {
+            ToggleHidePhotosList();
         }
     }
 }
