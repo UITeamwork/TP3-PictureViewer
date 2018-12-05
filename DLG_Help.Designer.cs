@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DLG_Help));
             this.BTN_Close = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,6 +40,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.WB_HelpBrowser = new System.Windows.Forms.WebBrowser();
+            this.LBL_Command = new System.Windows.Forms.Label();
             this.imageBox1 = new PhotoManagerClient.ImageBox();
             this.imageBox2 = new PhotoManagerClient.ImageBox();
             this.imageBox6 = new PhotoManagerClient.ImageBox();
@@ -60,7 +62,7 @@
             // 
             this.BTN_Close.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BTN_Close.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BTN_Close.Location = new System.Drawing.Point(589, 409);
+            this.BTN_Close.Location = new System.Drawing.Point(592, 430);
             this.BTN_Close.Name = "BTN_Close";
             this.BTN_Close.Size = new System.Drawing.Size(75, 24);
             this.BTN_Close.TabIndex = 4;
@@ -81,7 +83,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label2.Location = new System.Drawing.Point(56, 54);
+            this.label2.Location = new System.Drawing.Point(56, 52);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(121, 36);
             this.label2.TabIndex = 13;
@@ -91,7 +93,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label3.Location = new System.Drawing.Point(56, 108);
+            this.label3.Location = new System.Drawing.Point(56, 104);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(138, 36);
             this.label3.TabIndex = 14;
@@ -101,7 +103,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label4.Location = new System.Drawing.Point(56, 270);
+            this.label4.Location = new System.Drawing.Point(56, 260);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(130, 36);
             this.label4.TabIndex = 15;
@@ -111,7 +113,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label5.Location = new System.Drawing.Point(56, 162);
+            this.label5.Location = new System.Drawing.Point(56, 156);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(136, 36);
             this.label5.TabIndex = 16;
@@ -121,9 +123,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label6.Location = new System.Drawing.Point(56, 216);
+            this.label6.Location = new System.Drawing.Point(56, 208);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(120, 54);
+            this.label6.Size = new System.Drawing.Size(120, 52);
             this.label6.TabIndex = 17;
             this.label6.Text = "Add the selected image to the slideshow";
             // 
@@ -131,7 +133,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            this.label7.Location = new System.Drawing.Point(56, 324);
+            this.label7.Location = new System.Drawing.Point(56, 312);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(132, 18);
             this.label7.TabIndex = 18;
@@ -156,7 +158,7 @@
             this.tableLayoutPanel1.Controls.Add(this.imageBox4, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.imageBox3, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.label2, 1, 1);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(10, 11);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 41);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
@@ -166,7 +168,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(212, 385);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(212, 369);
             this.tableLayoutPanel1.TabIndex = 19;
             // 
             // WB_HelpBrowser
@@ -174,9 +176,19 @@
             this.WB_HelpBrowser.Location = new System.Drawing.Point(233, 11);
             this.WB_HelpBrowser.MinimumSize = new System.Drawing.Size(20, 20);
             this.WB_HelpBrowser.Name = "WB_HelpBrowser";
-            this.WB_HelpBrowser.Size = new System.Drawing.Size(429, 385);
+            this.WB_HelpBrowser.Size = new System.Drawing.Size(429, 399);
             this.WB_HelpBrowser.TabIndex = 20;
             this.WB_HelpBrowser.Url = new System.Uri("", System.UriKind.Relative);
+            // 
+            // LBL_Command
+            // 
+            this.LBL_Command.AutoSize = true;
+            this.LBL_Command.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.LBL_Command.Location = new System.Drawing.Point(12, 11);
+            this.LBL_Command.Name = "LBL_Command";
+            this.LBL_Command.Size = new System.Drawing.Size(86, 18);
+            this.LBL_Command.TabIndex = 21;
+            this.LBL_Command.Text = "Command :";
             // 
             // imageBox1
             // 
@@ -185,7 +197,7 @@
             this.imageBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.imageBox1.ControlToolTipText = "You can either drag & drop, paste image from clipboard or choose an image file wi" +
     "th context menu.";
-            this.imageBox1.Image = global::Client_PM.Properties.Resources.IMG_Upload_Neutral;
+            this.imageBox1.Image = ((System.Drawing.Image)(resources.GetObject("imageBox1.Image")));
             this.imageBox1.ImportImageText = "Import image from file...";
             this.imageBox1.Location = new System.Drawing.Point(3, 3);
             this.imageBox1.Name = "imageBox1";
@@ -203,9 +215,9 @@
             this.imageBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.imageBox2.ControlToolTipText = "You can either drag & drop, paste image from clipboard or choose an image file wi" +
     "th context menu.";
-            this.imageBox2.Image = global::Client_PM.Properties.Resources.IMG_Edit_Neutral;
+            this.imageBox2.Image = ((System.Drawing.Image)(resources.GetObject("imageBox2.Image")));
             this.imageBox2.ImportImageText = "Import image from file...";
-            this.imageBox2.Location = new System.Drawing.Point(3, 57);
+            this.imageBox2.Location = new System.Drawing.Point(3, 55);
             this.imageBox2.Name = "imageBox2";
             this.imageBox2.OpenFileDialogTitle = "Please choose image an file";
             this.imageBox2.PasteMenuText = "Paste image from clipboard";
@@ -221,9 +233,9 @@
             this.imageBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.imageBox6.ControlToolTipText = "You can either drag & drop, paste image from clipboard or choose an image file wi" +
     "th context menu.";
-            this.imageBox6.Image = global::Client_PM.Properties.Resources.IMG_Delete_Neutral;
+            this.imageBox6.Image = ((System.Drawing.Image)(resources.GetObject("imageBox6.Image")));
             this.imageBox6.ImportImageText = "Import image from file...";
-            this.imageBox6.Location = new System.Drawing.Point(3, 111);
+            this.imageBox6.Location = new System.Drawing.Point(3, 107);
             this.imageBox6.Name = "imageBox6";
             this.imageBox6.OpenFileDialogTitle = "Please choose image an file";
             this.imageBox6.PasteMenuText = "Paste image from clipboard";
@@ -239,9 +251,9 @@
             this.imageBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.imageBox7.ControlToolTipText = "You can either drag & drop, paste image from clipboard or choose an image file wi" +
     "th context menu.";
-            this.imageBox7.Image = global::Client_PM.Properties.Resources.IMG_View_Over;
+            this.imageBox7.Image = ((System.Drawing.Image)(resources.GetObject("imageBox7.Image")));
             this.imageBox7.ImportImageText = "Import image from file...";
-            this.imageBox7.Location = new System.Drawing.Point(3, 165);
+            this.imageBox7.Location = new System.Drawing.Point(3, 159);
             this.imageBox7.Name = "imageBox7";
             this.imageBox7.OpenFileDialogTitle = "Please choose image an file";
             this.imageBox7.PasteMenuText = "Paste image from clipboard";
@@ -257,9 +269,9 @@
             this.imageBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.imageBox5.ControlToolTipText = "You can either drag & drop, paste image from clipboard or choose an image file wi" +
     "th context menu.";
-            this.imageBox5.Image = global::Client_PM.Properties.Resources.IMG_AddPicture_Neutral;
+            this.imageBox5.Image = ((System.Drawing.Image)(resources.GetObject("imageBox5.Image")));
             this.imageBox5.ImportImageText = "Import image from file...";
-            this.imageBox5.Location = new System.Drawing.Point(3, 219);
+            this.imageBox5.Location = new System.Drawing.Point(3, 211);
             this.imageBox5.Name = "imageBox5";
             this.imageBox5.OpenFileDialogTitle = "Please choose image an file";
             this.imageBox5.PasteMenuText = "Paste image from clipboard";
@@ -275,9 +287,9 @@
             this.imageBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.imageBox4.ControlToolTipText = "You can either drag & drop, paste image from clipboard or choose an image file wi" +
     "th context menu.";
-            this.imageBox4.Image = global::Client_PM.Properties.Resources.IMG_Blacklist_Neutral;
+            this.imageBox4.Image = ((System.Drawing.Image)(resources.GetObject("imageBox4.Image")));
             this.imageBox4.ImportImageText = "Import image from file...";
-            this.imageBox4.Location = new System.Drawing.Point(3, 273);
+            this.imageBox4.Location = new System.Drawing.Point(3, 263);
             this.imageBox4.Name = "imageBox4";
             this.imageBox4.OpenFileDialogTitle = "Please choose image an file";
             this.imageBox4.PasteMenuText = "Paste image from clipboard";
@@ -293,9 +305,9 @@
             this.imageBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.imageBox3.ControlToolTipText = "You can either drag & drop, paste image from clipboard or choose an image file wi" +
     "th context menu.";
-            this.imageBox3.Image = global::Client_PM.Properties.Resources.IMG_Play_Neutral;
+            this.imageBox3.Image = ((System.Drawing.Image)(resources.GetObject("imageBox3.Image")));
             this.imageBox3.ImportImageText = "Import image from file...";
-            this.imageBox3.Location = new System.Drawing.Point(3, 327);
+            this.imageBox3.Location = new System.Drawing.Point(3, 315);
             this.imageBox3.Name = "imageBox3";
             this.imageBox3.OpenFileDialogTitle = "Please choose image an file";
             this.imageBox3.PasteMenuText = "Paste image from clipboard";
@@ -309,14 +321,17 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.BTN_Close;
-            this.ClientSize = new System.Drawing.Size(673, 441);
+            this.ClientSize = new System.Drawing.Size(676, 462);
+            this.Controls.Add(this.LBL_Command);
             this.Controls.Add(this.WB_HelpBrowser);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.BTN_Close);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DLG_Help";
-            this.Text = "DLG_Help";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Help";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DLG_Help_FormClosing);
             this.Load += new System.EventHandler(this.DLG_Help_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -329,6 +344,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.imageBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imageBox3)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -350,5 +366,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.WebBrowser WB_HelpBrowser;
+        private System.Windows.Forms.Label LBL_Command;
     }
 }

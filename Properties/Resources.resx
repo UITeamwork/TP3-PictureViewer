@@ -274,4 +274,7 @@
   <data name="HTMLPage1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\htmlpage1.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
+  <data name="HTMLPage2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\resources\htmlpage2.html;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  </data>
 </root>

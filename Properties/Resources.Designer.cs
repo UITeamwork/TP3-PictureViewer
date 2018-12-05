@@ -68,13 +68,53 @@ namespace Client_PM.Properties {
         ///    &lt;title&gt;&lt;/title&gt;
         ///&lt;/head&gt;
         ///&lt;body&gt;
-        ///    This is some resource HTML
-        ///&lt;/body&gt;
-        ///&lt;/html&gt;.
+        ///    &lt;hr /&gt;
+        ///    Photo Manager application&lt;br /&gt;
+        ///    Menu help&lt;br /&gt;
+        ///    &lt;hr /&gt;
+        ///
+        ///    &lt;ul style=&quot;list-style-type:decimal&quot;&gt;
+        ///        &lt;li&gt;
+        ///            Filters
+        ///            &lt;ul style=&quot;list-style-type:circle&quot;&gt;
+        ///
+        ///                &lt;li&gt;
+        ///                    &lt;u&gt;By Users :&lt;/u&gt;
+        ///                    Let you filter the pictures you see by user.
+        ///                    For e [le reste de la chaîne a été tronqué]&quot;;.
         /// </summary>
         internal static string HTMLPage1 {
             get {
                 return ResourceManager.GetString("HTMLPage1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à &lt;!DOCTYPE html&gt;
+        ///&lt;html lang=&quot;en&quot; xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+        ///&lt;head&gt;
+        ///	&lt;meta charset=&quot;utf-8&quot; /&gt;
+        ///	&lt;title&gt;&lt;/title&gt;
+        ///&lt;/head&gt;
+        ///&lt;body&gt;
+        ///	&lt;hr /&gt;
+        ///	Photo Manager application&lt;br /&gt;
+        ///	Menu help&lt;br /&gt;
+        ///	&lt;hr /&gt;
+        ///
+        ///	&lt;ul style=&quot;list-style-type:decimal&quot;&gt;
+        ///		&lt;li&gt;
+        ///			Filters
+        ///			&lt;ul style=&quot;list-style-type:circle&quot;&gt;
+        ///
+        ///				&lt;li&gt;
+        ///					&lt;u&gt;By Users :&lt;/u&gt;
+        ///					Let you filter the pictures you see by user.
+        ///					For exemple you can choose to see only you photos,the photos of all users that ar not blacklisted or the ph [le reste de la chaîne a été tronqué]&quot;;.
+        /// </summary>
+        internal static string HTMLPage2 {
+            get {
+                return ResourceManager.GetString("HTMLPage2", resourceCulture);
             }
         }
         
