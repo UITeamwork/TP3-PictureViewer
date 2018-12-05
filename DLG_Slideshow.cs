@@ -12,10 +12,8 @@ using System.Windows.Forms;
 
 namespace Client_PM
 {
-    public partial class Slideshow : Form
+    public partial class DLG_Slideshow : Form
     {
-       
-
         public static List<int> SlideShowList { get; set; }
 
         public List<Photo> PhotoPool { get; set; }
@@ -32,7 +30,7 @@ namespace Client_PM
 
         private int Show_Controls_Zone = 20;
 
-        public Slideshow()
+        public DLG_Slideshow()
         {
             InitializeComponent();
             ToolTip tooltip1 = new ToolTip();

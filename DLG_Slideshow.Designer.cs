@@ -1,6 +1,6 @@
 ﻿namespace Client_PM
 {
-    partial class Slideshow
+    partial class DLG_Slideshow
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Slideshow));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DLG_Slideshow));
             this.TrckB_SlideshowSpeed = new System.Windows.Forms.TrackBar();
             this.LAB_SlideshowSpeed = new System.Windows.Forms.Label();
             this.BTN_Previous = new System.Windows.Forms.Button();
