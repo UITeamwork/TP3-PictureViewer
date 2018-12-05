@@ -232,6 +232,7 @@
             this.LBL_Menu.TabIndex = 15;
             this.LBL_Menu.Text = "Move mouse here for slideshow menu";
             this.LBL_Menu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LBL_Menu.MouseHover += new System.EventHandler(this.LBL_Menu_MouseHover);
             // 
             // tableLayoutPanel2
             // 

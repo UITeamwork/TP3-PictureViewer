@@ -64,7 +64,7 @@ namespace Client_PM
             PN_Controls.Visible = false;
            
             LBL_Menu.Visible = true;
-            tableLayoutPanel2.Location = new Point(0, 350);
+            tableLayoutPanel2.Location = new Point(0, 575);
             tableLayoutPanel1.Visible = true;
            
             LBL_Menu.ForeColor = System.Drawing.Color.White;
@@ -72,12 +72,12 @@ namespace Client_PM
 
         private void DLG_Slideshow_MouseMove(object sender, MouseEventArgs e)
         {
-            
+
             if (!PN_Controls.Visible)
             {
-               
+
                 LBL_Menu.Visible = true;
-                
+
                 PN_Controls.Visible = e.Location.Y > (ClientRectangle.Height - Show_Controls_Zone);
             }
             else
@@ -304,6 +304,15 @@ namespace Client_PM
         private void DLG_Slideshow_FormClosing(object sender, FormClosingEventArgs e)
         {
             Save_settings();
+        }
+
+        
+
+        private void LBL_Menu_MouseHover(object sender, EventArgs e)
+        {
+            LBL_Menu.Visible = false;
+
+            PN_Controls.Visible = true;
         }
     }
 }
