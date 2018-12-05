@@ -40,33 +40,37 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 26);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(30, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 20);
+            this.label1.Size = new System.Drawing.Size(77, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Username";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(32, 73);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 20);
+            this.label2.Size = new System.Drawing.Size(75, 18);
             this.label2.TabIndex = 0;
             this.label2.Text = "Password";
             // 
             // TBX_UserName
             // 
+            this.TBX_UserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBX_UserName.Location = new System.Drawing.Point(117, 23);
             this.TBX_UserName.Name = "TBX_UserName";
-            this.TBX_UserName.Size = new System.Drawing.Size(188, 26);
+            this.TBX_UserName.Size = new System.Drawing.Size(188, 24);
             this.TBX_UserName.TabIndex = 0;
             // 
             // TBX_Password
             // 
+            this.TBX_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TBX_Password.Location = new System.Drawing.Point(117, 70);
             this.TBX_Password.Name = "TBX_Password";
-            this.TBX_Password.Size = new System.Drawing.Size(188, 26);
+            this.TBX_Password.Size = new System.Drawing.Size(188, 24);
             this.TBX_Password.TabIndex = 1;
             this.TBX_Password.UseSystemPasswordChar = true;
             // 
@@ -74,7 +78,8 @@
             // 
             this.BTN_Cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BTN_Cancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BTN_Cancel.Location = new System.Drawing.Point(255, 141);
+            this.BTN_Cancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Cancel.Location = new System.Drawing.Point(257, 137);
             this.BTN_Cancel.Name = "BTN_Cancel";
             this.BTN_Cancel.Size = new System.Drawing.Size(76, 29);
             this.BTN_Cancel.TabIndex = 3;
@@ -84,7 +89,8 @@
             // BTN_Ok
             // 
             this.BTN_Ok.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BTN_Ok.Location = new System.Drawing.Point(173, 141);
+            this.BTN_Ok.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTN_Ok.Location = new System.Drawing.Point(175, 137);
             this.BTN_Ok.Name = "BTN_Ok";
             this.BTN_Ok.Size = new System.Drawing.Size(76, 29);
             this.BTN_Ok.TabIndex = 2;
@@ -94,10 +100,11 @@
             // CBX_RememberMe
             // 
             this.CBX_RememberMe.AutoSize = true;
-            this.CBX_RememberMe.Location = new System.Drawing.Point(172, 105);
+            this.CBX_RememberMe.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CBX_RememberMe.Location = new System.Drawing.Point(179, 106);
             this.CBX_RememberMe.Name = "CBX_RememberMe";
             this.CBX_RememberMe.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.CBX_RememberMe.Size = new System.Drawing.Size(133, 24);
+            this.CBX_RememberMe.Size = new System.Drawing.Size(126, 22);
             this.CBX_RememberMe.TabIndex = 4;
             this.CBX_RememberMe.Text = "Remember me";
             this.CBX_RememberMe.UseVisualStyleBackColor = true;
@@ -108,7 +115,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.BTN_Cancel;
-            this.ClientSize = new System.Drawing.Size(343, 182);
+            this.ClientSize = new System.Drawing.Size(345, 178);
             this.Controls.Add(this.CBX_RememberMe);
             this.Controls.Add(this.BTN_Ok);
             this.Controls.Add(this.BTN_Cancel);

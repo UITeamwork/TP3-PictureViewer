@@ -172,7 +172,7 @@
             this.LAB_Shared.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.LAB_Shared.AutoSize = true;
             this.LAB_Shared.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LAB_Shared.Location = new System.Drawing.Point(217, 484);
+            this.LAB_Shared.Location = new System.Drawing.Point(214, 484);
             this.LAB_Shared.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.LAB_Shared.Name = "LAB_Shared";
             this.LAB_Shared.Size = new System.Drawing.Size(90, 24);

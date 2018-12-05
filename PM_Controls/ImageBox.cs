@@ -33,6 +33,7 @@ namespace PhotoManagerClient
             PasteMenuText = "Paste image from clipboard";
             ImportImageText = "Import image from file...";
             ControlToolTipText = "You can either drag & drop, paste image from clipboard or choose an image file with context menu.";
+            RotateImageText = "Rotate the image";
             PrepareContextMenu();
         }
         /// <summary>
@@ -54,6 +55,8 @@ namespace PhotoManagerClient
         /// Texte de l'info-bulle du contrôle
         /// </summary>
         public string ControlToolTipText { get; set; }
+
+        public string RotateImageText { get; set; }
 
         private void ImageBoxDragDrop(object sender, DragEventArgs e)
         {
@@ -104,12 +107,15 @@ namespace PhotoManagerClient
             pasteItem.Click += new EventHandler(pasteItem_Click);
             ToolStripMenuItem ImportImageItem = new ToolStripMenuItem(ImportImageText);
             ImportImageItem.Click += new EventHandler(ImportImageItem_Click);
+            ToolStripMenuItem RotateItem = new ToolStripMenuItem(RotateImageText);
+            RotateItem.Click += new EventHandler(RotateItem_Click);
 
             pasteItem.Name = "pasteItem";
             ImportImageItem.Name = "ImportImageItem";
 
             PopupMenuStrip.Items.Add(pasteItem);
             PopupMenuStrip.Items.Add(ImportImageItem);
+            PopupMenuStrip.Items.Add(RotateItem);
 
             ToolTip tp = new ToolTip();
             tp.SetToolTip(this, ControlToolTipText);
@@ -122,10 +128,19 @@ namespace PhotoManagerClient
         {
             ImportImageFormFile();
         }
+        private void RotateItem_Click(object sender, EventArgs e)
+        {
+            if (BackgroundImage != null)
+            {
+                RotateBgImage();
+            }
+        }
 
         public void RotateBgImage()
         {
-            BackgroundImage.RotateFlip(RotateFlipType.Rotate180FlipNone);
+            Image temp = (Image)BackgroundImage.Clone();
+            temp.RotateFlip(RotateFlipType.Rotate90FlipNone);
+            BackgroundImage = temp;
         }
     }
 }
