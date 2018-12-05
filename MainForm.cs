@@ -76,7 +76,7 @@ namespace Client_PM
             // PhotoIsOwnedByLoggedUser implies that the user is logged in and that a photo is currently selected
             bool PhotoIsOwnedByLoggedUser = PhotoIsSelected && PhotoBrowser.SelectedPhoto.OwnerId == Logged_User.Id;
 
-            FBTN_PhotoToSlideshow.SetImages(PhotoIsSelected && Slideshow.SlideShowList.Contains(PhotoBrowser.SelectedPhoto.Id) ?  RemoveFromSlideShow : AddToSlideShow);
+            FBTN_PhotoToSlideshow.SetImages(PhotoIsSelected && DLG_Slideshow.SlideShowList.Contains(PhotoBrowser.SelectedPhoto.Id) ?  RemoveFromSlideShow : AddToSlideShow);
             FBTN_PhotoToSlideshow.BackgroundImage = (FBTN_PhotoToSlideshow.Enabled ? FBTN_PhotoToSlideshow.NeutralImage : FBTN_PhotoToSlideshow.DisabledImage);
             FBTN_PhotoToSlideshow.Text = (PhotoIsSelected && DLG_Slideshow.SlideShowList.Contains(PhotoBrowser.SelectedPhoto.Id) ? "Remove photo from your slideshow" : "Add photo to your slideshow");
 
@@ -277,13 +277,13 @@ namespace Client_PM
 
         private void FBTN_PictureSlideshow_Click(object sender, EventArgs e)
         {
-            if (!Slideshow.SlideShowList.Contains(PhotoBrowser.SelectedPhoto.Id))
+            if (!DLG_Slideshow.SlideShowList.Contains(PhotoBrowser.SelectedPhoto.Id))
             {
-                Slideshow.SlideShowList.Add(PhotoBrowser.SelectedPhoto.Id);
+                DLG_Slideshow.SlideShowList.Add(PhotoBrowser.SelectedPhoto.Id);
             }
             else
             {
-                Slideshow.SlideShowList.Remove(PhotoBrowser.SelectedPhoto.Id);
+                DLG_Slideshow.SlideShowList.Remove(PhotoBrowser.SelectedPhoto.Id);
             }
             Update_UI();
         }
@@ -545,7 +545,7 @@ namespace Client_PM
                 foreach (string stringPhotoId in Properties.Settings.Default.SlideShowList)
                 {
                     int photoId = int.Parse(stringPhotoId);
-                    Slideshow.SlideShowList.Add(photoId);
+                    DLG_Slideshow.SlideShowList.Add(photoId);
                 }
             }
         }
