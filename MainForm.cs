@@ -15,9 +15,10 @@ namespace Client_PM
     {
         private User Logged_User = null;
         private DLG_PhotoInfo InfoOnSelected = new DLG_PhotoInfo();
-        private PhotoFilter PhotoFilter;
+        private PhotoFilter PhotoFilter = null;
         private bool PhotoBrowserIsExpanded = false;
         private int InitialBrowserHeight;
+
         public static List<Photo> photos;
          
         #region FBTN_PhotoToSlideshow
@@ -77,7 +78,6 @@ namespace Client_PM
             FBTN_PhotoToSlideshow.SetImages(PhotoIsSelected && DLG_Slideshow.SlideShowList.Contains(PhotoBrowser.SelectedPhoto.Id) ?  RemoveFromSlideShow : AddToSlideShow);
             FBTN_PhotoToSlideshow.BackgroundImage = (FBTN_PhotoToSlideshow.Enabled ? FBTN_PhotoToSlideshow.NeutralImage : FBTN_PhotoToSlideshow.DisabledImage);
 
-
             MI_Account_Profil.Enabled = UserIsLoggedIn;
             MI_Blacklist.Enabled = UserIsLoggedIn;
             FBTN_NewPicture.Enabled = UserIsLoggedIn;
@@ -96,17 +96,6 @@ namespace Client_PM
             WaitSplash.Show(this, "Loading photos from server...");
             PhotoBrowser.LoadPhotos(PhotoFilter.GetPhotos());
             WaitSplash.Hide();
-        }
-
-        private void ShowAbout()
-        {
-            string aboutText =
-                "----- Authors -----\n" +
-                "Jérémie Lacroix\n" +
-                "Gabriel Fournier-Cloutier\n"
-                +"Novembre 2018";
-            // About messagebox
-            MessageBox.Show(aboutText, "About Photo manager", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         #region Init Methods
@@ -219,6 +208,11 @@ namespace Client_PM
             }
             Update_UI();
         }
+        private void PhotoBrowser_DoubleClick(object sender, EventArgs e)
+        {
+            PhotoBrowser.ToggleHidePhotosList();
+            MI_HSPhotoList.Checked = !MI_HSPhotoList.Checked;
+        }
 
         #region Flash Buttons Events
         private void FBTN_Blacklist_Click(object sender, EventArgs e)
@@ -233,7 +227,6 @@ namespace Client_PM
         private void FBTN_Slideshow_Click(object sender, EventArgs e)
         {
             DLG_Slideshow dlg = new DLG_Slideshow();
-            
             dlg.PhotoPool = photos;
             dlg.ShowDialog();
         }
@@ -250,8 +243,9 @@ namespace Client_PM
             DLG_Photo dlg = new DLG_Photo();
             if (dlg.ShowDialog() == DialogResult.OK)
             {
-                throw new NotImplementedException("TODO : Upload the photo to the database");
-                //DBPhotosWebServices.CreatePhoto(dlg.Photo);
+                dlg.Photo.OwnerId = Logged_User.Id;
+                DBPhotosWebServices.CreatePhoto(dlg.Photo);
+                LoadPhoto();
             }
         }
 
@@ -261,19 +255,21 @@ namespace Client_PM
             dlg.Photo = PhotoBrowser.SelectedPhoto;
             if (dlg.ShowDialog() == DialogResult.OK)
             {
-                throw new NotImplementedException("TODO : Apply the edits on the photo");
-                //DBPhotosWebServices.UpdatePhoto(dlg.Photo);
+                dlg.Photo.OwnerId = Logged_User.Id;
+                DBPhotosWebServices.UpdatePhoto(dlg.Photo);
+                LoadPhoto();
             }
         }
 
         private void FBTN_DeletePicture_Click(object sender, EventArgs e)
         {
-            DLG_Photo dlg = new DLG_Photo();
-            // dlg.Photo = PhotoBrowser.SelectedPhoto;
+            DLG_Photo dlg = new DLG_Photo(true);
+            dlg.Photo = PhotoBrowser.SelectedPhoto;
             if (dlg.ShowDialog() == DialogResult.OK)
             {
-                throw new NotImplementedException("TODO : Delete the photo");
-                // DBPhotosWebServices.DeletePhoto(dlg.Photo);
+                dlg.Photo.OwnerId = Logged_User.Id;
+                DBPhotosWebServices.DeletePhoto(dlg.Photo);
+                LoadPhoto();
             }
         }
 
@@ -310,6 +306,7 @@ namespace Client_PM
                     PhotoFilter.SetUserFilter(true, false, selectedUser.Id);
                 }
             }
+
             PhotoFilter.SetKeywordsFilter(false, "");
             LoadPhoto();
             Init_Keywords_List();
@@ -360,6 +357,20 @@ namespace Client_PM
         {
             PhotoFilter.ExludeUserRequester = CBX_ExcludeMine.Checked;
             LoadPhoto();
+        }
+        #endregion
+
+        #region Help Menu
+        private void MI_About_Click(object sender, EventArgs e)
+        {
+            new AboutBox1().ShowDialog();
+        }
+
+        private void MI_DisplayHelp_Click(object sender, EventArgs e)
+        {
+            DLG_Help help = new DLG_Help();
+            help.ContentFromResources = Properties.Resources.HTMLPage1;
+            help.ShowDialog();
         }
         #endregion
 
@@ -429,12 +440,10 @@ namespace Client_PM
             ChangeGroupVisibility(GBX_Managers, !GBX_Managers.Visible);
             MI_HSManagers.Checked = !MI_HSManagers.Checked;
         }
-        #endregion
 
-        #region Help Menu
-        private void MI_About_Click(object sender, EventArgs e)
+        private void MI_HSPhotoList_Click(object sender, EventArgs e)
         {
-            new AboutBox1().ShowDialog();
+            PhotoBrowser.ToggleHidePhotosList();
         }
         #endregion
 
@@ -454,6 +463,7 @@ namespace Client_PM
             }
             else
             {
+                // Disconnect
                 Logged_User = null;
                 Setup_Logged_User();
             }
@@ -479,7 +489,13 @@ namespace Client_PM
                 Setup_Logged_User();
             }
         }
+
+        private void MI_Account_Exit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
         #endregion
+
         #endregion
 
         #region Settings
@@ -527,23 +543,5 @@ namespace Client_PM
                 }
         }
         #endregion
-
-        private void MI_HSPhotoList_Click(object sender, EventArgs e)
-        {
-            PhotoBrowser.ToggleHidePhotosList();
-        }
-
-        private void PhotoBrowser_DoubleClick(object sender, EventArgs e)
-        {
-            PhotoBrowser.ToggleHidePhotosList();
-            MI_HSPhotoList.Checked = !MI_HSPhotoList.Checked;
-        }
-
-        private void displayHelpToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            DLG_Help help = new DLG_Help();
-            help.ContentFromResources = Properties.Resources.HTMLPage1;
-            help.ShowDialog();
-        }
     }
 }
