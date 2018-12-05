@@ -64,7 +64,7 @@ namespace Client_PM
             WaitSplash.Show(this, "Connecting to Photo Manager...");
             string bidon = DBPhotosWebServices.GetServerImagesURLBase();
             WaitSplash.Hide();
-            Properties.Settings.Default.FirstExecution = false;
+
             Update_UI();
         }
 
@@ -504,13 +504,20 @@ namespace Client_PM
 
         private void Load_Settings()
         {
-            if (!Properties.Settings.Default.FirstExecution)
+            // UNCOMMENT TO RESET FirstExecution
+            //Properties.Settings.Default.Reset();
+
+            DLG_BlackList.BlacklistedUsers = new List<int>();
+            DLG_Slideshow.SlideShowList = new List<int>();
+            if (Properties.Settings.Default.FirstExecution)
             {
-                LoadSlideShowList();
+                Properties.Settings.Default.Blacklist = new System.Collections.Specialized.StringCollection();
+                Properties.Settings.Default.SlideShowList = new System.Collections.Specialized.StringCollection();
             }
             else
             {
-                DLG_Slideshow.SlideShowList = new List<int>();
+                LoadSlideShowList();
+                LoadBlacklist();
             }
         }
 
@@ -518,11 +525,21 @@ namespace Client_PM
         {
             Properties.Settings.Default.FirstExecution = false;
             SaveSlideShowList();
+            SaveBlacklist();
             Properties.Settings.Default.Save();
+        }
+        private void LoadBlacklist()
+        {
+            if (Properties.Settings.Default.Blacklist != null)
+            {
+                foreach (var id in Properties.Settings.Default.Blacklist)
+                {
+                    DLG_BlackList.BlacklistedUsers.Add(int.Parse(id));
+                }
+            }
         }
         private void LoadSlideShowList()
         {
-            DLG_Slideshow.SlideShowList = new List<int>();
             if (Properties.Settings.Default.SlideShowList != null)
             {
                 foreach (string stringPhotoId in Properties.Settings.Default.SlideShowList)
@@ -533,17 +550,34 @@ namespace Client_PM
             }
         }
 
+        private void SaveBlacklist()
+        {
+            if (DLG_BlackList.BlacklistedUsers != null)
+            {
+                Properties.Settings.Default.Blacklist.Clear();
+                foreach (var id in DLG_BlackList.BlacklistedUsers)
+                {
+                    Properties.Settings.Default.Blacklist.Add(id.ToString());
+                }
+            }
+        }
+
         private void SaveSlideShowList()
         {
-            if (Properties.Settings.Default.SlideShowList == null)
-                Properties.Settings.Default.SlideShowList = new System.Collections.Specialized.StringCollection();
-            Properties.Settings.Default.SlideShowList.Clear();
             if (DLG_Slideshow.SlideShowList != null)
+            {
+                Properties.Settings.Default.SlideShowList.Clear();
                 foreach (int photoId in DLG_Slideshow.SlideShowList)
                 {
                     Properties.Settings.Default.SlideShowList.Add(photoId.ToString());
                 }
+            }    
         }
         #endregion
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Save_settings();
+        }
     }
 }

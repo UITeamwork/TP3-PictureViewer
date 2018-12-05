@@ -145,7 +145,7 @@
             // 
             this.MI_Account_Login.Name = "MI_Account_Login";
             this.MI_Account_Login.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.L)));
-            this.MI_Account_Login.Size = new System.Drawing.Size(180, 22);
+            this.MI_Account_Login.Size = new System.Drawing.Size(154, 22);
             this.MI_Account_Login.Text = "Login";
             this.MI_Account_Login.Click += new System.EventHandler(this.MI_Account_Login_Click);
             // 
@@ -153,7 +153,7 @@
             // 
             this.MI_Account_Profil.Name = "MI_Account_Profil";
             this.MI_Account_Profil.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.P)));
-            this.MI_Account_Profil.Size = new System.Drawing.Size(180, 22);
+            this.MI_Account_Profil.Size = new System.Drawing.Size(154, 22);
             this.MI_Account_Profil.Text = "Profil";
             this.MI_Account_Profil.Click += new System.EventHandler(this.MI_Account_Profil_Click);
             // 
@@ -161,7 +161,7 @@
             // 
             this.Mi_Account_Create.Name = "Mi_Account_Create";
             this.Mi_Account_Create.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.C)));
-            this.Mi_Account_Create.Size = new System.Drawing.Size(180, 22);
+            this.Mi_Account_Create.Size = new System.Drawing.Size(154, 22);
             this.Mi_Account_Create.Text = "Create";
             this.Mi_Account_Create.Click += new System.EventHandler(this.Mi_Account_Create_Click);
             // 
@@ -169,14 +169,14 @@
             // 
             this.MI_Blacklist.Name = "MI_Blacklist";
             this.MI_Blacklist.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.B)));
-            this.MI_Blacklist.Size = new System.Drawing.Size(180, 22);
+            this.MI_Blacklist.Size = new System.Drawing.Size(154, 22);
             this.MI_Blacklist.Text = "Blacklist";
             // 
             // MI_Account_Exit
             // 
             this.MI_Account_Exit.Name = "MI_Account_Exit";
             this.MI_Account_Exit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.MI_Account_Exit.Size = new System.Drawing.Size(180, 22);
+            this.MI_Account_Exit.Size = new System.Drawing.Size(154, 22);
             this.MI_Account_Exit.Text = "Exit";
             this.MI_Account_Exit.Click += new System.EventHandler(this.MI_Account_Exit_Click);
             // 
@@ -197,7 +197,7 @@
             this.MI_Top,
             this.MI_Bottom});
             this.MI_BrowserDispo.Name = "MI_BrowserDispo";
-            this.MI_BrowserDispo.Size = new System.Drawing.Size(180, 22);
+            this.MI_BrowserDispo.Size = new System.Drawing.Size(178, 22);
             this.MI_BrowserDispo.Text = "Browser Disposition";
             // 
             // MI_Left
@@ -245,7 +245,7 @@
             this.MI_HSManagers,
             this.MI_HSPhotoList});
             this.MI_HideGroups.Name = "MI_HideGroups";
-            this.MI_HideGroups.Size = new System.Drawing.Size(180, 22);
+            this.MI_HideGroups.Size = new System.Drawing.Size(178, 22);
             this.MI_HideGroups.Text = "Hide Commands";
             // 
             // MI_HideAll
@@ -351,20 +351,20 @@
             this.MI_DisplayHelp.Name = "MI_DisplayHelp";
             this.MI_DisplayHelp.ShortcutKeyDisplayString = "";
             this.MI_DisplayHelp.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.MI_DisplayHelp.Size = new System.Drawing.Size(180, 22);
+            this.MI_DisplayHelp.Size = new System.Drawing.Size(118, 22);
             this.MI_DisplayHelp.Text = "Help";
             this.MI_DisplayHelp.Click += new System.EventHandler(this.MI_DisplayHelp_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(115, 6);
             // 
             // MI_About
             // 
             this.MI_About.Image = global::Client_PM.Properties.Resources.IMG_Info;
             this.MI_About.Name = "MI_About";
-            this.MI_About.Size = new System.Drawing.Size(180, 22);
+            this.MI_About.Size = new System.Drawing.Size(118, 22);
             this.MI_About.Text = "About";
             this.MI_About.Click += new System.EventHandler(this.MI_About_Click);
             // 
@@ -624,6 +624,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Photo manager client application";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Shown += new System.EventHandler(this.MainForm_Shown);
             this.GBX_Users.ResumeLayout(false);
             this.GBX_Users.PerformLayout();

@@ -69,5 +69,16 @@ namespace Client_PM.Properties {
                 this["FirstExecution"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Collections.Specialized.StringCollection Blacklist {
+            get {
+                return ((global::System.Collections.Specialized.StringCollection)(this["Blacklist"]));
+            }
+            set {
+                this["Blacklist"] = value;
+            }
+        }
     }
 }
