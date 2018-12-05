@@ -82,7 +82,7 @@
             this.BTN_Cancel.Location = new System.Drawing.Point(257, 137);
             this.BTN_Cancel.Name = "BTN_Cancel";
             this.BTN_Cancel.Size = new System.Drawing.Size(76, 29);
-            this.BTN_Cancel.TabIndex = 3;
+            this.BTN_Cancel.TabIndex = 4;
             this.BTN_Cancel.Text = "Cancel";
             this.BTN_Cancel.UseVisualStyleBackColor = true;
             // 
@@ -93,7 +93,7 @@
             this.BTN_Ok.Location = new System.Drawing.Point(175, 137);
             this.BTN_Ok.Name = "BTN_Ok";
             this.BTN_Ok.Size = new System.Drawing.Size(76, 29);
-            this.BTN_Ok.TabIndex = 2;
+            this.BTN_Ok.TabIndex = 3;
             this.BTN_Ok.Text = "Login";
             this.BTN_Ok.UseVisualStyleBackColor = true;
             // 
@@ -105,7 +105,7 @@
             this.CBX_RememberMe.Name = "CBX_RememberMe";
             this.CBX_RememberMe.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.CBX_RememberMe.Size = new System.Drawing.Size(126, 22);
-            this.CBX_RememberMe.TabIndex = 4;
+            this.CBX_RememberMe.TabIndex = 2;
             this.CBX_RememberMe.Text = "Remember me";
             this.CBX_RememberMe.UseVisualStyleBackColor = true;
             // 

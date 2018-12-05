@@ -52,8 +52,6 @@ namespace Client_PM
 
         private void MainForm_Shown(object sender, EventArgs e)
         {
-            
-            this.StartPosition = Properties.Settings.Default.DLG_MAINFORM_LOCATION;
             WaitSplash.Show(this, "Initializing(this might take a moment)...");
             photos = DBPhotosWebServices.GetAllPhotos();
             Load_Settings();
@@ -583,6 +581,11 @@ namespace Client_PM
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Save_settings();
+        }
+
+        private void MI_Blacklist_Click(object sender, EventArgs e)
+        {
+            FBTN_Blacklist.PerformClick();
         }
     }
 }

@@ -61,7 +61,7 @@
             this.DTP_Date.Margin = new System.Windows.Forms.Padding(4);
             this.DTP_Date.Name = "DTP_Date";
             this.DTP_Date.Size = new System.Drawing.Size(175, 24);
-            this.DTP_Date.TabIndex = 1;
+            this.DTP_Date.TabIndex = 2;
             this.DTP_Date.Value = new System.DateTime(2018, 12, 4, 19, 31, 24, 0);
             // 
             // RTBX_Description
@@ -70,7 +70,7 @@
             this.RTBX_Description.Margin = new System.Windows.Forms.Padding(4);
             this.RTBX_Description.Name = "RTBX_Description";
             this.RTBX_Description.Size = new System.Drawing.Size(269, 113);
-            this.RTBX_Description.TabIndex = 2;
+            this.RTBX_Description.TabIndex = 3;
             this.RTBX_Description.Text = "";
             // 
             // BTN_Cancel
@@ -80,7 +80,7 @@
             this.BTN_Cancel.Margin = new System.Windows.Forms.Padding(4);
             this.BTN_Cancel.Name = "BTN_Cancel";
             this.BTN_Cancel.Size = new System.Drawing.Size(80, 28);
-            this.BTN_Cancel.TabIndex = 6;
+            this.BTN_Cancel.TabIndex = 5;
             this.BTN_Cancel.Text = "Cancel";
             this.BTN_Cancel.UseVisualStyleBackColor = true;
             // 
@@ -91,7 +91,7 @@
             this.BTN_Ok.Margin = new System.Windows.Forms.Padding(4);
             this.BTN_Ok.Name = "BTN_Ok";
             this.BTN_Ok.Size = new System.Drawing.Size(80, 28);
-            this.BTN_Ok.TabIndex = 7;
+            this.BTN_Ok.TabIndex = 4;
             this.BTN_Ok.Text = "OK";
             this.BTN_Ok.UseVisualStyleBackColor = true;
             // 
@@ -141,7 +141,7 @@
             this.TBX_Keywords.Margin = new System.Windows.Forms.Padding(4);
             this.TBX_Keywords.Name = "TBX_Keywords";
             this.TBX_Keywords.Size = new System.Drawing.Size(269, 24);
-            this.TBX_Keywords.TabIndex = 12;
+            this.TBX_Keywords.TabIndex = 1;
             // 
             // CBX_Shared
             // 
@@ -189,6 +189,7 @@
             this.ImgBX_Image.Name = "ImgBX_Image";
             this.ImgBX_Image.OpenFileDialogTitle = "Please choose image an file";
             this.ImgBX_Image.PasteMenuText = "Paste image from clipboard";
+            this.ImgBX_Image.RotateImageText = "Rotate the image";
             this.ImgBX_Image.Size = new System.Drawing.Size(269, 241);
             this.ImgBX_Image.TabIndex = 3;
             this.ImgBX_Image.TabStop = false;

@@ -108,7 +108,7 @@
             this.BTN_Cancel.Location = new System.Drawing.Point(303, 202);
             this.BTN_Cancel.Name = "BTN_Cancel";
             this.BTN_Cancel.Size = new System.Drawing.Size(76, 23);
-            this.BTN_Cancel.TabIndex = 4;
+            this.BTN_Cancel.TabIndex = 5;
             this.BTN_Cancel.Text = "Cancel";
             this.BTN_Cancel.UseVisualStyleBackColor = true;
             // 
@@ -135,6 +135,7 @@
             this.IBX_Avatar.Name = "IBX_Avatar";
             this.IBX_Avatar.OpenFileDialogTitle = "Please choose image an file";
             this.IBX_Avatar.PasteMenuText = "Paste image from clipboard";
+            this.IBX_Avatar.RotateImageText = "Rotate the image";
             this.IBX_Avatar.Size = new System.Drawing.Size(160, 149);
             this.IBX_Avatar.TabIndex = 2;
             this.IBX_Avatar.TabStop = false;
@@ -159,7 +160,7 @@
             this.Controls.Add(this.TBX_Username);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DLG_Account";
             this.Text = "DLG_Account";
             this.Load += new System.EventHandler(this.DLG_Account_Load);

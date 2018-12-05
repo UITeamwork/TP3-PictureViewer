@@ -85,7 +85,7 @@
             this.BTN_Close.Margin = new System.Windows.Forms.Padding(6);
             this.BTN_Close.Name = "BTN_Close";
             this.BTN_Close.Size = new System.Drawing.Size(109, 35);
-            this.BTN_Close.TabIndex = 18;
+            this.BTN_Close.TabIndex = 5;
             this.BTN_Close.Text = "Close";
             this.BTN_Close.UseVisualStyleBackColor = true;
             this.BTN_Close.Click += new System.EventHandler(this.BTN_Close_Click);
@@ -99,7 +99,7 @@
             this.RTBX_Description.Name = "RTBX_Description";
             this.RTBX_Description.ReadOnly = true;
             this.RTBX_Description.Size = new System.Drawing.Size(462, 155);
-            this.RTBX_Description.TabIndex = 14;
+            this.RTBX_Description.TabIndex = 3;
             this.RTBX_Description.TabStop = false;
             this.RTBX_Description.Text = "";
             // 
@@ -110,7 +110,7 @@
             this.TBX_Title.Name = "TBX_Title";
             this.TBX_Title.ReadOnly = true;
             this.TBX_Title.Size = new System.Drawing.Size(225, 24);
-            this.TBX_Title.TabIndex = 12;
+            this.TBX_Title.TabIndex = 0;
             this.TBX_Title.TabStop = false;
             // 
             // TBX_PictureSize
@@ -120,7 +120,7 @@
             this.TBX_PictureSize.Name = "TBX_PictureSize";
             this.TBX_PictureSize.ReadOnly = true;
             this.TBX_PictureSize.Size = new System.Drawing.Size(148, 24);
-            this.TBX_PictureSize.TabIndex = 24;
+            this.TBX_PictureSize.TabIndex = 4;
             this.TBX_PictureSize.TabStop = false;
             this.TBX_PictureSize.Text = "000 X 000";
             this.TBX_PictureSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -198,7 +198,7 @@
             this.TBX_Keywords.Name = "TBX_Keywords";
             this.TBX_Keywords.ReadOnly = true;
             this.TBX_Keywords.Size = new System.Drawing.Size(462, 24);
-            this.TBX_Keywords.TabIndex = 28;
+            this.TBX_Keywords.TabIndex = 2;
             this.TBX_Keywords.TabStop = false;
             // 
             // DTP_PhotoDate
@@ -207,7 +207,7 @@
             this.DTP_PhotoDate.Location = new System.Drawing.Point(250, 164);
             this.DTP_PhotoDate.Name = "DTP_PhotoDate";
             this.DTP_PhotoDate.Size = new System.Drawing.Size(225, 24);
-            this.DTP_PhotoDate.TabIndex = 30;
+            this.DTP_PhotoDate.TabIndex = 1;
             this.DTP_PhotoDate.TabStop = false;
             // 
             // DLG_PhotoInfo

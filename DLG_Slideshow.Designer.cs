@@ -62,8 +62,8 @@
             this.TrckB_SlideshowSpeed.Margin = new System.Windows.Forms.Padding(4);
             this.TrckB_SlideshowSpeed.Maximum = 9;
             this.TrckB_SlideshowSpeed.Name = "TrckB_SlideshowSpeed";
-            this.TrckB_SlideshowSpeed.Size = new System.Drawing.Size(737, 45);
-            this.TrckB_SlideshowSpeed.TabIndex = 1;
+            this.TrckB_SlideshowSpeed.Size = new System.Drawing.Size(613, 45);
+            this.TrckB_SlideshowSpeed.TabIndex = 0;
             this.TrckB_SlideshowSpeed.Scroll += new System.EventHandler(this.TrckB_SlideshowSpeed_Scroll);
             // 
             // LAB_SlideshowSpeed
@@ -82,7 +82,7 @@
             this.BTN_Previous.Location = new System.Drawing.Point(3, 3);
             this.BTN_Previous.Name = "BTN_Previous";
             this.BTN_Previous.Size = new System.Drawing.Size(34, 31);
-            this.BTN_Previous.TabIndex = 3;
+            this.BTN_Previous.TabIndex = 0;
             this.BTN_Previous.Text = "<<";
             this.BTN_Previous.UseVisualStyleBackColor = true;
             this.BTN_Previous.Click += new System.EventHandler(this.BTN_Previous_Click);
@@ -90,10 +90,10 @@
             // BTN_Next
             // 
             this.BTN_Next.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BTN_Next.Location = new System.Drawing.Point(724, 3);
+            this.BTN_Next.Location = new System.Drawing.Point(600, 3);
             this.BTN_Next.Name = "BTN_Next";
             this.BTN_Next.Size = new System.Drawing.Size(34, 31);
-            this.BTN_Next.TabIndex = 4;
+            this.BTN_Next.TabIndex = 2;
             this.BTN_Next.Text = ">>";
             this.BTN_Next.UseVisualStyleBackColor = true;
             this.BTN_Next.Click += new System.EventHandler(this.BTN_Next_Click);
@@ -113,7 +113,7 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(761, 47);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(637, 47);
             this.tableLayoutPanel1.TabIndex = 6;
             // 
             // flashCheckBox1
@@ -127,12 +127,12 @@
             this.flashCheckBox1.ClickedImage = ((System.Drawing.Image)(resources.GetObject("flashCheckBox1.ClickedImage")));
             this.flashCheckBox1.DisabledImage = ((System.Drawing.Image)(resources.GetObject("flashCheckBox1.DisabledImage")));
             this.flashCheckBox1.Image = ((System.Drawing.Image)(resources.GetObject("flashCheckBox1.Image")));
-            this.flashCheckBox1.Location = new System.Drawing.Point(355, 3);
+            this.flashCheckBox1.Location = new System.Drawing.Point(293, 3);
             this.flashCheckBox1.Name = "flashCheckBox1";
             this.flashCheckBox1.NeutralImage = ((System.Drawing.Image)(resources.GetObject("flashCheckBox1.NeutralImage")));
             this.flashCheckBox1.OverImage = ((System.Drawing.Image)(resources.GetObject("flashCheckBox1.OverImage")));
             this.flashCheckBox1.Size = new System.Drawing.Size(50, 41);
-            this.flashCheckBox1.TabIndex = 5;
+            this.flashCheckBox1.TabIndex = 1;
             this.flashCheckBox1.Text = "Randomise the slideshow...";
             this.flashCheckBox1.UseVisualStyleBackColor = true;
             this.flashCheckBox1.CheckedChanged += new System.EventHandler(this.flashCheckBox1_CheckedChanged);
@@ -144,9 +144,9 @@
             this.PN_Controls.Controls.Add(this.tableLayoutPanel1);
             this.PN_Controls.Controls.Add(this.LAB_SlideshowSpeed);
             this.PN_Controls.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PN_Controls.Location = new System.Drawing.Point(0, 236);
+            this.PN_Controls.Location = new System.Drawing.Point(0, 463);
             this.PN_Controls.Name = "PN_Controls";
-            this.PN_Controls.Size = new System.Drawing.Size(767, 131);
+            this.PN_Controls.Size = new System.Drawing.Size(643, 131);
             this.PN_Controls.TabIndex = 7;
             this.PN_Controls.VisibleChanged += new System.EventHandler(this.PN_Controls_VisibleChanged);
             // 
@@ -173,7 +173,7 @@
             this.filesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(767, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(643, 24);
             this.menuStrip1.TabIndex = 11;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -226,7 +226,7 @@
             // 
             this.LBL_Menu.AutoSize = true;
             this.LBL_Menu.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.LBL_Menu.Location = new System.Drawing.Point(249, 0);
+            this.LBL_Menu.Location = new System.Drawing.Point(185, 0);
             this.LBL_Menu.Name = "LBL_Menu";
             this.LBL_Menu.Size = new System.Drawing.Size(261, 18);
             this.LBL_Menu.TabIndex = 15;
@@ -242,11 +242,11 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 280F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.17987F));
             this.tableLayoutPanel2.Controls.Add(this.LBL_Menu, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(6, 211);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(6, 438);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(756, 19);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(632, 19);
             this.tableLayoutPanel2.TabIndex = 16;
             // 
             // DLG_Slideshow
@@ -255,7 +255,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(767, 367);
+            this.ClientSize = new System.Drawing.Size(643, 594);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.Timer_Interval);
             this.Controls.Add(this.menuStrip1);
@@ -266,6 +266,7 @@
             this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MinimumSize = new System.Drawing.Size(659, 633);
             this.Name = "DLG_Slideshow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DLG_Slideshow";

@@ -73,7 +73,7 @@
             this.BTN_Cancel.Location = new System.Drawing.Point(695, 599);
             this.BTN_Cancel.Name = "BTN_Cancel";
             this.BTN_Cancel.Size = new System.Drawing.Size(75, 25);
-            this.BTN_Cancel.TabIndex = 6;
+            this.BTN_Cancel.TabIndex = 4;
             this.BTN_Cancel.Text = "Cancel";
             this.BTN_Cancel.UseVisualStyleBackColor = true;
             // 
@@ -84,7 +84,7 @@
             this.BTN_OK.Location = new System.Drawing.Point(614, 599);
             this.BTN_OK.Name = "BTN_OK";
             this.BTN_OK.Size = new System.Drawing.Size(75, 25);
-            this.BTN_OK.TabIndex = 7;
+            this.BTN_OK.TabIndex = 3;
             this.BTN_OK.Text = "OK";
             this.BTN_OK.UseVisualStyleBackColor = true;
             // 
@@ -100,7 +100,7 @@
             this.LV_AcceptedUsers.MultiSelect = false;
             this.LV_AcceptedUsers.Name = "LV_AcceptedUsers";
             this.LV_AcceptedUsers.Size = new System.Drawing.Size(371, 402);
-            this.LV_AcceptedUsers.TabIndex = 9;
+            this.LV_AcceptedUsers.TabIndex = 0;
             this.LV_AcceptedUsers.TileSize = new System.Drawing.Size(268, 60);
             this.LV_AcceptedUsers.UseCompatibleStateImageBehavior = false;
             this.LV_AcceptedUsers.View = System.Windows.Forms.View.Tile;
@@ -121,7 +121,7 @@
             this.LV_BlacklistedUsers.MultiSelect = false;
             this.LV_BlacklistedUsers.Name = "LV_BlacklistedUsers";
             this.LV_BlacklistedUsers.Size = new System.Drawing.Size(371, 402);
-            this.LV_BlacklistedUsers.TabIndex = 10;
+            this.LV_BlacklistedUsers.TabIndex = 1;
             this.LV_BlacklistedUsers.TileSize = new System.Drawing.Size(268, 60);
             this.LV_BlacklistedUsers.UseCompatibleStateImageBehavior = false;
             this.LV_BlacklistedUsers.View = System.Windows.Forms.View.Tile;
@@ -150,7 +150,7 @@
             this.ImgL_SelectedUserImages.Name = "ImgL_SelectedUserImages";
             this.ImgL_SelectedUserImages.SelectedPhotoBox = null;
             this.ImgL_SelectedUserImages.Size = new System.Drawing.Size(748, 107);
-            this.ImgL_SelectedUserImages.TabIndex = 11;
+            this.ImgL_SelectedUserImages.TabIndex = 2;
             this.ImgL_SelectedUserImages.WrapContents = false;
             // 
             // FBTN_ResetBlacklist
@@ -165,7 +165,7 @@
             this.FBTN_ResetBlacklist.NeutralImage = global::Client_PM.Properties.Resources.IMG_Recycle_Neutral;
             this.FBTN_ResetBlacklist.OverImage = global::Client_PM.Properties.Resources.IMG_Recycle_Over;
             this.FBTN_ResetBlacklist.Size = new System.Drawing.Size(30, 30);
-            this.FBTN_ResetBlacklist.TabIndex = 0;
+            this.FBTN_ResetBlacklist.TabIndex = 5;
             this.FBTN_ResetBlacklist.Text = "Reset the blacklist";
             this.FBTN_ResetBlacklist.UseVisualStyleBackColor = true;
             this.FBTN_ResetBlacklist.Click += new System.EventHandler(this.FBTN_ResetBlacklist_Click);
