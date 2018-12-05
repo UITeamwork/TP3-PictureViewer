@@ -53,7 +53,7 @@ namespace Client_PM
         private void MainForm_Shown(object sender, EventArgs e)
         {
             
-            this.StartPosition = Properties.Settings.Default.DLG_MAINFORM_LOCATION;
+            this.Location= Properties.Settings.Default.DLG_MAINFORM_LOCATION;
             WaitSplash.Show(this, "Initializing(this might take a moment)...");
             photos = DBPhotosWebServices.GetAllPhotos();
             Load_Settings();
