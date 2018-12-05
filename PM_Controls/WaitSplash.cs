@@ -118,7 +118,7 @@ namespace PhotoManagerClient
             // 
             this.progressBar1.Location = new System.Drawing.Point(13, 50);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(315, 23);
+            this.progressBar1.Size = new System.Drawing.Size(377, 23);
             this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
             this.progressBar1.TabIndex = 0;
             // 
@@ -137,7 +137,7 @@ namespace PhotoManagerClient
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(347, 95);
+            this.ClientSize = new System.Drawing.Size(409, 95);
             this.ControlBox = false;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.progressBar1);

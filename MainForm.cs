@@ -46,18 +46,19 @@ namespace Client_PM
 
         public MainForm()
         {
-            photos = DBPhotosWebServices.GetAllPhotos();
-            
             InitializeComponent();
             Text = "Photo Manager Client application - Not connected";
         }
 
         private void MainForm_Shown(object sender, EventArgs e)
         {
+            WaitSplash.Show(this, "Initializing(this might take a moment)...");
+            photos = DBPhotosWebServices.GetAllPhotos();
             Load_Settings();
             DTP_From.MaxDate = DateTime.Now;
             DTP_To.MaxDate = DateTime.Now;
             InitialBrowserHeight = PhotoBrowser.Height;
+            WaitSplash.Hide();
 
             // Get server attention...
             WaitSplash.Show(this, "Connecting to Photo Manager...");
@@ -77,6 +78,7 @@ namespace Client_PM
 
             FBTN_PhotoToSlideshow.SetImages(PhotoIsSelected && DLG_Slideshow.SlideShowList.Contains(PhotoBrowser.SelectedPhoto.Id) ?  RemoveFromSlideShow : AddToSlideShow);
             FBTN_PhotoToSlideshow.BackgroundImage = (FBTN_PhotoToSlideshow.Enabled ? FBTN_PhotoToSlideshow.NeutralImage : FBTN_PhotoToSlideshow.DisabledImage);
+            FBTN_PhotoToSlideshow.Text = (PhotoIsSelected && DLG_Slideshow.SlideShowList.Contains(PhotoBrowser.SelectedPhoto.Id) ? "Remove photo from your slideshow" : "Add photo to your slideshow");
 
             MI_Account_Profil.Enabled = UserIsLoggedIn;
             MI_Blacklist.Enabled = UserIsLoggedIn;
