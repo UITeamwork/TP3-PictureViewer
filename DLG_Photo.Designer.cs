@@ -176,6 +176,7 @@
             // ImgBX_Image
             // 
             this.ImgBX_Image.AllowDrop = true;
+            this.ImgBX_Image.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ImgBX_Image.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ImgBX_Image.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ImgBX_Image.ControlToolTipText = "You can either drag & drop, paste image from clipboard or choose an image file wi" +
@@ -211,12 +212,15 @@
             this.Controls.Add(this.DTP_Date);
             this.Controls.Add(this.TBX_Title);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "DLG_Photo";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DLG_Photo";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DLG_Photo_FormClosing);
             this.Load += new System.EventHandler(this.DLG_Photo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ImgBX_Image)).EndInit();
             this.ResumeLayout(false);
